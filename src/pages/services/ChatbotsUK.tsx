@@ -1,46 +1,31 @@
 import React from 'react';
 import ServiceLayout from '@/components/ServiceLayout';
 import SEOProvider from '@/components/SEOProvider';
-import RegionalPageLinks from '@/components/RegionalPageLinks';
-import RegionalPricing from '@/components/RegionalPricing';
 import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { CheckCircle, ArrowRight, MessageSquare, Brain, Zap, Shield, Users, BarChart3 } from 'lucide-react';
+import { CheckCircle, ArrowRight, MessageSquare, CreditCard } from 'lucide-react';
 
-const ChatbotsUK = () => {
-  return (
-    <SEOProvider
-      title="AI Chatbot Development UK | Enterprise Conversational AI | SyncSphere"
-      description="Leading AI chatbot development agency in the UK. Enterprise-grade conversational AI solutions with advanced NLP, multi-channel deployment, and seamless CRM integration for UK businesses."
-      keywords="ai chatbot development uk, conversational ai uk, chatbot agency uk, enterprise chatbots uk, nlp chatbots uk, whatsapp chatbot uk, ecommerce chatbots uk, web development uk, mobile app development uk"
-      region="uk"
-      service="chatbots"
-    >
-      <ServiceLayout>
-        <div className="container mx-auto px-4 py-16">
-          <div className="text-center">
-            <h1 className="text-4xl font-bold mb-6">AI Chatbot Development UK</h1>
-            <p className="text-xl mb-8">Enterprise-grade conversational AI solutions for UK businesses</p>
-            <Button size="lg">Get Started</Button>
-          </div>
+const ChatbotsUK = () => (
+  <SEOProvider title="AI Chatbot Solutions UK | SyncSphere" description="AI chatbot solutions for UK businesses from £299. Smart customer engagement across WhatsApp, web, and social." region="uk" service="chatbots">
+    <ServiceLayout>
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center mb-16">
+          <Badge variant="outline" className="mb-4 border-primary text-primary"><MessageSquare className="w-4 h-4 mr-2" />UK Chatbot Solutions</Badge>
+          <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-primary to-blue-300 bg-clip-text text-transparent">AI Chatbot Solutions — UK</h1>
+          <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">Smart chatbots for UK businesses. 24/7 customer engagement handled by our team.</p>
+          <a href="https://wa.me/447424819094?text=Hi! I'm a UK business interested in chatbot solutions." target="_blank" rel="noopener noreferrer">
+            <Button size="lg" className="bg-primary hover:bg-primary/90">Get Started — From £299<ArrowRight className="ml-2 h-4 w-4" /></Button>
+          </a>
         </div>
-
-        {/* Pricing Section */}
-        <section className="py-20 bg-gradient-to-br from-slate-50 to-blue-50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <RegionalPricing 
-              service="chatbots" 
-              region="uk" 
-              autoDetect={false}
-            />
-          </div>
-        </section>
-
-        {/* CTA Section */}
-      </ServiceLayout>
-    </SEOProvider>
-  );
-};
-
+        <div className="grid md:grid-cols-3 gap-8 mb-16">
+          <Card><CardHeader><CardTitle>Basic</CardTitle><div className="text-3xl font-bold">£299</div><p className="text-sm text-muted-foreground">+ £39/month</p></CardHeader><CardContent><ul className="space-y-2">{["1 platform","FAQ responses","Lead capture","Basic analytics"].map((f,i)=><li key={i} className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-green-500"/><span className="text-sm">{f}</span></li>)}</ul></CardContent></Card>
+          <Card className="border-primary"><CardHeader><Badge className="w-fit mb-2">Popular</Badge><CardTitle>Standard</CardTitle><div className="text-3xl font-bold">£599</div><p className="text-sm text-muted-foreground">+ £79/month</p></CardHeader><CardContent><ul className="space-y-2">{["2 platforms","Smart responses","CRM integration","Analytics dashboard"].map((f,i)=><li key={i} className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-green-500"/><span className="text-sm">{f}</span></li>)}</ul></CardContent></Card>
+          <Card><CardHeader><CardTitle>Advanced</CardTitle><div className="text-3xl font-bold">£1,199</div><p className="text-sm text-muted-foreground">+ £119/month</p></CardHeader><CardContent><ul className="space-y-2">{["3+ platforms + CRM","Multi-language","Custom integrations","Priority support"].map((f,i)=><li key={i} className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-green-500"/><span className="text-sm">{f}</span></li>)}</ul></CardContent></Card>
+        </div>
+        <div className="text-center"><Card className="bg-primary/5 border-primary/20"><CardContent className="p-8"><p className="text-foreground/70 flex items-center justify-center gap-2"><CreditCard className="h-4 w-4"/>50% upfront, 50% on delivery • PayPal accepted</p></CardContent></Card></div>
+      </div>
+    </ServiceLayout>
+  </SEOProvider>
+);
 export default ChatbotsUK;
