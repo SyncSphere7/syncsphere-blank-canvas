@@ -92,8 +92,8 @@ export function useChatStorage() {
           content: "👋 Hi! I'm SyncSphere's AI Assistant. I'm here to help you learn about our AI solutions, answer questions about our services, and discuss how we can transform your business with intelligent automation.\n\nWhat would you like to know about?",
           timestamp: new Date().toISOString()
         }],
-        createdAt: new Date(),
-        updatedAt: new Date(),
+        createdAt: new Date().toISOString(),
+        updatedAt: new Date().toISOString(),
         isActive: true
       };
       setChatSessions([defaultChat]);
