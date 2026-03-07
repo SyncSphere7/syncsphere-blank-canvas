@@ -196,8 +196,7 @@ const ContactFormNew: React.FC<ContactFormProps> = ({
             disabled={isSubmitting || !formData.name || !formData.email || !formData.message}
             className="w-full bg-primary hover:bg-primary/90 disabled:opacity-50"
           >
-            {submitStatus === 'sending' ? 'Sending...' :
-             submitStatus === 'success' ? 'Email Sent' : (
+            {submitStatus === 'sending' ? 'Sending...' : (
               <>
                 <Send className="h-4 w-4 mr-2" />
                 Send Message

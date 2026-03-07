@@ -221,7 +221,7 @@ const Index = () => {
             <ContactSection />
             
             {/* Ask AI Button */}
-            <AskAIButton floating={true} />
+            <AskAIButton />
             
             {/* Behavioral Triggers */}
             <BehavioralTriggers onTrigger={(type, data) => {

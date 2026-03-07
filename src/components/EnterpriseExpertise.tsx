@@ -143,7 +143,7 @@ const EnterpriseExpertise = () => {
                       className="h-8 w-8 object-contain filter brightness-0 invert opacity-70 hover:opacity-100 transition-opacity"
                       onError={(e) => {
                         e.currentTarget.style.display = 'none';
-                        e.currentTarget.nextElementSibling.style.display = 'block';
+                        (e.currentTarget.nextElementSibling as HTMLElement)?.style && ((e.currentTarget.nextElementSibling as HTMLElement).style.display = 'block');
                       }}
                     />
                     <div className="text-2xl hidden">

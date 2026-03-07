@@ -1022,7 +1022,7 @@ Contact: sales@syncsphereofficial.com | WhatsApp: +44 742 481 9094 | Phone: +1 8
   };
 
   // Generate downloadable document
-  const generateDocument = async (type: 'budget' | 'proposal' | 'mvp-plan', content: any, projectName?: string, clientName?: string) => {
+  const generateDocument = async (type: string, content: any, projectName?: string, clientName?: string) => {
     setIsGeneratingDoc(true);
     try {
       const response = await fetch('/api/generate-document', {
