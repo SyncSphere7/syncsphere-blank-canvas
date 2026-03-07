@@ -2,280 +2,138 @@ import React from 'react';
 import ServiceLayout from '@/components/ServiceLayout';
 import SEOProvider from '@/components/SEOProvider';
 import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { CheckCircle, ArrowRight, Globe, Smartphone, Zap, Shield, Code, Palette } from 'lucide-react';
+import { CheckCircle, ArrowRight, Globe, Smartphone, Zap, Shield, CreditCard } from 'lucide-react';
 
 const WebDevelopment = () => {
-  const features = [
-    "Modern responsive design",
-    "AI-powered personalization",
-    "SEO optimization",
-    "Performance optimization",
-    "Security best practices",
-    "Content management systems",
-    "E-commerce integration",
-    "Analytics and tracking"
-  ];
-
-  const technologies = [
-    "React & Next.js",
-    "TypeScript",
-    "Tailwind CSS",
-    "Node.js",
-    "WordPress",
-    "Shopify",
-    "AWS/Vercel",
-    "AI Integration APIs"
-  ];
-
   return (
     <SEOProvider
-      title="Website Design & Development | AI-Enhanced Web Solutions | SyncSphere"
-      description="Professional website design and development services with AI integration. Modern, responsive websites that convert visitors into customers. Custom web solutions for businesses worldwide."
-      keywords="website design, web development, responsive design, ai websites, custom websites, web design agency"
+      title="Website Design & Development | Custom Sites from $499 | SyncSphere"
+      description="Professional website design delivered in 48 hours. Starter $499, Business $899, Growth $1,499. Domain and SSL included. Custom designed for your business."
+      keywords="website design, web development, custom websites, fast delivery, affordable websites"
     >
       <ServiceLayout>
         <div className="container mx-auto px-4 py-16">
-          {/* Hero Section */}
           <div className="text-center mb-16">
-            <Badge variant="outline" className="mb-4 border-primary text-primary">
-              <Globe className="w-4 h-4 mr-2" />
-              Web Development Excellence
-            </Badge>
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-primary to-blue-300 bg-clip-text text-transparent">
-              Website Design & Development
-            </h1>
+            <Badge variant="outline" className="mb-4 border-primary text-primary"><Globe className="w-4 h-4 mr-2" />Website Design</Badge>
+            <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-primary to-blue-300 bg-clip-text text-transparent">Website Design & Development</h1>
             <p className="text-xl text-muted-foreground mb-8 max-w-4xl mx-auto">
-              Create stunning, high-performance websites that drive results. From modern design to AI integration, 
-              we build digital experiences that convert visitors into customers and grow your business.
+              Custom designed websites for your business. Fast delivery, professional quality, and everything you need to get online — domain and SSL included.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="https://wa.me/447424819094?text=Hi! I'd like to start a web development project with a £500 pilot program." target="_blank" rel="noopener noreferrer">
-                <Button size="lg" className="bg-primary hover:bg-primary/90 w-full">
-                  Start £500 Pilot
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Button>
-              </a>
-              <Button 
-                size="lg" 
-                variant="outline"
-                onClick={async () => {
-                  try {
-                    await fetch('/api/contact', {
-                      method: 'POST',
-                      headers: { 'Content-Type': 'application/json' },
-                      body: JSON.stringify({
-                        name: 'Portfolio Request',
-                        email: 'portfolio@example.com',
-                        message: 'I would like to see your web development portfolio.',
-                        formType: 'demo',
-                        service: 'Web Development Portfolio'
-                      })
-                    });
-                    alert('Portfolio request sent! We\'ll send you our latest work examples.');
-                  } catch (error) {
-                    window.location.href = 'mailto:info@syncsphereofficial.com?subject=Web%20Development%20Portfolio%20Request';
-                  }
-                }}
-              >
-                View Portfolio
-              </Button>
-            </div>
+            <a href="https://wa.me/447424819094?text=Hi! I'd like to get a website designed. Can we discuss?" target="_blank" rel="noopener noreferrer">
+              <Button size="lg" className="bg-primary hover:bg-primary/90">Get Started — From $499<ArrowRight className="ml-2 h-4 w-4" /></Button>
+            </a>
           </div>
 
           {/* Features Grid */}
-          <div className="mb-16">
-            <h2 className="text-3xl font-bold text-center mb-12">
-              Complete Web Solutions
-            </h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-              <Card className="text-center">
-                <CardContent className="p-6">
-                  <Palette className="h-12 w-12 text-blue-500 mx-auto mb-4" />
-                  <h3 className="font-semibold mb-2">Modern Design</h3>
-                  <p className="text-sm text-muted-foreground">Beautiful, user-friendly interfaces that engage visitors</p>
-                </CardContent>
-              </Card>
-              <Card className="text-center">
-                <CardContent className="p-6">
-                  <Smartphone className="h-12 w-12 text-green-500 mx-auto mb-4" />
-                  <h3 className="font-semibold mb-2">Mobile-First</h3>
-                  <p className="text-sm text-muted-foreground">Responsive design that works perfectly on all devices</p>
-                </CardContent>
-              </Card>
-              <Card className="text-center">
-                <CardContent className="p-6">
-                  <Zap className="h-12 w-12 text-yellow-500 mx-auto mb-4" />
-                  <h3 className="font-semibold mb-2">Fast Performance</h3>
-                  <p className="text-sm text-muted-foreground">Optimized for speed and search engine rankings</p>
-                </CardContent>
-              </Card>
-              <Card className="text-center">
-                <CardContent className="p-6">
-                  <Shield className="h-12 w-12 text-red-500 mx-auto mb-4" />
-                  <h3 className="font-semibold mb-2">Secure & Reliable</h3>
-                  <p className="text-sm text-muted-foreground">Built with security best practices and reliability</p>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-
-          {/* Features List */}
-          <div className="mb-16">
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
-              <div>
-                <h2 className="text-3xl font-bold mb-6">
-                  Everything You Need for Success
-                </h2>
-                <div className="grid gap-4">
-                  {features.map((feature, index) => (
-                    <div key={index} className="flex items-center gap-3">
-                      <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0" />
-                      <span>{feature}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-              <div>
-                <Card>
-                  <CardHeader>
-                    <CardTitle className="flex items-center gap-2">
-                      <Code className="h-5 w-5" />
-                      Technologies We Use
-                    </CardTitle>
-                    <CardDescription>
-                      Cutting-edge tools and frameworks for modern web development
-                    </CardDescription>
-                  </CardHeader>
-                  <CardContent>
-                    <div className="flex flex-wrap gap-2">
-                      {technologies.map((tech, index) => (
-                        <Badge key={index} variant="secondary">
-                          {tech}
-                        </Badge>
-                      ))}
-                    </div>
-                  </CardContent>
-                </Card>
-              </div>
-            </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+            {[
+              { icon: <Globe className="h-12 w-12 text-primary mx-auto mb-4" />, title: "Custom Design", desc: "Unique designs created specifically for your business" },
+              { icon: <Smartphone className="h-12 w-12 text-primary mx-auto mb-4" />, title: "Mobile-Friendly", desc: "Responsive on all devices — phones, tablets, desktops" },
+              { icon: <Zap className="h-12 w-12 text-primary mx-auto mb-4" />, title: "Fast Delivery", desc: "Starter sites delivered in just 48 hours" },
+              { icon: <Shield className="h-12 w-12 text-primary mx-auto mb-4" />, title: "Domain & SSL", desc: ".com domain and SSL certificate included" },
+            ].map((f, i) => (
+              <Card key={i} className="text-center"><CardContent className="p-6">{f.icon}<h3 className="font-semibold mb-2">{f.title}</h3><p className="text-sm text-muted-foreground">{f.desc}</p></CardContent></Card>
+            ))}
           </div>
 
           {/* Pricing */}
           <div className="mb-16">
-            <h2 className="text-3xl font-bold text-center mb-12">
-              Transparent Pricing
-            </h2>
+            <h2 className="text-3xl font-bold text-center mb-12">Website Packages</h2>
             <div className="grid md:grid-cols-3 gap-8">
               <Card>
                 <CardHeader>
-                  <CardTitle>Starter Website</CardTitle>
-                  <CardDescription>Perfect for small businesses</CardDescription>
-                  <div className="text-3xl font-bold">$500 - $2,000</div>
+                  <CardTitle>Starter</CardTitle>
+                  <div className="text-3xl font-bold">$499</div>
+                  <p className="text-sm text-muted-foreground">Delivered in 48 hours</p>
                 </CardHeader>
                 <CardContent>
                   <ul className="space-y-2">
-                    <li className="flex items-center gap-2">
-                      <CheckCircle className="h-4 w-4 text-green-500" />
-                      <span className="text-sm">Up to 5 pages</span>
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <CheckCircle className="h-4 w-4 text-green-500" />
-                      <span className="text-sm">Responsive design</span>
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <CheckCircle className="h-4 w-4 text-green-500" />
-                      <span className="text-sm">Basic SEO</span>
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <CheckCircle className="h-4 w-4 text-green-500" />
-                      <span className="text-sm">Contact forms</span>
-                    </li>
+                    {["Up to 3 pages", "Custom responsive design", ".com domain (1 year)", "SSL certificate", "Basic SEO setup", "Contact form"].map((f, i) => (
+                      <li key={i} className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-green-500" /><span className="text-sm">{f}</span></li>
+                    ))}
                   </ul>
+                  <a href="https://wa.me/447424819094?text=Hi! I'd like the Starter Website package ($499)." target="_blank" rel="noopener noreferrer" className="mt-4 block">
+                    <Button className="w-full" variant="outline">Get Started</Button>
+                  </a>
                 </CardContent>
               </Card>
 
               <Card className="border-primary">
                 <CardHeader>
                   <Badge className="w-fit mb-2">Most Popular</Badge>
-                  <CardTitle>Professional Website</CardTitle>
-                  <CardDescription>Advanced features and customization</CardDescription>
-                  <div className="text-3xl font-bold">$2,000 - $5,000</div>
+                  <CardTitle>Business</CardTitle>
+                  <div className="text-3xl font-bold">$899</div>
+                  <p className="text-sm text-muted-foreground">Delivered in 72 hours</p>
                 </CardHeader>
                 <CardContent>
                   <ul className="space-y-2">
-                    <li className="flex items-center gap-2">
-                      <CheckCircle className="h-4 w-4 text-green-500" />
-                      <span className="text-sm">Up to 15 pages</span>
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <CheckCircle className="h-4 w-4 text-green-500" />
-                      <span className="text-sm">Custom design</span>
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <CheckCircle className="h-4 w-4 text-green-500" />
-                      <span className="text-sm">CMS integration</span>
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <CheckCircle className="h-4 w-4 text-green-500" />
-                      <span className="text-sm">AI features</span>
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <CheckCircle className="h-4 w-4 text-green-500" />
-                      <span className="text-sm">Advanced SEO</span>
-                    </li>
+                    {["Up to 7 pages", "Custom responsive design", ".com domain (1 year)", "SSL certificate", "Advanced SEO", "Blog/CMS integration", "Analytics setup", "Social media integration"].map((f, i) => (
+                      <li key={i} className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-green-500" /><span className="text-sm">{f}</span></li>
+                    ))}
                   </ul>
+                  <a href="https://wa.me/447424819094?text=Hi! I'd like the Business Website package ($899)." target="_blank" rel="noopener noreferrer" className="mt-4 block">
+                    <Button className="w-full bg-primary hover:bg-primary/90">Get Started</Button>
+                  </a>
                 </CardContent>
               </Card>
 
               <Card>
                 <CardHeader>
-                  <CardTitle>Enterprise Solution</CardTitle>
-                  <CardDescription>Complex web applications</CardDescription>
-                  <div className="text-3xl font-bold">$5,000+</div>
+                  <CardTitle>Growth</CardTitle>
+                  <div className="text-3xl font-bold">$1,499</div>
+                  <p className="text-sm text-muted-foreground">Delivered in 5 days</p>
                 </CardHeader>
                 <CardContent>
                   <ul className="space-y-2">
-                    <li className="flex items-center gap-2">
-                      <CheckCircle className="h-4 w-4 text-green-500" />
-                      <span className="text-sm">Unlimited pages</span>
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <CheckCircle className="h-4 w-4 text-green-500" />
-                      <span className="text-sm">Custom functionality</span>
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <CheckCircle className="h-4 w-4 text-green-500" />
-                      <span className="text-sm">API integrations</span>
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <CheckCircle className="h-4 w-4 text-green-500" />
-                      <span className="text-sm">Advanced AI</span>
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <CheckCircle className="h-4 w-4 text-green-500" />
-                      <span className="text-sm">Ongoing support</span>
-                    </li>
+                    {["Up to 15 pages", "Premium custom design", ".com domain (1 year)", "SSL certificate", "Full SEO optimization", "E-commerce ready", "Booking integration", "Email marketing setup", "Priority support"].map((f, i) => (
+                      <li key={i} className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-green-500" /><span className="text-sm">{f}</span></li>
+                    ))}
                   </ul>
+                  <a href="https://wa.me/447424819094?text=Hi! I'd like the Growth Website package ($1,499)." target="_blank" rel="noopener noreferrer" className="mt-4 block">
+                    <Button className="w-full" variant="outline">Get Started</Button>
+                  </a>
                 </CardContent>
               </Card>
             </div>
           </div>
 
-          {/* CTA */}
+          {/* Hosting & Extras */}
+          <div className="grid md:grid-cols-2 gap-8 mb-16">
+            <Card>
+              <CardHeader><CardTitle>Hosting Retainer</CardTitle><div className="text-3xl font-bold">$99<span className="text-lg font-normal">/month</span></div></CardHeader>
+              <CardContent>
+                <ul className="space-y-2">
+                  {["Managed hosting", "Security updates", "Monthly backups", "Uptime monitoring", "Minor content updates", "Email support"].map((f, i) => (
+                    <li key={i} className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-green-500" /><span className="text-sm">{f}</span></li>
+                  ))}
+                </ul>
+              </CardContent>
+            </Card>
+            <Card>
+              <CardHeader><CardTitle>Good to Know</CardTitle></CardHeader>
+              <CardContent>
+                <ul className="space-y-3 text-sm text-muted-foreground">
+                  <li>✅ .com domain included for 1 year on all packages</li>
+                  <li>✅ SSL certificate included on all packages</li>
+                  <li>💰 Additional revisions: $30 each</li>
+                  <li>💳 Payment: 50% upfront, 50% on delivery via PayPal</li>
+                  <li>🌍 Prices in USD. GBP/EUR available on request.</li>
+                </ul>
+              </CardContent>
+            </Card>
+          </div>
+
           <div className="text-center">
-            <Card className="bg-black border-white/10 text-white">
+            <Card className="bg-primary/5 border-primary/20">
               <CardContent className="p-8">
-                <h2 className="text-3xl font-bold mb-4">Ready to Build Your Website?</h2>
-                <p className="text-lg mb-6 text-white/70">
-                  Let's create a stunning website that drives results for your business
-                </p>
-                <a href="https://wa.me/447424819094?text=Hi! I'm ready to build my website with SyncSphere. Can we discuss my requirements?" target="_blank" rel="noopener noreferrer">
-                  <Button size="lg" className="bg-primary hover:bg-primary/90">
-                    Get Started Today
-                  </Button>
+                <h2 className="text-2xl font-bold mb-4">Ready to Get Your Website?</h2>
+                <p className="text-muted-foreground mb-6">Message us on WhatsApp and we'll have your site live in as little as 48 hours.</p>
+                <a href="https://wa.me/447424819094?text=Hi! I'm ready to get started with a website. Can we discuss?" target="_blank" rel="noopener noreferrer">
+                  <Button size="lg" className="bg-primary hover:bg-primary/90">WhatsApp Us Now<ArrowRight className="ml-2 h-4 w-4" /></Button>
                 </a>
+                <p className="text-foreground/50 text-sm mt-4 flex items-center justify-center gap-2"><CreditCard className="h-4 w-4" />50% upfront, 50% on delivery • PayPal accepted</p>
               </CardContent>
             </Card>
           </div>
