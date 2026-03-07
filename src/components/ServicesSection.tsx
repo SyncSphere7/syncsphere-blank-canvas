@@ -1,71 +1,78 @@
-
 import React from 'react';
 import ServiceCard from './ServiceCard';
 import { Link } from 'react-router-dom';
 
 const services = [
   {
-    title: 'AI Workflow Automation / Business Systems',
-    description: 'Automate repetitive tasks and business processes to save time and reduce costs. Streamline operations with intelligent workflow automation that scales with your business.',
+    title: 'Website Design & Development',
+    description: 'Custom designed websites for your business. From starter sites delivered in 48 hours to full growth platforms. Domain and SSL included on all packages.',
     delay: '0.1s',
-    link: '/services/automations'
+    link: '/services/web-development'
   },
   {
-    title: 'AI Chatbots (SMS, WhatsApp, Web, Social)',
-    description: '24/7 customer engagement, order handling, inquiries, and recommendations across all channels. Provide instant support and boost customer satisfaction.',
+    title: 'AI Chatbot Solutions',
+    description: 'Smart chatbots that engage your customers 24/7 across WhatsApp, web, and social media. CRM integration available for seamless lead management.',
     delay: '0.2s',
     link: '/services/chatbots'
   },
   {
-    title: 'AI Voice Agents',
-    description: 'Handle calls, route queries, and perform basic transactions with natural-sounding AI voice technology. Reduce call center costs while maintaining quality service.',
+    title: 'Appointment Booking Systems',
+    description: 'Automated scheduling systems with calendar sync, reminders, and payment integration. Let your clients book anytime, anywhere.',
     delay: '0.3s',
-    link: '/services/voice-agents'
+    link: '/services/appointment-booking'
   },
   {
-    title: 'Website Design & Revamps',
-    description: 'Modern, responsive websites or revamping outdated platforms with AI integration. Create stunning digital experiences that convert visitors into customers.',
+    title: 'Social Media Management',
+    description: 'Content creation and management across all major platforms. From 3 posts per week to daily content, handled by our team.',
     delay: '0.4s',
-    link: '/services/web-development'
+    link: '/services/social-media'
   },
   {
-    title: 'E-commerce Solutions',
-    description: 'Online stores with AI integration, payments, and automation. Build scalable e-commerce platforms that drive sales and enhance customer experiences.',
+    title: 'Email Marketing',
+    description: 'Newsletter campaigns, automated sequences, and subscriber management. Set up once and let our system nurture your audience.',
     delay: '0.5s',
-    link: '/services/ecommerce'
+    link: '/services/email-marketing'
   },
   {
-    title: 'Mobile & Web App Development',
-    description: 'Custom apps with AI features for enhanced functionality. Develop innovative mobile and web applications that give your business a competitive edge.',
+    title: 'Google Business Management',
+    description: 'Optimize your Google Business profile, manage reviews, and boost local visibility. Monthly reporting on performance and growth.',
     delay: '0.6s',
-    link: '/services/app-development'
+    link: '/services/google-business'
   },
   {
-    title: 'Startup MVP Development (30 Days)',
-    description: 'From idea to launch in 30 days with flexible payment options. Complete MVP solutions with AI integration, designed to get startups funded and growing fast.',
+    title: 'Business Automation',
+    description: 'Streamline your operations with intelligent workflows. From single processes to multi-department integration, handled by our team.',
     delay: '0.7s',
-    link: '/startup-mvp'
+    link: '/services/automations'
   },
   {
-    title: 'AI Consulting & Ongoing Support',
-    description: 'Training, workflow optimization, and strategic guidance. Get expert AI consulting to maximize ROI and ensure long-term success with your AI initiatives.',
+    title: 'Brand Identity',
+    description: 'Professional brand kits and full visual identity packages. Logo, colors, typography, and brand guidelines custom designed for your business.',
     delay: '0.8s',
-    link: '/services/consulting'
+    link: '/services/brand-identity'
+  },
+  {
+    title: 'Micro MVP Development',
+    description: 'Landing page, waitlist, authentication, and deployment — everything you need to validate your startup idea quickly and affordably.',
+    delay: '0.9s',
+    link: '/services/micro-mvp'
   }
 ];
 
 const ServicesSection = () => {
   return (
     <section id="services" className="bg-background py-20 relative">
-      {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-b from-primary/10 to-transparent opacity-30 blur-3xl -z-10"></div>
       
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <span className="px-4 py-2 bg-white/5 dark:bg-white/5 light:bg-primary/5 rounded-full text-foreground/80 text-sm mb-6 inline-block border border-white/10 dark:border-white/10 light:border-primary/10 backdrop-blur-sm">
-            Our Capabilities
+          <span className="px-4 py-2 bg-white/5 dark:bg-white/5 rounded-full text-foreground/80 text-sm mb-6 inline-block border border-white/10 dark:border-white/10 backdrop-blur-sm">
+            Our Services
           </span>
-          <h2 className="text-foreground text-3xl md:text-4xl font-bold">Comprehensive AI Solutions</h2>
+          <h2 className="text-foreground text-3xl md:text-4xl font-bold">Everything Your Business Needs to Grow Online</h2>
+          <p className="text-foreground/70 mt-4 max-w-2xl mx-auto">
+            From websites to marketing to automation — we handle it all so you can focus on your business.
+          </p>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
