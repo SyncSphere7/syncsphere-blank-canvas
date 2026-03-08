@@ -62,6 +62,7 @@ const AIAgents = () => {
         </div>
       </div>
     </ServiceLayout>
+    </SEOProvider>
   );
 };
 
