@@ -2,6 +2,7 @@
 import React from 'react';
 import ServiceLayout from '../../components/ServiceLayout';
 import ServiceDemoForm from '../../components/ServiceDemoForm';
+import SEOProvider from '@/components/SEOProvider';
 import { Bot, CheckCircle2 } from 'lucide-react';
 
 const AIAgents = () => {
@@ -14,6 +15,7 @@ const AIAgents = () => {
   ];
 
   return (
+    <SEOProvider title="AI Agents & Agentic AI Solutions | SyncSphere" description="Custom AI agents that make autonomous decisions, optimize workflows, and drive innovation. Intelligent automation for your business operations.">
     <ServiceLayout 
       title="AI Agents (Agentic AI)"
       description="Leverage agentic AI to make autonomous decisions, optimize workflows, and drive innovation in your operations."
@@ -60,6 +62,7 @@ const AIAgents = () => {
         </div>
       </div>
     </ServiceLayout>
+    </SEOProvider>
   );
 };
 

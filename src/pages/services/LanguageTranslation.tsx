@@ -2,6 +2,7 @@
 import React from 'react';
 import ServiceLayout from '../../components/ServiceLayout';
 import ServiceDemoForm from '../../components/ServiceDemoForm';
+import SEOProvider from '@/components/SEOProvider';
 import { Languages, CheckCircle2 } from 'lucide-react';
 
 const LanguageTranslation = () => {
@@ -13,6 +14,7 @@ const LanguageTranslation = () => {
   ];
 
   return (
+    <SEOProvider title="Language Translation Widget | SyncSphere" description="AI-powered real-time language translation for websites and apps. Break language barriers and reach more customers globally.">
     <ServiceLayout 
       title="AI-Powered Language Translation Widget"
       description="Break language barriers and reach more customers with real-time website and app translation."
@@ -65,6 +67,7 @@ const LanguageTranslation = () => {
         </div>
       </div>
     </ServiceLayout>
+    </SEOProvider>
   );
 };
 
