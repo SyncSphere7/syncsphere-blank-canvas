@@ -67,6 +67,7 @@ const LanguageTranslation = () => {
         </div>
       </div>
     </ServiceLayout>
+    </SEOProvider>
   );
 };
 

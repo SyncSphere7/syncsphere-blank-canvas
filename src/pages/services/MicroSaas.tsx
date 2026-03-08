@@ -62,6 +62,7 @@ const MicroSaas = () => {
         </div>
       </div>
     </ServiceLayout>
+    </SEOProvider>
   );
 };
 
