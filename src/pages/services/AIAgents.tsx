@@ -15,6 +15,7 @@ const AIAgents = () => {
   ];
 
   return (
+    <SEOProvider title="AI Agents & Agentic AI Solutions | SyncSphere" description="Custom AI agents that make autonomous decisions, optimize workflows, and drive innovation. Intelligent automation for your business operations.">
     <ServiceLayout 
       title="AI Agents (Agentic AI)"
       description="Leverage agentic AI to make autonomous decisions, optimize workflows, and drive innovation in your operations."

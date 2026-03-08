@@ -2,6 +2,7 @@
 import React from 'react';
 import ServiceLayout from '../../components/ServiceLayout';
 import ServiceDemoForm from '../../components/ServiceDemoForm';
+import SEOProvider from '@/components/SEOProvider';
 import { Laptop, CheckCircle2 } from 'lucide-react';
 
 const MicroSaas = () => {
