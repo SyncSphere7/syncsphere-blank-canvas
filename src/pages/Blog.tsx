@@ -9,7 +9,7 @@ import { ArrowRight, Clock } from 'lucide-react';
 import ScrollReveal, { StaggerContainer, StaggerItem } from '@/components/ScrollReveal';
 
 const posts = [
-  { title: '5 Reasons Your Business Needs a Chatbot in 2026', excerpt: 'Chatbots aren't just for big tech anymore. Here's why small and medium businesses are adopting AI chatbots to boost customer engagement and reduce costs.', category: 'AI & Chatbots', readTime: '4 min', date: 'March 5, 2026' },
+  { title: '5 Reasons Your Business Needs a Chatbot in 2026', excerpt: 'Chatbots are not just for big tech anymore. Here is why small and medium businesses are adopting AI chatbots to boost customer engagement and reduce costs.', category: 'AI & Chatbots', readTime: '4 min', date: 'March 5, 2026' },
   { title: 'How to Get Your Website Live in 48 Hours', excerpt: 'Speed matters. Learn how our streamlined process delivers professional websites in just 2 days without cutting corners on quality.', category: 'Web Development', readTime: '3 min', date: 'March 1, 2026' },
   { title: 'The Complete Guide to Social Media Management for Small Businesses', excerpt: 'From content calendars to analytics dashboards — everything you need to know about managing your social media presence effectively.', category: 'Social Media', readTime: '6 min', date: 'February 25, 2026' },
   { title: 'Business Automation: What to Automate First', excerpt: 'Not sure where to start with automation? We break down the top 5 business processes you should automate today for immediate ROI.', category: 'Automation', readTime: '5 min', date: 'February 20, 2026' },
