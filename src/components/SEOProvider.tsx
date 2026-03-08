@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { useLocation, useSearchParams } from 'react-router-dom';
@@ -15,11 +14,11 @@ interface SEOProps {
 }
 
 const SEOProvider: React.FC<SEOProps> = ({
-  title = "SyncSphere AI Agency",
-  description = "Professional AI solutions including chatbots, voice agents, automations, micro-SaaS, and AI agents.",
+  title = "SyncSphere Digital Agency",
+  description = "Full-service digital agency offering custom websites, AI chatbots, social media management, email marketing, business automation, and brand identity. Fast delivery, affordable pricing.",
   canonicalUrl = "https://syncsphereofficial.com",
   ogImageUrl = "https://syncsphereofficial.com/syncsphere-logo.png",
-  keywords = "ai automation, business automation, workflow automation, ai chatbots, voice agents",
+  keywords = "website design, web development, AI chatbots, social media management, email marketing, business automation, brand identity, digital agency",
   region = 'global',
   service,
   children
@@ -27,187 +26,148 @@ const SEOProvider: React.FC<SEOProps> = ({
   const location = useLocation();
   const [searchParams] = useSearchParams();
   const isEmbedded = searchParams.get('embedded') === 'true';
-  
-  // Regional keyword mapping
-  const regionalKeywords = {
-    uk: "ai automation agency uk, business process automation uk, workflow automation uk, digital transformation agency uk, saas workflow automation uk",
-    us: "ai automation agency us, business process automation us, workflow automation us, digital transformation agency us, b2b ai automation services us",
-    eu: "ai automation agency eu, business process automation eu, workflow automation eu, digital transformation agency eu, virtual agents for business automation eu",
-    global: "ai automation agency, business process automation, workflow automation, digital transformation, ai solutions"
+
+  const regionalKeywords: Record<string, string> = {
+    uk: "web design uk, chatbots uk, social media management uk, business automation uk, digital agency uk, email marketing uk",
+    us: "web design us, chatbots us, social media management us, business automation us, digital agency us, email marketing us",
+    eu: "web design eu, chatbots eu, social media management eu, business automation eu, digital agency eu, email marketing eu",
+    global: "website design, web development, AI chatbots, social media management, email marketing, business automation, brand identity, digital agency"
   };
 
-  // Service-specific descriptions
-  const serviceDescriptions = {
+  const serviceDescriptions: Record<string, Record<string, string>> = {
     chatbots: {
-      uk: "Leading AI chatbot development agency in the UK. Enterprise-grade conversational AI solutions with advanced NLP, multi-channel deployment, and seamless CRM integration for businesses across London, Manchester, Birmingham and nationwide.",
-      us: "Top AI chatbot development company in the US. Advanced conversational AI solutions with machine learning, natural language understanding, and enterprise integrations serving Fortune 500 companies across New York, California, Texas and all US markets.",
-      eu: "Premier AI chatbot development agency in Europe. Multilingual conversational AI solutions with GDPR compliance, advanced sentiment analysis, and cross-platform deployment for businesses across Germany, France, Netherlands and EU.",
-      global: "Professional AI chatbot development services. Enterprise-grade conversational AI solutions with advanced NLP, machine learning, and seamless integrations for businesses worldwide."
+      uk: "AI chatbot solutions for UK businesses. Smart customer engagement across platforms, handled by our team. From £329.",
+      us: "AI chatbot solutions for US businesses. Smart customer engagement across platforms, handled by our team. From $399.",
+      eu: "AI chatbot solutions for European businesses. Multilingual customer engagement across platforms with GDPR compliance. From €369.",
+      global: "AI chatbot solutions for businesses worldwide. Smart customer engagement across multiple platforms, handled by our team."
     },
     automations: {
-      uk: "Expert business process automation services in the UK. Advanced AI-driven workflow automation with RPA, machine learning, and intelligent document processing for UK enterprises. GDPR-compliant solutions with HMRC integration.",
-      us: "Leading business process automation company in the US. Enterprise-grade intelligent automation with AI/ML, robotic process automation, and advanced analytics for American businesses. SOX and HIPAA compliant solutions.",
-      eu: "Top business process automation agency in Europe. Advanced workflow automation solutions with AI orchestration, intelligent document processing, and multi-language support for European enterprises and SMEs.",
-      global: "Professional business process automation services. AI-driven workflow solutions with machine learning, RPA, and intelligent automation for global enterprises."
+      uk: "Business automation services for UK enterprises. Intelligent workflow solutions to streamline operations. From £399.",
+      us: "Business automation services for US enterprises. Intelligent workflow solutions to streamline operations. From $499.",
+      eu: "Business automation services for European enterprises. GDPR-compliant workflow solutions. From €459.",
+      global: "Business automation services. Intelligent workflow solutions to streamline your operations worldwide."
     },
-    'voice-agents': {
-      uk: "Advanced AI voice agent development in the UK. Custom voice automation solutions with natural speech synthesis, real-time conversation handling, and telephony integration for British businesses and call centers.",
-      us: "Leading AI voice agent development company in the US. Enterprise voice automation solutions with advanced speech recognition, conversational AI, and cloud telephony integration for American businesses.",
-      eu: "Premier AI voice agent development in Europe. Multilingual voice automation solutions with accent adaptation, real-time translation, and advanced speech processing for European markets.",
-      global: "Professional AI voice agent development services. Custom voice automation solutions with advanced speech technology and conversational AI worldwide."
+    'web-development': {
+      uk: "Custom website design & development for UK businesses. Starter sites from £399 delivered in 48 hours.",
+      us: "Custom website design & development for US businesses. Starter sites from $499 delivered in 48 hours.",
+      eu: "Custom website design & development for European businesses. Starter sites from €459 delivered in 48 hours.",
+      global: "Custom website design & development. Starter sites from $499 delivered in 48 hours. Business and Growth packages available."
     }
   };
 
-  // Dynamic SEO based on route
   let dynamicTitle = title;
   let dynamicDescription = description;
   let dynamicKeywords = keywords;
 
-  // Extract service and region from path
   const pathParts = location.pathname.split('/');
-  const detectedService = pathParts.find(part => 
-    ['chatbots', 'automations', 'voice-agents', 'ai-agents', 'web-development', 'app-development', 'ecommerce', 'consulting'].includes(part)
+  const detectedService = pathParts.find(part =>
+    ['chatbots', 'automations', 'web-development', 'appointment-booking', 'social-media', 'email-marketing', 'google-business', 'analytics', 'brand-identity', 'micro-mvp'].includes(part)
   );
   const detectedRegion = pathParts.find(part => ['uk', 'us', 'eu'].includes(part)) as 'uk' | 'us' | 'eu' | undefined;
 
   const currentRegion = region !== 'global' ? region : detectedRegion || 'global';
   const currentService = service || detectedService;
 
-  // Update title and description based on service and region
-  if (currentService && serviceDescriptions[currentService as keyof typeof serviceDescriptions]) {
-    const serviceData = serviceDescriptions[currentService as keyof typeof serviceDescriptions];
+  if (currentService && serviceDescriptions[currentService]) {
+    const serviceData = serviceDescriptions[currentService];
     dynamicDescription = serviceData[currentRegion] || serviceData.global;
-    
     const regionSuffix = currentRegion !== 'global' ? ` ${currentRegion.toUpperCase()}` : '';
-    dynamicTitle = `${currentService.charAt(0).toUpperCase() + currentService.slice(1).replace('-', ' ')}${regionSuffix} | SyncSphere AI Agency`;
+    dynamicTitle = `${currentService.charAt(0).toUpperCase() + currentService.slice(1).replace(/-/g, ' ')}${regionSuffix} | SyncSphere Digital Agency`;
   }
 
-  // Update keywords based on region
   dynamicKeywords = regionalKeywords[currentRegion];
 
-  // Chat agent specific SEO
   if (location.pathname === '/chat-agent') {
-    dynamicTitle = "AI Assistant | SyncSphere AI Agency";
-    dynamicDescription = "Chat with our AI assistant to learn more about SyncSphere's AI solutions and services.";
+    dynamicTitle = "AI Assistant | SyncSphere Digital Agency";
+    dynamicDescription = "Chat with our AI assistant to learn about SyncSphere's digital services.";
   }
-  
-  // Don't include metadata for embedded chat views
+
+  if (location.pathname === '/pricing') {
+    dynamicTitle = "Pricing | SyncSphere Digital Agency — Transparent & Affordable";
+    dynamicDescription = "Websites from $499, chatbots from $399, social media from $199/mo. 50% upfront, 50% on delivery. PayPal accepted. View all service packages and bundles.";
+  }
+
   if (isEmbedded) {
     return <>{children}</>;
   }
-  
-  // Enhanced organization schema with regional data
+
   const organizationSchema = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "name": "SyncSphere",
-    "alternateName": "SyncSphere AI Agency",
+    "name": "SyncSphere Digital Agency",
     "url": "https://syncsphereofficial.com",
     "logo": "https://syncsphereofficial.com/syncsphere-logo.png",
-    "description": "Leading AI automation agency providing enterprise-grade business process automation, conversational AI, voice agents, and digital transformation solutions across UK, US, and EU markets.",
-    "foundingDate": "2023",
+    "description": "Full-service digital agency offering website design, AI chatbots, social media management, email marketing, business automation, and brand identity services.",
     "sameAs": [
       "https://twitter.com/SyncSphere",
       "https://www.linkedin.com/company/syncsphere",
-      "https://www.facebook.com/SyncSphere"
+      "https://www.facebook.com/syncsphereofficial"
     ],
-    "contactPoint": [
-      {
-        "@type": "ContactPoint",
-        "telephone": "+44-742-481-9094",
-        "contactType": "sales",
-        "availableLanguage": ["English"],
-        "areaServed": ["GB", "US", "EU"]
-      }
-    ],
+    "contactPoint": [{
+      "@type": "ContactPoint",
+      "telephone": "+1-815-472-7760",
+      "contactType": "sales",
+      "availableLanguage": ["English"],
+      "areaServed": ["US", "GB", "EU"]
+    }],
     "areaServed": [
-      {
-        "@type": "Country",
-        "name": "United Kingdom"
-      },
-      {
-        "@type": "Country", 
-        "name": "United States"
-      },
-      {
-        "@type": "Place",
-        "name": "European Union"
-      }
-    ],
-    "serviceType": [
-      "AI Automation Services",
-      "Business Process Automation", 
-      "AI Chatbot Development",
-      "Voice Agent Development",
-      "Workflow Automation",
-      "Digital Transformation Consulting"
+      { "@type": "Country", "name": "United States" },
+      { "@type": "Country", "name": "United Kingdom" },
+      { "@type": "Place", "name": "European Union" }
     ]
   };
 
-  // Service-specific schema
   const serviceSchema = currentService ? {
     "@context": "https://schema.org",
     "@type": "Service",
-    "name": `${currentService.charAt(0).toUpperCase() + currentService.slice(1).replace('-', ' ')} Services`,
-    "provider": {
-      "@type": "Organization",
-      "name": "SyncSphere"
-    },
-    "areaServed": currentRegion !== 'global' ? [currentRegion.toUpperCase()] : ["GB", "US", "EU"],
-    "serviceType": dynamicTitle,
+    "name": `${currentService.charAt(0).toUpperCase() + currentService.slice(1).replace(/-/g, ' ')} Services`,
+    "provider": { "@type": "Organization", "name": "SyncSphere Digital Agency" },
+    "areaServed": currentRegion !== 'global' ? [currentRegion.toUpperCase()] : ["US", "GB", "EU"],
     "description": dynamicDescription
   } : null;
 
   return (
     <>
-    <Helmet>
-      {/* Basic meta tags */}
-      <title>{dynamicTitle}</title>
-      <meta name="description" content={dynamicDescription} />
-      <meta name="keywords" content={dynamicKeywords} />
-      <link rel="canonical" href={`${canonicalUrl}${location.pathname}`} />
+      <Helmet>
+        <title>{dynamicTitle}</title>
+        <meta name="description" content={dynamicDescription} />
+        <meta name="keywords" content={dynamicKeywords} />
+        <link rel="canonical" href={`${canonicalUrl}${location.pathname}`} />
 
-      {/* Regional hreflang tags */}
-      {currentService && (
-        <>
-          <link rel="alternate" hrefLang="en-gb" href={`${canonicalUrl}/${currentService}/uk`} />
-          <link rel="alternate" hrefLang="en-us" href={`${canonicalUrl}/${currentService}/us`} />
-          <link rel="alternate" hrefLang="en-eu" href={`${canonicalUrl}/${currentService}/eu`} />
-          <link rel="alternate" hrefLang="x-default" href={`${canonicalUrl}/${currentService}`} />
-        </>
-      )}
+        {currentService && (
+          <>
+            <link rel="alternate" hrefLang="en-gb" href={`${canonicalUrl}/${currentService}/uk`} />
+            <link rel="alternate" hrefLang="en-us" href={`${canonicalUrl}/${currentService}/us`} />
+            <link rel="alternate" hrefLang="en" href={`${canonicalUrl}/${currentService}/eu`} />
+            <link rel="alternate" hrefLang="x-default" href={`${canonicalUrl}/services/${currentService}`} />
+          </>
+        )}
 
-      {/* OpenGraph tags */}
-      <meta property="og:title" content={dynamicTitle} />
-      <meta property="og:description" content={dynamicDescription} />
-      <meta property="og:url" content={`${canonicalUrl}${location.pathname}`} />
-      <meta property="og:image" content={ogImageUrl} />
-      <meta property="og:type" content="website" />
-      <meta property="og:site_name" content="SyncSphere AI Agency" />
+        <meta property="og:title" content={dynamicTitle} />
+        <meta property="og:description" content={dynamicDescription} />
+        <meta property="og:url" content={`${canonicalUrl}${location.pathname}`} />
+        <meta property="og:image" content={ogImageUrl} />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="SyncSphere Digital Agency" />
 
-      {/* Twitter tags */}
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content={dynamicTitle} />
-      <meta name="twitter:description" content={dynamicDescription} />
-      <meta name="twitter:image" content={ogImageUrl} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={dynamicTitle} />
+        <meta name="twitter:description" content={dynamicDescription} />
+        <meta name="twitter:image" content={ogImageUrl} />
 
-      {/* Additional SEO tags */}
-      <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
-      <meta name="author" content="SyncSphere AI Agency" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+        <meta name="author" content="SyncSphere Digital Agency" />
 
-      {/* Structured data / JSON-LD */}
-      <script type="application/ld+json">
-        {JSON.stringify(organizationSchema)}
-      </script>
-      
-      {serviceSchema && (
         <script type="application/ld+json">
-          {JSON.stringify(serviceSchema)}
+          {JSON.stringify(organizationSchema)}
         </script>
-      )}
-    </Helmet>
-    {children}
+        {serviceSchema && (
+          <script type="application/ld+json">
+            {JSON.stringify(serviceSchema)}
+          </script>
+        )}
+      </Helmet>
+      {children}
     </>
   );
 };
