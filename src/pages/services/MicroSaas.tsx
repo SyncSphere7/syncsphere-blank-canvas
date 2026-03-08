@@ -15,6 +15,7 @@ const MicroSaas = () => {
   ];
 
   return (
+    <SEOProvider title="Micro SaaS Solutions | SyncSphere" description="Affordable, specialized micro SaaS tools designed to solve niche business challenges. Low-cost, high-impact software solutions that scale with your business.">
     <ServiceLayout 
       title="Micro SaaS Solutions"
       description="Access affordable, AI-powered micro SaaS tools designed to solve niche business challenges across Africa."
