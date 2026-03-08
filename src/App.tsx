@@ -34,14 +34,16 @@ import ChatbotsUS from "./pages/services/ChatbotsUS";
 import ChatbotsEU from "./pages/services/ChatbotsEU";
 import WebDevelopmentUK from "./pages/services/WebDevelopmentUK";
 
+// Content Pages
+import Portfolio from "./pages/Portfolio";
+import Blog from "./pages/Blog";
+
 // Policy Pages
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsOfService from "./pages/TermsOfService";
 
-// Pricing Page
+// Pricing & MVP
 import Pricing from "./pages/Pricing";
-
-// Startup MVP Page
 import StartupMVP from "./pages/StartupMVP";
 
 const queryClient = new QueryClient();
@@ -80,10 +82,12 @@ const App = () => (
                 <Route path="/chatbots/eu" element={<ChatbotsEU />} />
                 <Route path="/web-development/uk" element={<WebDevelopmentUK />} />
                 
-                {/* Pricing Routes */}
-                <Route path="/pricing" element={<Pricing />} />
+                {/* Content Routes */}
+                <Route path="/portfolio" element={<Portfolio />} />
+                <Route path="/blog" element={<Blog />} />
                 
-                {/* Micro MVP Routes */}
+                {/* Pricing & MVP */}
+                <Route path="/pricing" element={<Pricing />} />
                 <Route path="/services/micro-mvp" element={<StartupMVP />} />
                 
                 {/* Policy Routes */}
@@ -93,7 +97,6 @@ const App = () => (
                 {/* Chat Agent Route */}
                 <Route path="/chat-agent" element={<ErrorBoundary><OpenRouterChat /></ErrorBoundary>} />
                 
-                {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
                 <Route path="*" element={<NotFound />} />
               </Routes>
               <WhatsAppBubble />
