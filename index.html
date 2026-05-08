@@ -1,6 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
   <head>
+    <script>
+      // Prevent flash of wrong theme - set dark class BEFORE any rendering
+      (function() {
+        document.documentElement.classList.add('dark');
+      })();
+    </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SyncSphere | Full-Service Digital Agency — Websites, Chatbots, Marketing & Automation</title>
