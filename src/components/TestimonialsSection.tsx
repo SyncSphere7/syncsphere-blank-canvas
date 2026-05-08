@@ -14,9 +14,9 @@ interface Testimonial {
 }
 
 const testimonials: Testimonial[] = [
-  { name: "Jennifer Martinez", company: "Global Tech Solutions", text: "SyncSphere transformed our customer service with their AI chatbot platform. Response times decreased by 80% and our team now focuses on complex issues while the AI handles routine inquiries seamlessly.", rating: 5 },
-  { name: "Michael Chen", company: "International Retail Group", text: "The voice agent solution from SyncSphere has revolutionized our call center operations. The AI handles over 70% of our customer inquiries without human intervention, improving efficiency dramatically.", rating: 5 },
-  { name: "Sarah Johnson", company: "FinTech Innovations Inc", text: "We've been using SyncSphere's automation solutions for our back-office operations and have seen remarkable improvements in efficiency, accuracy, and overall productivity across our global teams.", rating: 5 },
+  { name: "Jennifer Martinez", company: "Prairie Law Group", text: "SyncSphere built our firm's website in just 48 hours and it completely transformed our client inquiries. Professional, fast, and the quality exceeded what we expected at this price point.", rating: 5 },
+  { name: "Michael Chen", company: "Bloor West Dental", text: "The website SyncSphere designed for our practice is stunning. Patients constantly comment on how easy it is to find information and book appointments. Our online bookings increased by 60% in the first month.", rating: 5 },
+  { name: "Sarah Johnson", company: "FinTech Innovations Inc", text: "We needed a complete digital presence — website, social media, and email marketing. SyncSphere handled everything and we've seen a 40% increase in qualified leads since launch.", rating: 5 },
 ];
 
 interface TestimonialsSectionProps {

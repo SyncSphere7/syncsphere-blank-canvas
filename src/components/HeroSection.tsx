@@ -63,7 +63,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ personalization }) => {
           transition={{ duration: 0.7, delay: 0.2 }}
           className="text-muted-foreground text-xl md:text-2xl mb-10 max-w-3xl"
         >
-          Custom websites from $499 in 48 hours. Chatbots, social media management, email marketing, business automation, and brand identity — all handled by our expert team.
+          Custom websites from $2,500 in 48 hours. Social media management, email marketing, maintenance, and brand identity — all handled by our expert team.
         </motion.p>
 
         <motion.div
@@ -78,7 +78,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ personalization }) => {
                 className="group bg-gradient-to-r from-primary to-blue-400 hover:from-blue-400 hover:to-primary text-primary-foreground px-6 md:px-8 py-4 md:py-6 text-base md:text-lg flex items-center gap-2 border border-primary/30 shadow-lg shadow-primary/25 transition-all duration-300 hover:translate-y-[-2px] hover:shadow-xl hover:shadow-primary/30 w-full sm:w-auto" 
               >
                 <Globe className="mr-1 transition-transform duration-300 group-hover:rotate-12" />
-                Get Started — From $499
+                Get Started — From $2,500
                 <ArrowRight size={20} className="transition-transform duration-300 group-hover:translate-x-1" />
               </Button>
             </a>

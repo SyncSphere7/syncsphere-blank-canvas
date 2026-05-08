@@ -5,9 +5,9 @@ import ScrollReveal, { StaggerContainer, StaggerItem } from './ScrollReveal';
 
 const reviews = [
   { name: "David Thompson", platform: "Google", text: "SyncSphere built our company website in just 2 days. The quality was incredible and they were very responsive throughout the process. Highly recommend!", rating: 5 },
-  { name: "Maria Santos", platform: "Trustpilot", text: "We needed a chatbot for our e-commerce store and SyncSphere delivered beyond expectations. Customer inquiries dropped by 60% and sales went up!", rating: 5 },
-  { name: "James Wilson", platform: "Facebook", text: "Their social media management service transformed our online presence. Consistent, quality content and our engagement tripled in 3 months.", rating: 5 },
-  { name: "Lisa Chen", platform: "Google", text: "The appointment booking system they built for our clinic is flawless. Patients love the easy scheduling and we've reduced no-shows by 40%.", rating: 5 },
+  { name: "Maria Santos", platform: "Trustpilot", text: "SyncSphere redesigned our entire website and the results were immediate. We started getting more inquiries within the first week. Professional, fast, and worth every penny.", rating: 5 },
+  { name: "James Wilson", platform: "Facebook", text: "Their social media management transformed our online presence. Consistent, quality content and our engagement tripled in 3 months.", rating: 5 },
+  { name: "Lisa Chen", platform: "Google", text: "The website they built for our clinic is fast, beautiful, and works perfectly on mobile. Our patients love it and we've seen a 50% increase in online inquiries.", rating: 5 },
   { name: "Robert Martinez", platform: "Trustpilot", text: "Great value for money. The brand identity package gave us everything we needed to launch professionally. Logo, colors, guidelines — all perfect.", rating: 5 },
   { name: "Amanda Foster", platform: "Facebook", text: "SyncSphere handles our email marketing and the results speak for themselves. Open rates above 35% and growing subscriber list every month.", rating: 4 },
 ];

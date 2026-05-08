@@ -4,9 +4,9 @@ import { CheckCircle, Clock, Shield, DollarSign, Headphones, Zap } from 'lucide-
 
 const reasons = [
   { icon: Clock, title: '48-Hour Delivery', description: 'Get your website live in as little as 48 hours. No waiting weeks or months.' },
-  { icon: DollarSign, title: 'Transparent Pricing', description: '50% upfront, 50% on delivery. No hidden fees, no surprises.' },
+  { icon: DollarSign, title: 'Transparent Pricing', description: '50% upfront, 25% at design approval, 25% on launch. No hidden fees, no surprises.' },
   { icon: Shield, title: 'PayPal Protected', description: 'All payments processed through PayPal for buyer protection and security.' },
-  { icon: Zap, title: 'All-In-One Agency', description: 'Websites, chatbots, marketing, automation, branding — everything under one roof.' },
+  { icon: Zap, title: 'All-In-One Agency', description: 'Websites, marketing, automation, branding — everything your business needs under one roof.' },
   { icon: Headphones, title: 'Dedicated Support', description: 'Direct WhatsApp access to your project manager. Real humans, fast responses.' },
   { icon: CheckCircle, title: 'Proven Results', description: '150+ projects delivered with 98% client satisfaction across 12+ countries.' },
 ];

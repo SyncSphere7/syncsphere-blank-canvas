@@ -51,40 +51,40 @@ const PersonalizationEngine: React.FC<PersonalizationEngineProps> = ({ children 
   // Industry-specific testimonials
   const testimonials = {
     ecommerce: {
-      text: "SyncSphere's AI chatbot increased our conversion rate by 40% and handles 80% of customer inquiries automatically.",
-      author: "Sarah Chen, E-commerce Director",
-      company: "TechMart Online",
-      metric: "40% conversion increase"
+      text: "SyncSphere redesigned our online store and we saw a 40% increase in sales within the first month. The site loads fast, looks professional, and converts visitors into buyers.",
+      author: "Sarah Chen, Owner",
+      company: "StyleHub Boutique",
+      metric: "40% sales increase"
     },
     healthcare: {
-      text: "The AI automation reduced patient wait times by 60% and improved our appointment scheduling efficiency dramatically.",
-      author: "Dr. Michael Rodriguez, Practice Manager",
+      text: "The website SyncSphere built for our clinic is clean, fast, and patients love how easy it is to find us online. Our new patient inquiries doubled in 6 weeks.",
+      author: "Dr. Michael Rodriguez",
       company: "HealthFirst Clinic",
-      metric: "60% faster processing"
+      metric: "2x more inquiries"
     },
     finance: {
-      text: "Our AI voice agent processes loan applications 5x faster while maintaining 99.9% accuracy in compliance checks.",
-      author: "Jennifer Walsh, Operations Director",
+      text: "We needed a professional website that builds trust with clients. SyncSphere delivered a site that looks like it cost $50k but was done in 5 days. Excellent value.",
+      author: "Jennifer Walsh, Partner",
       company: "SecureFinance Group",
-      metric: "5x faster processing"
+      metric: "Professional credibility"
     },
     manufacturing: {
-      text: "AI workflow automation cut our production planning time from 8 hours to 45 minutes with better accuracy.",
-      author: "Robert Kim, Production Manager",
+      text: "SyncSphere built us a website that actually generates leads. We went from zero online inquiries to 10+ per month. The site works perfectly on mobile too.",
+      author: "Robert Kim, Owner",
       company: "PrecisionTech Manufacturing",
-      metric: "90% time reduction"
+      metric: "10+ leads/month"
     },
     retail: {
-      text: "The AI system manages our inventory across 50 stores, reducing stockouts by 75% and overstock by 60%.",
-      author: "Lisa Thompson, Retail Operations",
-      company: "StyleHub Retail Chain",
-      metric: "75% fewer stockouts"
+      text: "Our new website brought in more customers in the first month than our old site did in a year. The design is clean, fast, and optimized for local search.",
+      author: "Lisa Thompson, Owner",
+      company: "Main Street Retail",
+      metric: "Best sales month ever"
     },
     technology: {
-      text: "SyncSphere's custom AI solution automated our entire customer onboarding, reducing time-to-value by 80%.",
-      author: "Alex Johnson, CTO",
+      text: "SyncSphere built our landing page and email automation in under a week. We generated 200+ signups in the first 30 days. Fast, professional, and effective.",
+      author: "Alex Johnson, Founder",
       company: "InnovateTech Solutions",
-      metric: "80% faster onboarding"
+      metric: "200+ signups in 30 days"
     }
   };
 

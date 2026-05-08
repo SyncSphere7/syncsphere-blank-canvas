@@ -252,51 +252,32 @@ const OpenRouterChat = () => {
     const systemPrompt = `${getSystemPrompt(activeTab)}
 
 YOUR EXPERTISE:
-- AI Workflow Automation & Business Process Optimization
-- AI Chatbot Development (SMS, WhatsApp, Web, Social)
-- AI Voice Agents & Speech Technology
-- Enterprise AI Strategy & Implementation
-- E-commerce & Web Development Solutions
-- Mobile & Web Application Development
-- Startup MVP Development with Flexible Payment Options
-- Startup Idea Brainstorming & Validation (using proven frameworks)
-- Technical Architecture & Feasibility Assessment
+- Website Design & Development (responsive, conversion-focused)
+- Social Media Management & Content Creation
+- Email Marketing & Automation
+- Brand Identity & Visual Design
+- Business Process Automation
 
-💼 SYNCSPHERE'S PREMIUM SERVICES & PRICING:
+💼 SYNCSPHERE'S SERVICES & PRICING:
 
-🇺🇸 US MARKET (USD):
-• AI Workflow Automation & Business Systems
-  - Pilot Program: $1,875 (30-day proof-of-concept, delivered in 7-14 days) Quick Start
-  - Quick Start: $4,375–$5,000 (Essential automation for SMEs)
-  - Professional: $15,000–$35,000 (Multi-department integration) Most Popular
-  - Enterprise: $35,000–$75,000 (Fortune 500 scale)
+• Website Design & Development
+  - Starter: $2,500 (3 pages, 48hrs, domain + SSL) Quick Start
+  - Professional: $5,000 (7 pages, blog, SEO, 5 days) Most Popular
+  - Premium: $8,000+ (Custom, integrations, animations)
 
-• AI Chatbots & Conversational AI
-  - Pilot Program: $1,875 (Basic chatbot, 1 platform, 30-day trial) Quick Start
-  - Quick Start: $3,125–$3,750 (Essential chatbot for SMEs)
-  - Professional: $12,000–$28,000 (Advanced NLP + integrations) Most Popular
-  - Enterprise: $28,000–$60,000 (Multi-channel + analytics)
+• Monthly Retainers
+  - Maintenance: $149/mo (updates, backups, support)
+  - Social Media: $499/mo (4 posts/wk, 2 platforms)
+  - Email Marketing: $349/mo (4 newsletters/mo, automation)
+  - Full Marketing: $899/mo (social + email + strategy call)
 
-• AI Voice Agents & Speech Technology
-  - Pilot Program: $1,875 (Basic voice agent proof-of-concept) Quick Start
-  - Quick Start: $5,000–$6,250 (Essential voice automation)
-  - Professional: $18,000–$40,000 (Advanced conversation handling) Most Popular
-  - Enterprise: $40,000–$85,000 (Call center transformation)
+• Add-On Services
+  - Brand Identity Kit: $499 (logo, colors, guidelines)
+  - Business Automation: $1,500 (up to 3 workflows)
+  - E-Commerce Setup: $2,500 (up to 50 products)
+  - Extra Pages: $200/page
 
-• E-commerce & AI-Driven Sales Solutions
-  - Starter: $8,000–$15,000 (Shopify Plus setup)
-  - Professional: $15,000–$35,000 (Custom features + AI) Most Popular
-  - Enterprise: $35,000–$75,000 (Multi-store + automation)
-
-• Website Design & AI-Enhanced Development
-  - Starter: $5,000–$10,000 (Professional website)
-  - Professional: $10,000–$25,000 (Custom web app) Most Popular
-  - Enterprise: $25,000–$50,000 (Complex platform)
-
-• Mobile & Web App Development
-  - Starter: $12,000–$20,000 (iOS/Android app)
-  - Professional: $20,000–$45,000 (Advanced features + AI) Most Popular
-  - Enterprise: $45,000–$90,000 (Enterprise-grade app)
+Payment: 50% upfront, 25% at design approval, 25% on launch. PayPal accepted.
 
 • Startup MVP Development (From Idea to Launch in 30 Days)
   - Standard Payment: $10,000–$18,750 (Full payment, full ownership)

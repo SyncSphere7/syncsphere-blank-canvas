@@ -10,7 +10,7 @@ const Footer = () => {
           <div>
             <h3 className="text-foreground text-2xl font-bold mb-6">SyncSphere</h3>
             <p className="text-muted-foreground mb-4 max-w-md">
-              Your full-service digital agency. Websites, chatbots, marketing, automation, and branding — all under one roof.
+              Your full-service digital agency. Websites, marketing, automation, and branding — all under one roof.
             </p>
             <div className="space-y-2">
               <div className="flex items-center gap-2 text-muted-foreground">
@@ -40,9 +40,9 @@ const Footer = () => {
             <h3 className="text-foreground text-lg font-bold mb-6">Services</h3>
             <div className="space-y-3">
               <Link to="/services/web-development" className="text-muted-foreground hover:text-primary transition-colors block text-sm">Website Design</Link>
-              <Link to="/services/chatbots" className="text-muted-foreground hover:text-primary transition-colors block text-sm">Chatbot Solutions</Link>
               <Link to="/services/social-media" className="text-muted-foreground hover:text-primary transition-colors block text-sm">Social Media</Link>
               <Link to="/services/email-marketing" className="text-muted-foreground hover:text-primary transition-colors block text-sm">Email Marketing</Link>
+              <Link to="/pricing" className="text-muted-foreground hover:text-primary transition-colors block text-sm">Maintenance & Support</Link>
               <Link to="/services/automations" className="text-muted-foreground hover:text-primary transition-colors block text-sm">Business Automation</Link>
               <Link to="/services/brand-identity" className="text-muted-foreground hover:text-primary transition-colors block text-sm">Brand Identity</Link>
             </div>
@@ -61,7 +61,7 @@ const Footer = () => {
               </button>
             </div>
             <div className="mt-6 space-y-2 text-xs text-muted-foreground/70">
-              <p>Payment: 50% upfront, 50% on delivery</p>
+              <p>Payment: 50% upfront, 25% design approval, 25% on launch</p>
               <p>All prices in USD. GBP/EUR available.</p>
             </div>
           </div>

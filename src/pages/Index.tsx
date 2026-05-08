@@ -33,18 +33,18 @@ const Index = () => {
     "address": { "@type": "PostalAddress", "addressCountry": "US" },
     "telephone": "+1-815-472-7760",
     "email": "contact@syncsphereofficial.com",
-    "priceRange": "$79-$3,499",
+    "priceRange": "$2,500-$8,000+",
     "paymentAccepted": "PayPal",
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
       "name": "Digital Services",
       "itemListElement": [
         { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Website Design & Development" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "AI Chatbot Solutions" } },
         { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Social Media Management" } },
         { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Email Marketing" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Business Automation" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Maintenance & Support" } },
         { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Brand Identity" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Business Automation" } },
       ]
     }
   };
@@ -61,8 +61,8 @@ const Index = () => {
       {({ greeting, pricing, testimonial, cta, urgency, industry }) => (
         <div className="min-h-screen bg-background text-foreground flex flex-col">
           <Helmet>
-            <title>SyncSphere | Full-Service Digital Agency — Websites, Chatbots, Marketing & Automation</title>
-            <meta name="description" content="Custom websites from $499 in 48 hours. Chatbots, social media, email marketing, automation & branding. 50% upfront, 50% on delivery. PayPal accepted. USA registered." />
+            <title>SyncSphere | Full-Service Digital Agency — Websites, Marketing & Automation</title>
+            <meta name="description" content="Custom websites from $2,500 in 48 hours. Social media management, email marketing, maintenance & branding. 50% upfront, 50% on delivery. PayPal accepted. USA registered." />
             <link rel="canonical" href="https://syncsphereofficial.com" />
             <script type="application/ld+json">{JSON.stringify(businessSchema)}</script>
             <script type="application/ld+json">{JSON.stringify(reviewSchema)}</script>

@@ -17,15 +17,11 @@ const Header = () => {
 
   const servicesItems = [
     { title: "Website Design & Development", path: "/services/web-development" },
-    { title: "AI Chatbot Solutions", path: "/services/chatbots" },
-    { title: "Appointment Booking Systems", path: "/services/appointment-booking" },
     { title: "Social Media Management", path: "/services/social-media" },
     { title: "Email Marketing", path: "/services/email-marketing" },
-    { title: "Google Business Management", path: "/services/google-business" },
-    { title: "Business Automation", path: "/services/automations" },
-    { title: "Analytics & Reporting", path: "/services/analytics" },
+    { title: "Maintenance & Support", path: "/pricing" },
     { title: "Brand Identity", path: "/services/brand-identity" },
-    { title: "Micro MVP Development", path: "/services/micro-mvp" },
+    { title: "Business Automation", path: "/services/automations" },
   ];
 
   const handleContactClick = (e: React.MouseEvent) => {
@@ -53,7 +49,7 @@ const Header = () => {
               <NavigationMenuItem>
                 <NavigationMenuTrigger className="text-muted-foreground hover:text-foreground transition-colors bg-transparent text-sm font-medium">Services</NavigationMenuTrigger>
                 <NavigationMenuContent>
-                  <ul className="grid grid-cols-2 gap-1 p-3 w-[480px]">
+                  <ul className="grid grid-cols-2 gap-1 p-3 w-[420px]">
                     {servicesItems.map((service) => (
                       <li key={service.path}>
                         <NavigationMenuLink asChild>
