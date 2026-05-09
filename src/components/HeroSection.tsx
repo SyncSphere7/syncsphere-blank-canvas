@@ -45,7 +45,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ personalization }) => {
           transition={{ duration: 0.6 }}
           className="px-4 py-2 bg-card/50 rounded-full text-muted-foreground text-sm mb-6 border border-border backdrop-blur-sm"
         >
-          Full-Service Digital Agency — Websites, Marketing & Automation
+          Agency-Quality Websites — At Freelance Prices
         </motion.span>
 
         <motion.h1
@@ -54,7 +54,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ personalization }) => {
           transition={{ duration: 0.7, delay: 0.1 }}
           className="text-foreground text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight"
         >
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-300">Your Digital Partner</span> for Growth & Innovation
+          What <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-300">$15K Agencies</span> Deliver — For <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-300">$2,500</span>
         </motion.h1>
 
         <motion.p
@@ -63,7 +63,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ personalization }) => {
           transition={{ duration: 0.7, delay: 0.2 }}
           className="text-muted-foreground text-xl md:text-2xl mb-10 max-w-3xl"
         >
-          Custom websites from $2,500 in 48 hours. Social media management, email marketing, maintenance, and brand identity — all handled by our expert team.
+          Premium websites, marketing & automation — 50-90% less than traditional agencies. Custom sites from $2,500 in 48 hours. Social media, email marketing & maintenance included.
         </motion.p>
 
         <motion.div

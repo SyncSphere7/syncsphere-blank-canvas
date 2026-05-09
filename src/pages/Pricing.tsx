@@ -104,7 +104,7 @@ const Pricing = () => {
           <section className="py-16 bg-white/5">
             <div className="max-w-7xl mx-auto px-4">
               <h2 className="text-3xl font-bold text-center mb-4 text-foreground">Monthly Retainers</h2>
-              <p className="text-center text-foreground/70 mb-12">Ongoing services to grow your business online</p>
+              <p className="text-center text-foreground/70 mb-4">Predictable pricing. Cancel anytime. Scale up or down as you grow.</p>
               <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
                 {/* Maintenance */}
                 <Card>
@@ -164,6 +164,72 @@ const Pricing = () => {
                         <li key={i} className="flex items-center gap-2"><Check className="h-3 w-3 text-green-500" /><span>{f}</span></li>
                       ))}
                     </ul>
+                  </CardContent>
+                </Card>
+              </div>
+            </div>
+          </section>
+
+          {/* Vertical-Specific Packages */}
+          <section className="py-16 bg-background">
+            <div className="max-w-7xl mx-auto px-4">
+              <h2 className="text-3xl font-bold text-center mb-4 text-foreground">Industry-Specific Packages</h2>
+              <p className="text-center text-foreground/70 mb-12">Pre-built for your industry — faster delivery, lower cost</p>
+              <div className="grid md:grid-cols-3 gap-8">
+                {/* Medical */}
+                <Card className="border-primary/50">
+                  <CardHeader className="text-center">
+                    <Badge className="mx-auto mb-2 bg-red-500/10 text-red-400 border-red-500/20">Medical & Dental</Badge>
+                    <CardTitle>Medical Practice</CardTitle>
+                    <div className="text-3xl font-bold text-foreground">$3,500</div>
+                    <p className="text-sm text-foreground/60">7 days delivery</p>
+                  </CardHeader>
+                  <CardContent>
+                    <ul className="space-y-2 mb-4">
+                      {["Patient-facing design", "Online appointment booking", "Service pages (procedures, conditions)", "HIPAA-compliant forms", "Google Maps integration", "Review display widget"].map((f, i) => (
+                        <li key={i} className="flex items-center gap-2"><Check className="h-3 w-3 text-green-500" /><span className="text-sm">{f}</span></li>
+                      ))}
+                    </ul>
+                    <p className="text-xs text-foreground/50 mb-4">Perfect for: dentists, doctors, chiropractors, clinics</p>
+                    <Link to="/services/web-development"><Button className="w-full bg-primary hover:bg-primary/90" size="sm">Get Started</Button></Link>
+                  </CardContent>
+                </Card>
+
+                {/* Legal */}
+                <Card className="border-primary/50">
+                  <CardHeader className="text-center">
+                    <Badge className="mx-auto mb-2 bg-blue-500/10 text-blue-400 border-blue-500/20">Legal</Badge>
+                    <CardTitle>Law Firm</CardTitle>
+                    <div className="text-3xl font-bold text-foreground">$4,500</div>
+                    <p className="text-sm text-foreground/60">7 days delivery</p>
+                  </CardHeader>
+                  <CardContent>
+                    <ul className="space-y-2 mb-4">
+                      {["Professional, trust-building design", "Attorney profiles & bios", "Practice area pages", "Case results / testimonials", "Secure client intake forms", "Legal blog setup"].map((f, i) => (
+                        <li key={i} className="flex items-center gap-2"><Check className="h-3 w-3 text-green-500" /><span className="text-sm">{f}</span></li>
+                      ))}
+                    </ul>
+                    <p className="text-xs text-foreground/50 mb-4">Perfect for: law firms, solo attorneys, legal consultancies</p>
+                    <Link to="/services/web-development"><Button className="w-full bg-primary hover:bg-primary/90" size="sm">Get Started</Button></Link>
+                  </CardContent>
+                </Card>
+
+                {/* E-Commerce */}
+                <Card className="border-primary/50">
+                  <CardHeader className="text-center">
+                    <Badge className="mx-auto mb-2 bg-green-500/10 text-green-400 border-green-500/20">E-Commerce</Badge>
+                    <CardTitle>Online Store</CardTitle>
+                    <div className="text-3xl font-bold text-foreground">$5,500</div>
+                    <p className="text-sm text-foreground/60">10 days delivery</p>
+                  </CardHeader>
+                  <CardContent>
+                    <ul className="space-y-2 mb-4">
+                      {["Up to 100 products", "Stripe & PayPal payments", "Inventory management", "Order notifications", "Abandoned cart recovery", "Mobile-optimized checkout"].map((f, i) => (
+                        <li key={i} className="flex items-center gap-2"><Check className="h-3 w-3 text-green-500" /><span className="text-sm">{f}</span></li>
+                      ))}
+                    </ul>
+                    <p className="text-xs text-foreground/50 mb-4">Perfect for: retailers, DTC brands, service businesses selling online</p>
+                    <Link to="/services/web-development"><Button className="w-full bg-primary hover:bg-primary/90" size="sm">Get Started</Button></Link>
                   </CardContent>
                 </Card>
               </div>
