@@ -30,7 +30,7 @@ const services = [
   },
   {
     title: 'Brand Identity',
-    description: 'Professional brand identity kit that makes your business instantly recognizable. Our $499 package includes custom logo design (3 concepts, unlimited revisions), color palette selection, typography guidelines, brand style guide PDF, business card design, and social media profile templates. Build a brand that customers trust.',
+    description: 'Professional brand identity kit that makes your business instantly recognizable. Our Brand Identity package ($499 add-on) includes custom logo design (3 concepts, unlimited revisions), color palette selection, typography guidelines, brand style guide PDF, business card design, and social media profile templates. Build a brand that customers trust.',
     delay: '0.5s',
     link: '/services/brand-identity'
   },

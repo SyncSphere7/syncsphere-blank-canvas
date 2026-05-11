@@ -13,7 +13,6 @@ import FAQSection from '../components/FAQSection';
 import ContactSection from '../components/ContactSection';
 import Footer from '../components/Footer';
 import StickyCTA from '../components/StickyCTA';
-import AskAIButton from '../components/AskAIButton';
 import PersonalizationEngine from '../components/PersonalizationEngine';
 import BehavioralTriggers from '../components/BehavioralTriggers';
 import { Link } from 'react-router-dom';
@@ -148,7 +147,6 @@ const Index = () => {
             <FAQSection />
             <ContactSection />
             <StickyCTA />
-            <AskAIButton />
             <BehavioralTriggers onTrigger={(type, data) => {
               console.log('Behavioral trigger:', type, data);
             }} />

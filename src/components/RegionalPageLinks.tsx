@@ -33,11 +33,8 @@ const RegionalPageLinks: React.FC<RegionalPageLinksProps> = ({ currentService, c
 
   const services = [
     { slug: 'automations', name: 'Business Process Automation' },
-    { slug: 'chatbots', name: 'AI Chatbot Development' },
     { slug: 'ecommerce', name: 'E-commerce Development' },
-    { slug: 'web-development', name: 'Web Development' },
-    { slug: 'app-development', name: 'Mobile App Development' },
-    { slug: 'voice-agents', name: 'Voice Agent Development' }
+    { slug: 'web-development', name: 'Web Development' }
   ];
 
   const currentServiceName = services.find(s => s.slug === currentService)?.name || currentService;
