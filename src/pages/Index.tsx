@@ -16,13 +16,24 @@ import StickyCTA from '../components/StickyCTA';
 import AskAIButton from '../components/AskAIButton';
 import PersonalizationEngine from '../components/PersonalizationEngine';
 import BehavioralTriggers from '../components/BehavioralTriggers';
+import { Link } from 'react-router-dom';
+import { Card, CardContent } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+import { ArrowRight, Clock, Calendar } from 'lucide-react';
+import ScrollReveal, { StaggerContainer, StaggerItem } from '@/components/ScrollReveal';
+
+const blogPosts = [
+  { slug: 'why-your-business-needs-website-2026', title: 'Why Your Business Needs a Professional Website in 2026', excerpt: '93% of online experiences begin with a search engine. Learn why investing in a professional website is the most important digital marketing decision.', category: 'Web Development', readTime: '5 min', date: 'May 10, 2026' },
+  { slug: 'how-to-choose-digital-agency', title: 'How to Choose the Right Digital Agency: A Complete Guide', excerpt: 'Choosing the wrong digital agency can cost you thousands. This guide covers red flags, must-have capabilities, and questions to ask.', category: 'Business', readTime: '7 min', date: 'May 8, 2026' },
+  { slug: 'social-media-management-roi', title: 'Social Media Management: How to Measure ROI', excerpt: 'Stop guessing whether your social media is working. Learn the exact metrics that matter and what ROI to expect.', category: 'Social Media', readTime: '6 min', date: 'May 5, 2026' },
+];
 
 const Index = () => {
   const businessSchema = {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
     "name": "SyncSphere Digital Agency",
-    "description": "Full-service digital agency offering website design, chatbots, social media management, email marketing, business automation, and brand identity services. Fast delivery, affordable pricing.",
+    "description": "Full-service digital agency offering website design, social media management, email marketing, business automation, and brand identity services. Fast delivery, affordable pricing.",
     "url": "https://syncsphereofficial.com",
     "logo": "https://syncsphereofficial.com/syncsphere-logo.png",
     "sameAs": [
@@ -78,6 +89,62 @@ const Index = () => {
             <ProcessSection />
             <ReviewsSection />
             <TestimonialsSection testimonial={testimonial} industry={industry} />
+
+            {/* Blog Section */}
+            <section className="py-20 bg-background relative">
+              <div className="absolute inset-0 bg-gradient-to-b from-primary/5 to-transparent opacity-30 blur-3xl -z-10"></div>
+              <div className="container mx-auto px-6">
+                <ScrollReveal>
+                  <div className="text-center mb-16">
+                    <Badge variant="outline" className="mb-4 border-primary text-primary">Blog</Badge>
+                    <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">Latest Insights & Tips</h2>
+                    <p className="text-muted-foreground max-w-2xl mx-auto">
+                      Expert advice on web development, digital marketing, social media, and business automation to help you grow online.
+                    </p>
+                  </div>
+                </ScrollReveal>
+
+                <StaggerContainer>
+                  <div className="grid md:grid-cols-3 gap-8 mb-12">
+                    {blogPosts.map((post, index) => (
+                      <StaggerItem key={post.slug} delay={index * 0.1}>
+                        <Card className="bg-card/50 border-border hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10 h-full flex flex-col">
+                          <CardContent className="p-6 flex flex-col flex-1">
+                            <div className="flex items-center gap-2 mb-4">
+                              <Badge variant="secondary" className="text-xs">{post.category}</Badge>
+                              <span className="text-xs text-muted-foreground flex items-center gap-1">
+                                <Clock className="h-3 w-3" /> {post.readTime}
+                              </span>
+                            </div>
+                            <h3 className="text-lg font-bold mb-3 text-foreground hover:text-primary transition-colors">
+                              <Link to={`/blog/${post.slug}`}>{post.title}</Link>
+                            </h3>
+                            <p className="text-muted-foreground text-sm mb-4 flex-1">{post.excerpt}</p>
+                            <div className="flex items-center justify-between mt-auto pt-4 border-t border-border">
+                              <span className="text-xs text-muted-foreground flex items-center gap-1">
+                                <Calendar className="h-3 w-3" /> {post.date}
+                              </span>
+                              <Link to={`/blog/${post.slug}`} className="text-primary text-sm font-medium flex items-center gap-1 hover:gap-2 transition-all">
+                                Read More <ArrowRight className="h-3 w-3" />
+                              </Link>
+                            </div>
+                          </CardContent>
+                        </Card>
+                      </StaggerItem>
+                    ))}
+                  </div>
+                </StaggerContainer>
+
+                <div className="text-center">
+                  <Link to="/blog">
+                    <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
+                      View All Posts <ArrowRight className="ml-2 h-4 w-4" />
+                    </Button>
+                  </Link>
+                </div>
+              </div>
+            </section>
+
             <FAQSection />
             <ContactSection />
             <StickyCTA />

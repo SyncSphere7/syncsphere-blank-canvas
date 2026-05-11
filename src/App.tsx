@@ -37,6 +37,7 @@ import WebDevelopmentUK from "./pages/services/WebDevelopmentUK";
 // Content Pages
 import Portfolio from "./pages/Portfolio";
 import Blog from "./pages/Blog";
+import BlogPost from "./pages/BlogPost";
 
 // Policy Pages
 import PrivacyPolicy from "./pages/PrivacyPolicy";
@@ -85,6 +86,7 @@ const App = () => (
                 {/* Content Routes */}
                 <Route path="/portfolio" element={<Portfolio />} />
                 <Route path="/blog" element={<Blog />} />
+                <Route path="/blog/:slug" element={<BlogPost />} />
                 
                 {/* Pricing & MVP */}
                 <Route path="/pricing" element={<Pricing />} />

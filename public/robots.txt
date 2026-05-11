@@ -1,20 +1,11 @@
-# SyncSphere Digital Agency - Robots.txt
-# Updated: March 2026
-
 User-agent: *
 Allow: /
-Disallow: /chat-agent
 
-User-agent: Googlebot
-Allow: /
-
-User-agent: Bingbot
-Allow: /
-
-User-agent: Twitterbot
-Allow: /
-
-User-agent: facebookexternalhit
-Allow: /
-
+# Sitemap
 Sitemap: https://syncsphereofficial.com/sitemap.xml
+
+# Crawl-delay
+Crawl-delay: 1
+
+# Disallow admin/private paths
+Disallow: /chat-agent?embedded=true

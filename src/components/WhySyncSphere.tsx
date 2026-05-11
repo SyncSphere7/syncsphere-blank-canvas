@@ -1,19 +1,58 @@
 import React from 'react';
 import ScrollReveal, { StaggerContainer, StaggerItem } from './ScrollReveal';
-import { CheckCircle, Clock, Shield, DollarSign, Headphones, Zap } from 'lucide-react';
+import { CheckCircle, Clock, Shield, DollarSign, Headphones, Zap, Globe, TrendingUp, Users } from 'lucide-react';
 
 const reasons = [
-  { icon: Clock, title: '48-Hour Delivery', description: 'Get your website live in as little as 48 hours. No waiting weeks or months.' },
-  { icon: DollarSign, title: 'Transparent Pricing', description: '50% upfront, 25% at design approval, 25% on launch. No hidden fees, no surprises.' },
-  { icon: Shield, title: 'PayPal Protected', description: 'All payments processed through PayPal for buyer protection and security.' },
-  { icon: Zap, title: 'All-In-One Agency', description: 'Websites, marketing, automation, branding — everything your business needs under one roof.' },
-  { icon: Headphones, title: 'Dedicated Support', description: 'Direct WhatsApp access to your project manager. Real humans, fast responses.' },
-  { icon: CheckCircle, title: 'Proven Results', description: '150+ projects delivered with 98% client satisfaction across 12+ countries.' },
+  {
+    icon: Clock,
+    title: '48-Hour Delivery',
+    description: 'Get your website live in as little as 48 hours. While other agencies take weeks or months, we deliver professional websites in 2 days. Our streamlined process eliminates bottlenecks without cutting corners on quality.'
+  },
+  {
+    icon: DollarSign,
+    title: 'Transparent Pricing',
+    description: '50% upfront, 25% at design approval, 25% on launch. No hidden fees, no surprises. Our Starter package starts at $2,500, Professional at $5,000, and Premium at $8,000+. Every deliverable is clearly defined before we begin.'
+  },
+  {
+    icon: Shield,
+    title: 'PayPal Protected',
+    description: 'All payments processed through PayPal for buyer protection and security. You\'re covered by PayPal\'s buyer protection policy. If something isn\'t right, you have recourse. We also offer a 30-day bug-fix guarantee after launch.'
+  },
+  {
+    icon: Zap,
+    title: 'All-In-One Agency',
+    description: 'Websites, marketing, automation, branding — everything your business needs under one roof. No need to juggle multiple vendors. We handle web development, social media management, email marketing, SEO, and business automation.'
+  },
+  {
+    icon: Headphones,
+    title: 'Dedicated Support',
+    description: 'Direct WhatsApp access to your project manager. Real humans, fast responses. We don\'t use ticketing systems or make you wait 48 hours for a reply. When you have a question, you get an answer — usually within minutes.'
+  },
+  {
+    icon: CheckCircle,
+    title: 'Proven Results',
+    description: '150+ projects delivered with 98% client satisfaction across 12+ countries. Our clients see real results — increased leads, higher conversion rates, and measurable ROI. We don\'t just build websites; we build business growth engines.'
+  },
+  {
+    icon: Globe,
+    title: 'Global Reach',
+    description: 'We serve clients worldwide — from the US and UK to Uganda, Canada, and Australia. Time zones don\'t matter when your website works 24/7. We\'ve helped businesses in 12+ countries establish their online presence.'
+  },
+  {
+    icon: TrendingUp,
+    title: 'SEO Optimized',
+    description: 'Every website we build is optimized for search engines from day one. Proper meta tags, structured data, fast loading speed, mobile responsiveness, and clean code. We don\'t just make sites look good — we make them rank.'
+  },
+  {
+    icon: Users,
+    title: 'Client-First Approach',
+    description: 'We work closely with you at every stage. From initial consultation to final launch, you\'re involved in every decision. We provide up to 2 rounds of revisions at each milestone to ensure the final product matches your vision exactly.'
+  }
 ];
 
 const WhySyncSphere = () => {
   return (
-    <section className="py-20 bg-background relative">
+    <section className="py-20 bg-background relative" id="why-us">
       <div className="absolute inset-0 bg-gradient-to-b from-primary/5 to-transparent opacity-30 blur-3xl -z-10" />
       <div className="container mx-auto px-6">
         <ScrollReveal>
@@ -23,7 +62,7 @@ const WhySyncSphere = () => {
             </span>
             <h2 className="text-foreground text-3xl md:text-4xl font-bold">Why Businesses Choose SyncSphere</h2>
             <p className="text-muted-foreground mt-4 max-w-2xl mx-auto">
-              We're not just another agency. Here's what makes us different.
+              We're not just another digital agency. We're your growth partner. Here's what makes us different from the competition.
             </p>
           </div>
         </ScrollReveal>
@@ -36,11 +75,25 @@ const WhySyncSphere = () => {
                   <reason.icon className="h-6 w-6 text-primary" />
                 </div>
                 <h3 className="text-foreground font-semibold text-lg mb-2">{reason.title}</h3>
-                <p className="text-muted-foreground text-sm">{reason.description}</p>
+                <p className="text-muted-foreground text-sm leading-relaxed">{reason.description}</p>
               </div>
             </StaggerItem>
           ))}
         </StaggerContainer>
+
+        <ScrollReveal>
+          <div className="mt-16 text-center">
+            <div className="inline-block p-8 rounded-2xl bg-card/30 border border-border/50 max-w-3xl">
+              <h3 className="text-2xl font-bold text-foreground mb-4">Our Promise to You</h3>
+              <p className="text-muted-foreground leading-relaxed">
+                We believe every business deserves a professional online presence — regardless of budget. That's why we've built our agency around three core principles: <strong className="text-foreground">speed, transparency, and results</strong>. No hidden fees. No endless timelines. No excuses. Just professional digital services delivered on time, every time.
+              </p>
+              <p className="text-muted-foreground leading-relaxed mt-4">
+                Whether you need a simple starter website or a complete digital marketing strategy, we have the skills, experience, and dedication to help your business grow online. <strong className="text-foreground">150+ businesses trust us</strong> — and we're ready to earn your trust too.
+              </p>
+            </div>
+          </div>
+        </ScrollReveal>
       </div>
     </section>
   );
