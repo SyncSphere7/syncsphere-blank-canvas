@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+@theme {
+  --color-red: #c00000;
+  --color-red-dark: #a00000;
+  --color-gold: #f0d060;
+  --color-blue: #0050a0;
+  --color-blue-dark: #003d7a;
+  --color-navy: #102030;
+  --color-navy-light: #1a2d42;
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+@layer base {
+  * {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply bg-white text-gray-900 antialiased;
+  }
+
+  .dark body {
+    @apply bg-navy text-white;
+  }
+}
