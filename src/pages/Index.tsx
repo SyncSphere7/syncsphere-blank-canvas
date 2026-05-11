@@ -17,6 +17,7 @@ import { Link } from 'react-router-dom';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { ArrowRight, Clock, Calendar } from 'lucide-react';
+import { Button } from '@/components/ui/button';
 
 const blogPosts = [
   { slug: 'why-your-business-needs-website-2026', title: 'Why Your Business Needs a Professional Website in 2026', excerpt: '93% of online experiences begin with a search engine. Learn why investing in a professional website is the most important digital marketing decision.', category: 'Web Development', readTime: '5 min', date: 'May 10, 2026' },
