@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Zap } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from './ThemeToggle';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
@@ -68,6 +68,9 @@ const Header = () => {
           <Link to="/portfolio" className="text-muted-foreground hover:text-foreground transition-colors text-sm font-medium">Portfolio</Link>
           <Link to="/blog" className="text-muted-foreground hover:text-foreground transition-colors text-sm font-medium">Blog</Link>
           <Link to="/pricing" className="text-muted-foreground hover:text-foreground transition-colors text-sm font-medium">Pricing</Link>
+          <Link to="/tools/website-grader" className="text-primary hover:text-primary/80 transition-colors text-sm font-medium flex items-center gap-1">
+            <Zap className="h-3 w-3" /> Free Grader
+          </Link>
           <a href="#contact" onClick={handleContactClick} className="text-muted-foreground hover:text-foreground transition-colors cursor-pointer text-sm font-medium">Contact</a>
           <ThemeToggle />
         </nav>

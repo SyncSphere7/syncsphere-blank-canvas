@@ -33,6 +33,7 @@ import BlogPost from "./pages/BlogPost";
 // Policy Pages
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsOfService from "./pages/TermsOfService";
+import WebsiteGrader from "./pages/WebsiteGrader";
 
 // Pricing
 import Pricing from "./pages/Pricing";
@@ -76,7 +77,10 @@ const App = () => (
                 {/* Policy Routes */}
                 <Route path="/privacy-policy" element={<PrivacyPolicy />} />
                 <Route path="/terms-of-service" element={<TermsOfService />} />
-                
+
+                {/* Tools */}
+                <Route path="/tools/website-grader" element={<WebsiteGrader />} />
+
                 <Route path="*" element={<NotFound />} />
               </Routes>
               <WhatsAppBubble />

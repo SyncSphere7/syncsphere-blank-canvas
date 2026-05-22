@@ -101,6 +101,16 @@ const HeroSection: React.FC<HeroSectionProps> = ({ personalization }) => {
               </Button>
             </a>
           </div>
+
+          {/* Free Website Grader CTA */}
+          <div className="flex justify-center mt-3">
+            <Link to="/tools/website-grader">
+              <Button variant="outline" className="text-sm flex items-center gap-2 border-primary/30 hover:bg-primary/5">
+                <Zap className="h-4 w-4 text-primary" />
+                Free Website Grader — Score Your Site in 30 Seconds
+              </Button>
+            </Link>
+          </div>
         </motion.div>
 
         <motion.div
