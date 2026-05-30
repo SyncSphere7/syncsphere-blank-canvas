@@ -51,10 +51,29 @@ const WebsiteGrader = () => {
     setResult(null);
 
     try {
-      // Fetch the target page via a CORS proxy
-      const proxyUrl = `https://api.allorigins.win/raw?url=${encodeURIComponent(normalizedUrl)}`;
-      const response = await fetch(proxyUrl, { signal: AbortSignal.timeout(15000) });
-      if (!response.ok) throw new Error('Could not fetch the website. It may be blocking automated access.');
+      // Fetch the target page via a CORS proxy with fallbacks
+      const proxyUrls = [
+        `https://api.allorigins.win/raw?url=${encodeURIComponent(normalizedUrl)}`,
+        `https://corsproxy.io/?${encodeURIComponent(normalizedUrl)}`,
+        `https://api.codetabs.com/v1/proxy?quest=${encodeURIComponent(normalizedUrl)}`,
+      ];
+
+      let html = '';
+      let fetchError = null;
+      for (const proxyUrl of proxyUrls) {
+        try {
+          const response = await fetch(proxyUrl, { signal: AbortSignal.timeout(10000) });
+          if (response.ok) {
+            html = await response.text();
+            break;
+          }
+          fetchError = `Proxy returned ${response.status}`;
+        } catch (e: any) {
+          fetchError = e.message;
+        }
+      }
+
+      if (!html) throw new Error(fetchError || 'Could not fetch the website. It may be blocking automated access.');
       const html = await response.text();
       const parser = new DOMParser();
       const doc = parser.parseFromString(html, 'text/html');
