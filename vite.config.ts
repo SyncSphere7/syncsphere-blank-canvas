@@ -5,7 +5,7 @@ import { componentTagger } from "lovable-tagger";
 import { viteSingleFile } from "vite-plugin-singlefile";
 
 // Add base path for GitHub Pages deployment
-const base = process.env.NODE_ENV === 'production' ? '/syncsphere-global/' : '/';
+const base = '/';
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
