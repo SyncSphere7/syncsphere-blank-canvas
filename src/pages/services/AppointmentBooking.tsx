@@ -35,14 +35,14 @@ const AppointmentBooking = () => {
               </CardContent>
             </Card>
             <Card className="border-primary">
-              <CardHeader><Badge className="w-fit mb-2">Most Popular</Badge><CardTitle>Business</CardTitle><div className="text-3xl font-bold">$499</div><p className="text-sm text-muted-foreground">+ $79/month</p></CardHeader>
+              <CardHeader><Badge className="w-fit mb-2">Most Popular</Badge><CardTitle>Business</CardTitle><div className="text-3xl font-bold">$799</div><p className="text-sm text-muted-foreground">+ $99/month hosting</p></CardHeader>
               <CardContent>
                 <ul className="space-y-2">
                   {["Custom booking page", "Multi-staff calendars", "SMS & email reminders", "Payment integration", "Unlimited bookings"].map((f, i) => (
                     <li key={i} className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-green-500" /><span className="text-sm">{f}</span></li>
                   ))}
                 </ul>
-                <a href="https://wa.me/447424819094?text=Hi! I'd like the Business Appointment Booking package ($499)." target="_blank" rel="noopener noreferrer" className="mt-4 block">
+                <a href="https://wa.me/447424819094?text=Hi! I'd like the Business Appointment Booking package ($799)." target="_blank" rel="noopener noreferrer" className="mt-4 block">
                   <Button className="w-full bg-primary hover:bg-primary/90">Get Started</Button>
                 </a>
               </CardContent>

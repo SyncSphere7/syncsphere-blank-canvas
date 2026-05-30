@@ -55,19 +55,19 @@ When investing in a professional website, make sure it includes:
 
 ### How Much Does a Professional Website Cost?
 
-At SyncSphere, professional websites start at **$2,500 for a Starter package** delivered in 48 hours. Our most popular **Professional package at $5,000** includes up to 7 pages, custom design, SEO setup, and a blog system.
+At SyncSphere, professional websites start at **$3,500 for a Starter package** delivered in 48 hours. Our most popular **Professional package at $6,500** includes up to 7 pages, custom design, SEO setup, and a blog system.
 
-For businesses that need ongoing support, our **maintenance plan at $149/month** includes security updates, weekly backups, and uptime monitoring.
+For businesses that need ongoing support, our **maintenance plan at $199/month** includes security updates, weekly backups, and uptime monitoring.
 
 ### The ROI of a Professional Website
 
-Consider this: If your website generates just **10 new leads per month** and you convert **20% of them** into customers, that's **2 new customers per month**. If each customer is worth $500, that's **$1,000/month in revenue** from a $2,500 investment.
+Consider this: If your website generates just **10 new leads per month** and you convert **20% of them** into customers, that's **2 new customers per month**. If each customer is worth $500, that's **$1,000/month in revenue** from a $3,500 investment.
 
-That's a **40% return in the first month** — and it compounds every month after.
+That's a **29% return in the first month** — and it compounds every month after.
 
 ### Ready to Get Started?
 
-[Contact us today](/contact) for a free consultation. We'll analyze your business needs and recommend the perfect website package for your goals. No pressure, no obligation — just honest advice from a team that's helped 150+ businesses get online.
+[Contact us today](/contact) for a free consultation. We'll analyze your business needs and recommend the perfect website package for your goals. No pressure, no obligation — just honest advice from a team that specializes in helping businesses get online.
 
 ---
 
@@ -126,11 +126,11 @@ Before you sign with any agency, ask these questions:
 
 At SyncSphere, we pride ourselves on transparency, quality, and speed:
 
-- **Transparent Pricing** — Our packages start at $2,500 with everything included. No hidden fees.
+- **Transparent Pricing** — Our packages start at $3,500 with everything included. No hidden fees.
 - **Fast Delivery** — Starter websites delivered in 48 hours. Professional in 5 days.
 - **Full Ownership** — You own everything. Domain, design, content — all yours.
-- **Ongoing Support** — Our $149/month maintenance plan keeps your site secure and up to date.
-- **150+ Projects Delivered** — We've helped businesses across 12+ countries get online.
+- **Ongoing Support** — Our $199/month maintenance plan keeps your site secure and up to date.
+- We focus on delivering quality results for every client we work with.
 
 ### The Bottom Line
 
@@ -182,7 +182,7 @@ Forget vanity metrics like follower count. Here's what actually impacts your bot
 
 ### What Professional Social Media Management Includes
 
-At SyncSphere, our **$499/month social media management package** includes:
+At SyncSphere, our **$999/month social media management package** includes:
 
 - **4 posts per week** across your chosen platforms (Facebook, Instagram, LinkedIn, Twitter/X)
 - **Content creation** — Custom graphics, engaging captions, and strategic hashtags
@@ -197,12 +197,12 @@ Here's a simple formula:
 **ROI = (Revenue from Social Media - Cost of Social Media) / Cost of Social Media × 100**
 
 For example:
-- You spend $499/month on social media management
+- You spend $999/month on social media management
 - Social media generates 20 leads per month
 - You convert 10% into customers (2 customers)
 - Each customer is worth $500
 - Revenue = $1,000
-- ROI = ($1,000 - $499) / $499 × 100 = **100% ROI**
+- ROI = ($1,000 - $999) / $999 × 100 = **0.1% ROI**
 
 ### Common Social Media Mistakes
 
@@ -274,7 +274,7 @@ The real power of email marketing is automation:
 
 ### Professional Email Marketing Services
 
-Our **$349/month email marketing service** includes:
+Our **$599/month email marketing service** includes:
 
 - **4 newsletters per month** — Written, designed, and sent to your list
 - **Automation sequences** — Welcome series, abandoned cart, follow-ups
@@ -349,7 +349,7 @@ Here are the most popular automations we build for clients:
 
 ### Professional Automation Services
 
-SyncSphere offers business automation starting at **$1,500**. We'll:
+SyncSphere offers business automation starting at **$2,500**. We'll:
 
 1. Analyze your current workflows
 2. Identify the highest-impact automation opportunities
@@ -434,7 +434,7 @@ Apply your brand everywhere — website, social media, email, business cards, in
 
 ### Professional Brand Identity Services
 
-SyncSphere's **Brand Identity package starts at $499** and includes:
+SyncSphere's **Brand Identity package starts at $799** and includes:
 
 - Custom logo design (3 concepts, unlimited revisions)
 - Color palette selection with hex codes

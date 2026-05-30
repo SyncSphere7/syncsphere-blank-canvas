@@ -41,7 +41,7 @@ A professional website isn't just a digital brochure. It's a sales machine that:
 
 ### How Much Does a Professional Website Cost?
 
-At SyncSphere, professional websites start at $2,500 for a Starter package delivered in 48 hours. Our most popular Professional package at $5,000 includes up to 7 pages, custom design, SEO setup, and a blog system.
+At SyncSphere, professional websites start at $3,500 for a Starter package delivered in 48 hours. Our most popular Professional package at $6,500 includes up to 7 pages, custom design, SEO setup, and a blog system.
 
 ### Ready to Get Started?
 
@@ -90,7 +90,7 @@ A great digital agency should offer:
 
 ### Why SyncSphere?
 
-At SyncSphere, we pride ourselves on transparency, quality, and speed. Our Starter website package starts at $2,500 with 48-hour delivery. We include a .com domain, SSL certificate, and basic SEO setup — everything you need to get online fast.
+At SyncSphere, we pride ourselves on transparency, quality, and speed. Our Starter website package starts at $3,500 with 48-hour delivery. We include a .com domain, SSL certificate, and basic SEO setup — everything you need to get online fast.
 
 [View our pricing](/pricing) or [get in touch](/contact) to discuss your project.
     `
@@ -124,7 +124,7 @@ Forget vanity metrics. Here's what actually impacts your bottom line:
 
 ### What Professional Social Media Management Includes
 
-At SyncSphere, our $499/month social media management package includes:
+At SyncSphere, our $999/month social media management package includes:
 
 - **4 posts per week** across your chosen platforms
 - **Content creation** — graphics, captions, and hashtags
@@ -177,7 +177,7 @@ Great marketing emails follow this formula:
 
 ### Professional Email Marketing Services
 
-Our $349/month email marketing service includes:
+Our $599/month email marketing service includes:
 
 - **4 newsletters per month** — written, designed, and sent
 - **Automation sequences** — welcome series, abandoned cart, follow-ups
@@ -226,7 +226,7 @@ Businesses that implement automation see:
 
 ### Professional Automation Services
 
-SyncSphere offers business automation starting at $1,500. We'll analyze your workflows, identify the highest-impact automation opportunities, and build custom solutions that save you time and money.
+SyncSphere offers business automation starting at $2,500. We'll analyze your workflows, identify the highest-impact automation opportunities, and build custom solutions that save you time and money.
 
 [Book a free automation consultation](/contact) to find out where you can save the most.
     `
@@ -269,7 +269,7 @@ Brand identity encompasses:
 
 ### Professional Brand Identity Services
 
-SyncSphere's Brand Identity package starts at $499 and includes:
+SyncSphere's Brand Identity package starts at $799 and includes:
 - Custom logo design
 - Color palette selection
 - Typography guidelines
