@@ -74,7 +74,6 @@ const WebsiteGrader = () => {
       }
 
       if (!html) throw new Error(fetchError || 'Could not fetch the website. It may be blocking automated access.');
-      const html = await response.text();
       const parser = new DOMParser();
       const doc = parser.parseFromString(html, 'text/html');
 
