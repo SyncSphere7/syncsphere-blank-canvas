@@ -11,7 +11,7 @@ const reasons = [
   {
     icon: DollarSign,
     title: 'Transparent Pricing',
-    description: '50% upfront, 25% at design approval, 25% on launch. No hidden fees, no surprises. Our Starter package starts at $2,500, Professional at $5,000, and Premium at $8,000+. Every deliverable is clearly defined before we begin.'
+    description: '50% upfront, 25% at design approval, 25% on launch. No hidden fees, no surprises. Our Starter package starts at $3,500, Professional at $6,500, and Premium at $10,000+. Every deliverable is clearly defined before we begin.'
   },
   {
     icon: Shield,
@@ -31,12 +31,12 @@ const reasons = [
   {
     icon: CheckCircle,
     title: 'Proven Results',
-    description: '150+ projects delivered with 98% client satisfaction across 12+ countries. Our clients see real results — increased leads, higher conversion rates, and measurable ROI. We don\'t just build websites; we build business growth engines.'
+    description: 'We focus on delivering quality results for every client. Our team combines technical expertise with business strategy to build digital solutions that drive real growth. Client satisfaction is our top priority.'
   },
   {
     icon: Globe,
     title: 'Global Reach',
-    description: 'We serve clients worldwide — from the US and UK to Uganda, Canada, and Australia. Time zones don\'t matter when your website works 24/7. We\'ve helped businesses in 12+ countries establish their online presence.'
+    description: 'We serve clients worldwide. Time zones don\'t matter when your website works 24/7. We\'ve helped businesses across multiple countries establish their online presence.'
   },
   {
     icon: TrendingUp,
@@ -89,7 +89,7 @@ const WhySyncSphere = () => {
                 We believe every business deserves a professional online presence — regardless of budget. That's why we've built our agency around three core principles: <strong className="text-foreground">speed, transparency, and results</strong>. No hidden fees. No endless timelines. No excuses. Just professional digital services delivered on time, every time.
               </p>
               <p className="text-muted-foreground leading-relaxed mt-4">
-                Whether you need a simple starter website or a complete digital marketing strategy, we have the skills, experience, and dedication to help your business grow online. <strong className="text-foreground">150+ businesses trust us</strong> — and we're ready to earn your trust too.
+                Whether you need a simple starter website or a complete digital marketing strategy, we have the skills, experience, and dedication to help your business grow online. We're ready to earn your trust.
               </p>
             </div>
           </div>

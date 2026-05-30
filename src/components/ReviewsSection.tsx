@@ -1,22 +1,5 @@
 import React from 'react';
-import { Card, CardContent } from "@/components/ui/card";
-import { Star } from 'lucide-react';
-import ScrollReveal, { StaggerContainer, StaggerItem } from './ScrollReveal';
-
-const reviews = [
-  { name: "David Thompson", platform: "Google", text: "SyncSphere built our company website in just 2 days. The quality was incredible and they were very responsive throughout the process. Highly recommend!", rating: 5 },
-  { name: "Maria Santos", platform: "Trustpilot", text: "SyncSphere redesigned our entire website and the results were immediate. We started getting more inquiries within the first week. Professional, fast, and worth every penny.", rating: 5 },
-  { name: "James Wilson", platform: "Facebook", text: "Their social media management transformed our online presence. Consistent, quality content and our engagement tripled in 3 months.", rating: 5 },
-  { name: "Lisa Chen", platform: "Google", text: "The website they built for our clinic is fast, beautiful, and works perfectly on mobile. Our patients love it and we've seen a 50% increase in online inquiries.", rating: 5 },
-  { name: "Robert Martinez", platform: "Trustpilot", text: "Great value for money. The brand identity package gave us everything we needed to launch professionally. Logo, colors, guidelines — all perfect.", rating: 5 },
-  { name: "Amanda Foster", platform: "Facebook", text: "SyncSphere handles our email marketing and the results speak for themselves. Open rates above 35% and growing subscriber list every month.", rating: 4 },
-];
-
-const platformColors: Record<string, string> = {
-  "Google": "text-blue-400",
-  "Trustpilot": "text-green-400",
-  "Facebook": "text-blue-500",
-};
+import ScrollReveal from './ScrollReveal';
 
 const ReviewsSection = () => {
   return (
@@ -30,33 +13,10 @@ const ReviewsSection = () => {
             </span>
             <h2 className="text-foreground text-3xl md:text-4xl font-bold">What Our Clients Are Saying</h2>
             <p className="text-muted-foreground mt-4 max-w-xl mx-auto">
-              Real reviews from businesses we've helped grow online.
+              We're collecting reviews from our clients. Check back soon.
             </p>
           </div>
         </ScrollReveal>
-
-        <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {reviews.map((review, index) => (
-            <StaggerItem key={index}>
-              <Card className="bg-card/50 border border-border/50 backdrop-blur-sm h-full hover:border-primary/30 hover:bg-primary/5 transition-all duration-300">
-                <CardContent className="p-6">
-                  <div className="flex items-center justify-between mb-4">
-                    <div className="flex gap-1">
-                      {[...Array(5)].map((_, i) => (
-                        <Star key={i} size={16} className={i < review.rating ? "text-yellow-400 fill-yellow-400" : "text-muted-foreground"} />
-                      ))}
-                    </div>
-                    <span className={`text-xs font-medium ${platformColors[review.platform] || 'text-muted-foreground'}`}>
-                      {review.platform}
-                    </span>
-                  </div>
-                  <p className="text-foreground/80 mb-4 text-sm italic">"{review.text}"</p>
-                  <p className="font-semibold text-foreground text-sm">{review.name}</p>
-                </CardContent>
-              </Card>
-            </StaggerItem>
-          ))}
-        </StaggerContainer>
       </div>
     </section>
   );

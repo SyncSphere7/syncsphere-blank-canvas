@@ -35,14 +35,14 @@ const BrandIdentity = () => {
               </CardContent>
             </Card>
             <Card className="border-primary">
-              <CardHeader><Badge className="w-fit mb-2">Complete Package</Badge><CardTitle>Full Brand Identity</CardTitle><div className="text-3xl font-bold">$499</div><p className="text-sm text-muted-foreground">One-time</p></CardHeader>
+              <CardHeader><Badge className="w-fit mb-2">Complete Package</Badge><CardTitle>Full Brand Identity</CardTitle><div className="text-3xl font-bold">$799</div><p className="text-sm text-muted-foreground">One-time</p></CardHeader>
               <CardContent>
                 <ul className="space-y-2">
                   {["Logo design (5 concepts)", "Full color system", "Typography guidelines", "Brand guidelines document", "Business card design", "Social media kit", "Letterhead & invoice template", "All digital files"].map((f, i) => (
                     <li key={i} className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-green-500" /><span className="text-sm">{f}</span></li>
                   ))}
                 </ul>
-                <a href="https://wa.me/447424819094?text=Hi! I'd like the Full Brand Identity package ($499)." target="_blank" rel="noopener noreferrer" className="mt-4 block">
+                <a href="https://wa.me/447424819094?text=Hi! I'd like the Full Brand Identity package ($799)." target="_blank" rel="noopener noreferrer" className="mt-4 block">
                   <Button className="w-full bg-primary hover:bg-primary/90">Get Started</Button>
                 </a>
               </CardContent>

@@ -30,7 +30,7 @@ const Index = () => {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
     "name": "SyncSphere Digital Agency",
-    "description": "Professional digital agency offering website design, social media management, email marketing, business automation, and brand identity. Websites from $2,500 delivered in 48 hours.",
+    "description": "Professional digital agency offering website design, social media management, email marketing, business automation, and brand identity. Websites from $3,500 with domain and SSL included.",
     "url": "https://syncsphere-blank-canvas.vercel.app",
     "logo": "https://syncsphere-blank-canvas.vercel.app/syncsphere-logo.png",
     "sameAs": [
@@ -38,7 +38,7 @@ const Index = () => {
       "https://www.linkedin.com/company/syncsphere"
     ],
     "address": { "@type": "PostalAddress", "addressCountry": "US" },
-    "priceRange": "$2,500-$8,000+",
+    "priceRange": "$3,500-$10,000+",
     "paymentAccepted": "PayPal",
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
@@ -58,7 +58,7 @@ const Index = () => {
     <div className="min-h-screen bg-background text-foreground flex flex-col">
       <Helmet>
         <title>SyncSphere | Premium Digital Agency — Websites, Marketing & Automation</title>
-        <meta name="description" content="Professional websites from $2,500 delivered in 48 hours. Social media management, email marketing, business automation & brand identity. 50/25/25 payment terms. PayPal accepted." />
+        <meta name="description" content="Professional websites from $3,500. Social media management, email marketing, business automation & brand identity. 50/25/25 payment terms. PayPal accepted. Domain & SSL included." />
         <link rel="canonical" href="https://syncsphere-blank-canvas.vercel.app" />
         <script type="application/ld+json">{JSON.stringify(businessSchema)}</script>
       </Helmet>

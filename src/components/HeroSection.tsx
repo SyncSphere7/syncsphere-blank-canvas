@@ -45,7 +45,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ personalization }) => {
           transition={{ duration: 0.6 }}
           className="px-4 py-2 bg-card/50 rounded-full text-muted-foreground text-sm mb-6 border border-border backdrop-blur-sm"
         >
-          Agency-Quality Websites — At Freelance Prices
+          Professional Websites — Built Right, Built Fast
         </motion.span>
 
         <motion.h1
@@ -54,7 +54,10 @@ const HeroSection: React.FC<HeroSectionProps> = ({ personalization }) => {
           transition={{ duration: 0.7, delay: 0.1 }}
           className="text-foreground text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight"
         >
-          What <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-300">$15K Agencies</span> Deliver — For <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-300">$2,500</span>
+          Your Business Deserves a{' '}
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-300">
+            Professional Website
+          </span>
         </motion.h1>
 
         <motion.p
@@ -63,7 +66,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ personalization }) => {
           transition={{ duration: 0.7, delay: 0.2 }}
           className="text-muted-foreground text-xl md:text-2xl mb-10 max-w-3xl"
         >
-          Premium websites, marketing & automation — 50-90% less than traditional agencies. Custom sites from $2,500 in 48 hours. Social media, email marketing & maintenance included.
+          Custom websites, social media management, email marketing & business automation — everything your business needs to grow online.
         </motion.p>
 
         <motion.div
@@ -78,7 +81,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ personalization }) => {
                 className="group bg-gradient-to-r from-primary to-blue-400 hover:from-blue-400 hover:to-primary text-primary-foreground px-6 md:px-8 py-4 md:py-6 text-base md:text-lg flex items-center gap-2 border border-primary/30 shadow-lg shadow-primary/25 transition-all duration-300 hover:translate-y-[-2px] hover:shadow-xl hover:shadow-primary/30 w-full sm:w-auto" 
               >
                 <Globe className="mr-1 transition-transform duration-300 group-hover:rotate-12" />
-                Get Started — From $2,500
+                Get Started Today
                 <ArrowRight size={20} className="transition-transform duration-300 group-hover:translate-x-1" />
               </Button>
             </a>
@@ -88,7 +91,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ personalization }) => {
                 className="group backdrop-blur-sm bg-card/50 text-foreground border-border hover:bg-accent px-6 md:px-8 py-4 md:py-6 text-base md:text-lg flex items-center gap-2 transition-all duration-300 hover:translate-y-[-2px] w-full sm:w-auto"
               >
                 <Zap className="h-5 w-5" />
-                View All Services & Pricing
+                View Pricing
               </Button>
             </Link>
           </div>
@@ -120,7 +123,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ personalization }) => {
           className="mt-6"
         >
           <p className="text-muted-foreground/70 text-sm">
-            48-hour delivery available • 50% upfront, 50% on delivery • PayPal protected payments
+            50% upfront, 25% at design approval, 25% on delivery • PayPal protected payments
           </p>
         </motion.div>
       </div>

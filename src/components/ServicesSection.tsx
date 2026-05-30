@@ -18,25 +18,25 @@ const services = [
   },
   {
     title: 'Email Marketing',
-    description: 'Newsletter campaigns, automated sequences, and subscriber management that nurture your audience on autopilot. We set up welcome series, abandoned cart flows, promotional campaigns, and regular newsletters. Our $349/month package includes 4 emails per month, automation setup, list segmentation, and detailed analytics.',
+    description: 'Newsletter campaigns, automated sequences, and subscriber management that nurture your audience on autopilot. We set up welcome series, abandoned cart flows, promotional campaigns, and regular newsletters. Our $599/month package includes 4 emails per month, automation setup, list segmentation, and detailed analytics.',
     delay: '0.3s',
     link: '/services/email-marketing'
   },
   {
     title: 'Maintenance & Support',
-    description: 'Keep your website secure, fast, and up to date with our ongoing maintenance plan. For $149/month we provide weekly backups, security patches, uptime monitoring, performance optimization, and 1 hour of support. We also offer 30 days of free bug-fix support after every launch. Never worry about your website again.',
+    description: 'Keep your website secure, fast, and up to date with our ongoing maintenance plan. For $199/month we provide weekly backups, security patches, uptime monitoring, performance optimization, and 1 hour of support. We also offer 30 days of free bug-fix support after every launch. Never worry about your website again.',
     delay: '0.4s',
     link: '/pricing'
   },
   {
     title: 'Brand Identity',
-    description: 'Professional brand identity kit that makes your business instantly recognizable. Our Brand Identity package ($499 add-on) includes custom logo design (3 concepts, unlimited revisions), color palette selection, typography guidelines, brand style guide PDF, business card design, and social media profile templates. Build a brand that customers trust.',
+    description: 'Professional brand identity kit that makes your business instantly recognizable. Our Brand Identity package ($799 add-on) includes custom logo design (3 concepts, unlimited revisions), color palette selection, typography guidelines, brand style guide PDF, business card design, and social media profile templates. Build a brand that customers trust.',
     delay: '0.5s',
     link: '/services/brand-identity'
   },
   {
     title: 'Business Automation',
-    description: 'Streamline your operations with intelligent workflows that save you 20+ hours per week. We connect your forms, email, CRM, and other tools so repetitive tasks handle themselves. From lead capture to invoice generation, we automate the processes that eat up your day. Custom automation packages start at $1,500.',
+    description: 'Streamline your operations with intelligent workflows that save you 20+ hours per week. We connect your forms, email, CRM, and other tools so repetitive tasks handle themselves. From lead capture to invoice generation, we automate the processes that eat up your day. Custom automation packages start at $2,500.',
     delay: '0.6s',
     link: '/services/automations'
   }

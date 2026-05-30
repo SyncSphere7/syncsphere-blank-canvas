@@ -12,7 +12,7 @@ const Pricing = () => {
   return (
     <SEOProvider
       title="Pricing | Website Design & Digital Services | SyncSphere"
-      description="Transparent pricing for websites, social media, email marketing, and maintenance. Websites from $2,500. 50% upfront, 50% on delivery. PayPal accepted."
+      description="Transparent pricing for professional websites, social media, email marketing, and maintenance. Websites from $3,500. 50/25/25 payment terms. PayPal accepted."
       keywords="website pricing, web design cost, social media management pricing, email marketing pricing, small business website"
     >
       <div className="min-h-screen bg-background">
@@ -46,7 +46,7 @@ const Pricing = () => {
                 <Card>
                   <CardHeader className="text-center">
                     <CardTitle>Starter</CardTitle>
-                    <div className="text-3xl font-bold text-foreground">$2,500</div>
+                    <div className="text-3xl font-bold text-foreground">$3,500</div>
                     <p className="text-sm text-foreground/60">48 hours delivery</p>
                   </CardHeader>
                   <CardContent>
@@ -64,7 +64,7 @@ const Pricing = () => {
                   <CardHeader className="text-center">
                     <Badge className="mx-auto mb-2">Most Popular</Badge>
                     <CardTitle>Professional</CardTitle>
-                    <div className="text-3xl font-bold text-foreground">$5,000</div>
+                    <div className="text-3xl font-bold text-foreground">$6,500</div>
                     <p className="text-sm text-foreground/60">5 days delivery</p>
                   </CardHeader>
                   <CardContent>
@@ -81,7 +81,7 @@ const Pricing = () => {
                 <Card>
                   <CardHeader className="text-center">
                     <CardTitle>Premium</CardTitle>
-                    <div className="text-3xl font-bold text-foreground">$8,000+</div>
+                    <div className="text-3xl font-bold text-foreground">$10,000+</div>
                     <p className="text-sm text-foreground/60">Custom timeline</p>
                   </CardHeader>
                   <CardContent>
@@ -95,7 +95,7 @@ const Pricing = () => {
                 </Card>
               </div>
               <p className="text-center text-foreground/50 text-sm">
-                Extra revisions: $100/hour • Extra pages: $200 each • Maintenance: $149/month
+                Extra revisions: $100/hour • Extra pages: $300 each • Maintenance: $199/month
               </p>
             </div>
           </section>
@@ -110,7 +110,7 @@ const Pricing = () => {
                 <Card>
                   <CardHeader className="text-center">
                     <CardTitle className="text-lg">Maintenance</CardTitle>
-                    <div className="text-2xl font-bold text-foreground">$149<span className="text-sm font-normal">/mo</span></div>
+                    <div className="text-2xl font-bold text-foreground">$199<span className="text-sm font-normal">/mo</span></div>
                   </CardHeader>
                   <CardContent>
                     <ul className="space-y-1 text-sm">
@@ -125,7 +125,7 @@ const Pricing = () => {
                 <Card>
                   <CardHeader className="text-center">
                     <CardTitle className="text-lg">Social Media</CardTitle>
-                    <div className="text-2xl font-bold text-foreground">$499<span className="text-sm font-normal">/mo</span></div>
+                    <div className="text-2xl font-bold text-foreground">$999<span className="text-sm font-normal">/mo</span></div>
                   </CardHeader>
                   <CardContent>
                     <ul className="space-y-1 text-sm">
@@ -140,7 +140,7 @@ const Pricing = () => {
                 <Card>
                   <CardHeader className="text-center">
                     <CardTitle className="text-lg">Email Marketing</CardTitle>
-                    <div className="text-2xl font-bold text-foreground">$349<span className="text-sm font-normal">/mo</span></div>
+                    <div className="text-2xl font-bold text-foreground">$599<span className="text-sm font-normal">/mo</span></div>
                   </CardHeader>
                   <CardContent>
                     <ul className="space-y-1 text-sm">
@@ -156,7 +156,7 @@ const Pricing = () => {
                   <CardHeader className="text-center">
                     <Badge className="mx-auto mb-2">Best Value</Badge>
                     <CardTitle className="text-lg">Full Marketing</CardTitle>
-                    <div className="text-2xl font-bold text-foreground">$899<span className="text-sm font-normal">/mo</span></div>
+                    <div className="text-2xl font-bold text-foreground">$1,499<span className="text-sm font-normal">/mo</span></div>
                   </CardHeader>
                   <CardContent>
                     <ul className="space-y-1 text-sm">
@@ -181,7 +181,7 @@ const Pricing = () => {
                   <CardHeader className="text-center">
                     <Badge className="mx-auto mb-2 bg-red-500/10 text-red-400 border-red-500/20">Medical & Dental</Badge>
                     <CardTitle>Medical Practice</CardTitle>
-                    <div className="text-3xl font-bold text-foreground">$3,500</div>
+                    <div className="text-3xl font-bold text-foreground">$5,000</div>
                     <p className="text-sm text-foreground/60">7 days delivery</p>
                   </CardHeader>
                   <CardContent>
@@ -200,7 +200,7 @@ const Pricing = () => {
                   <CardHeader className="text-center">
                     <Badge className="mx-auto mb-2 bg-blue-500/10 text-blue-400 border-blue-500/20">Legal</Badge>
                     <CardTitle>Law Firm</CardTitle>
-                    <div className="text-3xl font-bold text-foreground">$4,500</div>
+                    <div className="text-3xl font-bold text-foreground">$6,500</div>
                     <p className="text-sm text-foreground/60">7 days delivery</p>
                   </CardHeader>
                   <CardContent>
@@ -219,7 +219,7 @@ const Pricing = () => {
                   <CardHeader className="text-center">
                     <Badge className="mx-auto mb-2 bg-green-500/10 text-green-400 border-green-500/20">E-Commerce</Badge>
                     <CardTitle>Online Store</CardTitle>
-                    <div className="text-3xl font-bold text-foreground">$5,500</div>
+                    <div className="text-3xl font-bold text-foreground">$8,000+</div>
                     <p className="text-sm text-foreground/60">10 days delivery</p>
                   </CardHeader>
                   <CardContent>
@@ -245,7 +245,7 @@ const Pricing = () => {
                 <Card>
                   <CardHeader className="text-center">
                     <CardTitle className="text-lg">Brand Identity Kit</CardTitle>
-                    <div className="text-2xl font-bold text-foreground">$499</div>
+                    <div className="text-2xl font-bold text-foreground">$799</div>
                   </CardHeader>
                   <CardContent>
                     <ul className="space-y-1 text-sm">
@@ -258,7 +258,7 @@ const Pricing = () => {
                 <Card>
                   <CardHeader className="text-center">
                     <CardTitle className="text-lg">Extra Pages</CardTitle>
-                    <div className="text-2xl font-bold text-foreground">$200<span className="text-sm font-normal">/page</span></div>
+                    <div className="text-2xl font-bold text-foreground">$300<span className="text-sm font-normal">/page</span></div>
                   </CardHeader>
                   <CardContent>
                     <p className="text-sm text-foreground/70">Add pages to any website package. Same design, responsive, SEO-optimized.</p>
@@ -267,7 +267,7 @@ const Pricing = () => {
                 <Card>
                   <CardHeader className="text-center">
                     <CardTitle className="text-lg">E-Commerce Setup</CardTitle>
-                    <div className="text-2xl font-bold text-foreground">$2,500</div>
+                    <div className="text-2xl font-bold text-foreground">$3,500</div>
                   </CardHeader>
                   <CardContent>
                     <ul className="space-y-1 text-sm">
@@ -280,7 +280,7 @@ const Pricing = () => {
                 <Card>
                   <CardHeader className="text-center">
                     <CardTitle className="text-lg">Business Automation</CardTitle>
-                    <div className="text-2xl font-bold text-foreground">$1,500</div>
+                    <div className="text-2xl font-bold text-foreground">$2,500</div>
                   </CardHeader>
                   <CardContent>
                     <ul className="space-y-1 text-sm">
