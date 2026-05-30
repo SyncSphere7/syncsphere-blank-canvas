@@ -6,7 +6,7 @@ const stats = [
   { value: '48hr', label: 'Fast Delivery Available' },
   { value: '100%', label: 'Custom Design' },
   { value: 'SSL', label: 'Included on Every Site' },
-  { value: 'PayPal', label: 'Protected Payments' },
+  { value: 'Secure', label: 'Stripe & Bank Transfer' },
 ];
 
 const ClientLogos = () => {

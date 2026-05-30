@@ -23,7 +23,7 @@ const ChatbotsEU = () => (
           <Card className="border-primary"><CardHeader><Badge className="w-fit mb-2">Popular</Badge><CardTitle>Standard</CardTitle><div className="text-3xl font-bold">€719</div><p className="text-sm text-muted-foreground">+ €89/month</p></CardHeader><CardContent><ul className="space-y-2">{["2 platforms","Smart responses","CRM integration","Analytics dashboard"].map((f,i)=><li key={i} className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-green-500"/><span className="text-sm">{f}</span></li>)}</ul></CardContent></Card>
           <Card><CardHeader><CardTitle>Advanced</CardTitle><div className="text-3xl font-bold">€1,349</div><p className="text-sm text-muted-foreground">+ €129/month</p></CardHeader><CardContent><ul className="space-y-2">{["3+ platforms + CRM","Multi-language","Custom integrations","Priority support"].map((f,i)=><li key={i} className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-green-500"/><span className="text-sm">{f}</span></li>)}</ul></CardContent></Card>
         </div>
-        <div className="text-center"><Card className="bg-primary/5 border-primary/20"><CardContent className="p-8"><p className="text-foreground/70 flex items-center justify-center gap-2"><CreditCard className="h-4 w-4"/>50% upfront, 50% on delivery • PayPal accepted</p></CardContent></Card></div>
+        <div className="text-center"><Card className="bg-primary/5 border-primary/20"><CardContent className="p-8"><p className="text-foreground/70 flex items-center justify-center gap-2"><CreditCard className="h-4 w-4"/>50% upfront, 50% on delivery • Stripe, bank transfer, Visa & debit accepted</p></CardContent></Card></div>
       </div>
     </ServiceLayout>
   </SEOProvider>

@@ -123,7 +123,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ personalization }) => {
           className="mt-6"
         >
           <p className="text-muted-foreground/70 text-sm">
-            50% upfront, 25% at design approval, 25% on delivery • PayPal protected payments
+            50% upfront, 25% at design approval, 25% on delivery • Stripe & bank transfer payments
           </p>
         </motion.div>
       </div>

@@ -98,7 +98,7 @@ const ContactSection = () => {
                   </Button>
                   <div className="flex items-center gap-2 text-muted-foreground/70 text-sm">
                     <CreditCard size={16} />
-                    <span>Payments via PayPal - 50% upfront, 50% on delivery</span>
+                    <span>Payments via Stripe, bank transfer, Visa & debit â€” 50% upfront, 50% on delivery</span>
                   </div>
                 </div>
               </form>

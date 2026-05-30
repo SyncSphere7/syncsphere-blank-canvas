@@ -23,7 +23,7 @@ const Footer = () => {
               </div>
               <div className="flex items-center gap-2 text-muted-foreground">
                 <CreditCard size={16} className="text-primary" />
-                <span>PayPal Protected Payments</span>
+                <span>Stripe & Bank Transfer</span>
               </div>
               <div className="flex items-center gap-2 text-muted-foreground">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" className="text-primary">

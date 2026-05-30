@@ -12,7 +12,7 @@ const Pricing = () => {
   return (
     <SEOProvider
       title="Pricing | Website Design & Digital Services | SyncSphere"
-      description="Transparent pricing for professional websites, social media, email marketing, and maintenance. Websites from $3,500. 50/25/25 payment terms. PayPal accepted."
+      description="Transparent pricing for professional websites, social media, email marketing, and maintenance. Websites from $3,500. 50/25/25 payment terms. Stripe, bank transfer, Visa & debit accepted."
       keywords="website pricing, web design cost, social media management pricing, email marketing pricing, small business website"
     >
       <div className="min-h-screen bg-background">
@@ -26,12 +26,12 @@ const Pricing = () => {
                 Simple, <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-300">Transparent Pricing</span>
               </h1>
               <p className="text-foreground/80 text-xl mb-8 max-w-3xl mx-auto">
-                No hidden fees. 50% upfront, 25% at design approval, 25% on delivery. PayPal protected.
+                No hidden fees. 50% upfront, 25% at design approval, 25% on delivery. Stripe & bank transfer.
               </p>
               <div className="flex flex-wrap justify-center gap-4 mb-8">
                 <Badge variant="outline" className="px-4 py-2 bg-white/5 border-white/10 text-foreground/80"><Shield className="h-4 w-4 mr-2" />USA Registered</Badge>
                 <Badge variant="outline" className="px-4 py-2 bg-white/5 border-white/10 text-foreground/80"><Lock className="h-4 w-4 mr-2" />SSL Secured</Badge>
-                <Badge variant="outline" className="px-4 py-2 bg-white/5 border-white/10 text-foreground/80"><CreditCard className="h-4 w-4 mr-2" />PayPal Protected</Badge>
+                <Badge variant="outline" className="px-4 py-2 bg-white/5 border-white/10 text-foreground/80"><CreditCard className="h-4 w-4 mr-2" />Stripe & Bank Transfer</Badge>
               </div>
             </div>
           </section>
@@ -224,7 +224,7 @@ const Pricing = () => {
                   </CardHeader>
                   <CardContent>
                     <ul className="space-y-2 mb-4">
-                      {["Up to 100 products", "Stripe & PayPal payments", "Inventory management", "Order notifications", "Abandoned cart recovery", "Mobile-optimized checkout"].map((f, i) => (
+                      {["Up to 100 products", "Stripe payments", "Inventory management", "Order notifications", "Abandoned cart recovery", "Mobile-optimized checkout"].map((f, i) => (
                         <li key={i} className="flex items-center gap-2"><Check className="h-3 w-3 text-green-500" /><span className="text-sm">{f}</span></li>
                       ))}
                     </ul>
@@ -271,7 +271,7 @@ const Pricing = () => {
                   </CardHeader>
                   <CardContent>
                     <ul className="space-y-1 text-sm">
-                      {["Up to 50 products", "Payment integration (Stripe/PayPal)", "Order management", "Mobile-optimized checkout"].map((f, i) => (
+                      {["Up to 50 products", "Stripe payment integration", "Order management", "Mobile-optimized checkout"].map((f, i) => (
                         <li key={i} className="flex items-center gap-2"><Check className="h-3 w-3 text-green-500" /><span>{f}</span></li>
                       ))}
                     </ul>

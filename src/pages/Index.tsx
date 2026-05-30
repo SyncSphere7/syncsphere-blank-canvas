@@ -39,7 +39,7 @@ const Index = () => {
     ],
     "address": { "@type": "PostalAddress", "addressCountry": "US" },
     "priceRange": "$3,500-$10,000+",
-    "paymentAccepted": "PayPal",
+    "paymentAccepted": "Stripe, bank transfer, Visa, debit",
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
       "name": "Digital Services",
@@ -58,7 +58,7 @@ const Index = () => {
     <div className="min-h-screen bg-background text-foreground flex flex-col">
       <Helmet>
         <title>SyncSphere | Premium Digital Agency — Websites, Marketing & Automation</title>
-        <meta name="description" content="Professional websites from $3,500. Social media management, email marketing, business automation & brand identity. 50/25/25 payment terms. PayPal accepted. Domain & SSL included." />
+        <meta name="description" content="Professional websites from $3,500. Social media management, email marketing, business automation & brand identity. 50/25/25 payment terms. Stripe, bank transfer, Visa & debit accepted. Domain & SSL included." />
         <link rel="canonical" href="https://syncsphere-blank-canvas.vercel.app" />
         <script type="application/ld+json">{JSON.stringify(businessSchema)}</script>
       </Helmet>

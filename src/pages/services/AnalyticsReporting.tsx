@@ -50,7 +50,7 @@ const AnalyticsReporting = () => {
           </div>
 
           <div className="text-center">
-            <Card className="bg-primary/5 border-primary/20"><CardContent className="p-8"><p className="text-foreground/70 flex items-center justify-center gap-2"><CreditCard className="h-4 w-4" />Payment: 50% upfront, 50% on delivery • PayPal accepted</p></CardContent></Card>
+            <Card className="bg-primary/5 border-primary/20"><CardContent className="p-8"><p className="text-foreground/70 flex items-center justify-center gap-2"><CreditCard className="h-4 w-4" />Payment: 50% upfront, 50% on delivery • Stripe, bank transfer, Visa & debit accepted</p></CardContent></Card>
           </div>
         </div>
       </ServiceLayout>

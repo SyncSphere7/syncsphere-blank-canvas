@@ -15,8 +15,8 @@ const reasons = [
   },
   {
     icon: Shield,
-    title: 'PayPal Protected',
-    description: 'All payments processed through PayPal for buyer protection and security. You\'re covered by PayPal\'s buyer protection policy. If something isn\'t right, you have recourse. We also offer a 30-day bug-fix guarantee after launch.'
+    title: 'Stripe & Bank Transfer',
+    description: 'All payments processed securely via Stripe, bank transfer, or card. You\'re protected by buyer protection policies. If something isn\'t right, you have recourse. We also offer a 30-day bug-fix guarantee after launch.'
   },
   {
     icon: Zap,

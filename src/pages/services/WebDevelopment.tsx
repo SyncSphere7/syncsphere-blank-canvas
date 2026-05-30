@@ -106,7 +106,7 @@ const WebDevelopment = () => {
             <Card className="bg-primary/5 border-primary/20">
               <CardContent className="p-8">
                 <p className="text-foreground/70 flex items-center justify-center gap-2">
-                  Payment: 50/25/25 • PayPal accepted
+                  Payment: 50/25/25 • Stripe, bank transfer, Visa & debit accepted
                 </p>
               </CardContent>
             </Card>

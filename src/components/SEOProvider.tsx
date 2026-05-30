@@ -15,7 +15,7 @@ interface SEOProps {
 
 const SEOProvider: React.FC<SEOProps> = ({
   title = "SyncSphere | Professional Websites, Marketing & Automation",
-  description = "Professional websites from $3,500. Custom design, domain & SSL included. Social media management, email marketing & business automation. PayPal accepted.",
+  description = "Professional websites from $3,500. Custom design, domain & SSL included. Social media management, email marketing & business automation. Stripe, bank transfer, Visa & debit accepted.",
   canonicalUrl = "https://syncsphere-blank-canvas.vercel.app",
   ogImageUrl = "https://syncsphere-blank-canvas.vercel.app/syncsphere-logo.png",
   keywords = "website design, web development, social media management, email marketing, business automation, brand identity, digital agency, professional websites",
@@ -82,7 +82,7 @@ const SEOProvider: React.FC<SEOProps> = ({
 
   if (location.pathname === '/pricing') {
     dynamicTitle = "Pricing | SyncSphere — Transparent & Professional";
-    dynamicDescription = "Websites from $3,500. Social media from $999/mo, email marketing from $599/mo. Business automation from $2,500. 50/25/25 payment terms. PayPal accepted.";
+    dynamicDescription = "Websites from $3,500. Social media from $999/mo, email marketing from $599/mo. Business automation from $2,500. 50/25/25 payment terms. Stripe, bank transfer, Visa & debit accepted.";
   }
 
   if (location.pathname === '/blog') {

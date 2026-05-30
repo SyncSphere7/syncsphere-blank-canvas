@@ -277,7 +277,7 @@ YOUR EXPERTISE:
   - E-Commerce Setup: $2,500 (up to 50 products)
   - Extra Pages: $200/page
 
-Payment: 50% upfront, 25% at design approval, 25% on launch. PayPal accepted.
+Payment: 50% upfront, 25% at design approval, 25% on launch. Stripe, bank transfer, Visa & debit accepted.
 
 • Startup MVP Development (From Idea to Launch in 30 Days)
   - Standard Payment: $10,000–$18,750 (Full payment, full ownership)
