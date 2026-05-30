@@ -14,7 +14,7 @@ const ChatbotsUS = () => (
           <Badge variant="outline" className="mb-4 border-primary text-primary"><MessageSquare className="w-4 h-4 mr-2" />US Chatbot Solutions</Badge>
           <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-primary to-blue-300 bg-clip-text text-transparent">AI Chatbot Solutions — US</h1>
           <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">Smart chatbots for US businesses. 24/7 customer engagement handled by our team.</p>
-          <a href="https://wa.me/447424819094?text=Hi! I'm a US business interested in chatbot solutions." target="_blank" rel="noopener noreferrer">
+          <a href="tel:+14326920996" target="_blank" rel="noopener noreferrer">
             <Button size="lg" className="bg-primary hover:bg-primary/90">Get Started — From $1,499<ArrowRight className="ml-2 h-4 w-4" /></Button>
           </a>
         </div>

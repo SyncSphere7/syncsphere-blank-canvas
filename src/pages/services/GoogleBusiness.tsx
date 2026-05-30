@@ -15,7 +15,7 @@ const GoogleBusiness = () => {
             <Badge variant="outline" className="mb-4 border-primary text-primary"><MapPin className="w-4 h-4 mr-2" />Google Business</Badge>
             <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-primary to-blue-300 bg-clip-text text-transparent">Google Business Management</h1>
             <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">Get found by local customers. We optimize your Google Business profile, manage reviews, and boost your local search visibility.</p>
-            <a href="https://wa.me/447424819094?text=Hi! I'm interested in Google Business management." target="_blank" rel="noopener noreferrer">
+            <a href="tel:+14326920996" target="_blank" rel="noopener noreferrer">
               <Button size="lg" className="bg-primary hover:bg-primary/90">Get Started — From $99/mo<ArrowRight className="ml-2 h-4 w-4" /></Button>
             </a>
           </div>
@@ -29,7 +29,7 @@ const GoogleBusiness = () => {
                     <li key={i} className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-green-500" /><span className="text-sm">{f}</span></li>
                   ))}
                 </ul>
-                <a href="https://wa.me/447424819094?text=Hi! I'd like the Basic Google Business package ($99/mo)." target="_blank" rel="noopener noreferrer" className="mt-4 block">
+                <a href="tel:+14326920996" target="_blank" rel="noopener noreferrer" className="mt-4 block">
                   <Button className="w-full" variant="outline">Get Started</Button>
                 </a>
               </CardContent>
@@ -42,7 +42,7 @@ const GoogleBusiness = () => {
                     <li key={i} className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-green-500" /><span className="text-sm">{f}</span></li>
                   ))}
                 </ul>
-                <a href="https://wa.me/447424819094?text=Hi! I'd like the Standard Google Business package ($199/mo)." target="_blank" rel="noopener noreferrer" className="mt-4 block">
+                <a href="tel:+14326920996" target="_blank" rel="noopener noreferrer" className="mt-4 block">
                   <Button className="w-full bg-primary hover:bg-primary/90">Get Started</Button>
                 </a>
               </CardContent>
@@ -55,7 +55,7 @@ const GoogleBusiness = () => {
                     <li key={i} className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-green-500" /><span className="text-sm">{f}</span></li>
                   ))}
                 </ul>
-                <a href="https://wa.me/447424819094?text=Hi! I'd like the Growth Google Business package ($299/mo)." target="_blank" rel="noopener noreferrer" className="mt-4 block">
+                <a href="tel:+14326920996" target="_blank" rel="noopener noreferrer" className="mt-4 block">
                   <Button className="w-full" variant="outline">Get Started</Button>
                 </a>
               </CardContent>

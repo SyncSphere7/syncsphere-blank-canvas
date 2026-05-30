@@ -546,7 +546,7 @@ const BlogPost = () => {
               <div className="mt-12 p-8 bg-card/50 rounded-lg border border-border">
                 <h3 className="text-xl font-bold mb-4 text-foreground">Ready to Grow Your Business?</h3>
                 <p className="text-muted-foreground mb-6">SyncSphere provides professional web development, digital marketing, and business automation services. Let's discuss how we can help.</p>
-                <a href="https://wa.me/447424819094?text=Hi! I'd like to get started with a website or digital service." target="_blank" rel="noopener noreferrer">
+                <a href="tel:+14326920996" target="_blank" rel="noopener noreferrer">
                   <Button className="bg-gradient-to-r from-primary to-blue-400 hover:from-blue-400 hover:to-primary">
                     Get Started Today <ArrowRight className="ml-2 h-4 w-4" />
                   </Button>

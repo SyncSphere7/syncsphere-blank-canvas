@@ -16,13 +16,12 @@ const MessageRenderer: React.FC<MessageRendererProps> = ({ content, className = 
         replacement: (match: string, number: string) => (
           <a
             key={`whatsapp-${number}`}
-            href={`https://wa.me/447424819094`}
-            target="_blank"
+            href="tel:+143****0996"
             rel="noopener noreferrer"
             className="text-green-400 hover:text-green-300 underline"
-            title="Chat with us on WhatsApp"
+            title="Call us"
           >
-            WhatsApp: {number}
+            +1 (432) 692-0996
           </a>
         )
       },

@@ -22,7 +22,7 @@ const WebDevelopment = () => {
             <p className="text-xl text-muted-foreground mb-8 max-w-4xl mx-auto">
               Custom designed websites for your business. Fast delivery, professional quality, and everything you need to get online — domain and SSL included.
             </p>
-            <a href="https://wa.me/447424819094?text=Hi! I'd like to get a website designed. Can we discuss?" target="_blank" rel="noopener noreferrer">
+            <a href="tel:+14326920996" target="_blank" rel="noopener noreferrer">
               <Button size="lg" className="bg-primary hover:bg-primary/90">Get Started — From $3,500<ArrowRight className="ml-2 h-4 w-4" /></Button>
             </a>
           </div>
@@ -59,7 +59,7 @@ const WebDevelopment = () => {
                       <li key={i} className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-green-500" /><span className="text-sm">{f}</span></li>
                     ))}
                   </ul>
-                  <a href="https://wa.me/447424819094?text=Hi! I'd like the Starter Website package ($3,500)." target="_blank" rel="noopener noreferrer" className="mt-4 block">
+                  <a href="tel:+14326920996" target="_blank" rel="noopener noreferrer" className="mt-4 block">
                     <Button className="w-full" variant="outline">Get Started</Button>
                   </a>
                 </CardContent>
@@ -77,7 +77,7 @@ const WebDevelopment = () => {
                       <li key={i} className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-green-500" /><span className="text-sm">{f}</span></li>
                     ))}
                   </ul>
-                  <a href="https://wa.me/447424819094?text=Hi! I'd like the Professional Website package ($6,500)." target="_blank" rel="noopener noreferrer" className="mt-4 block">
+                  <a href="tel:+14326920996" target="_blank" rel="noopener noreferrer" className="mt-4 block">
                     <Button className="w-full bg-primary hover:bg-primary/90">Get Started</Button>
                   </a>
                 </CardContent>
@@ -94,7 +94,7 @@ const WebDevelopment = () => {
                       <li key={i} className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-green-500" /><span className="text-sm">{f}</span></li>
                     ))}
                   </ul>
-                  <a href="https://wa.me/447424819094?text=Hi! I'd like the Premium Website package ($10,000+)." target="_blank" rel="noopener noreferrer" className="mt-4 block">
+                  <a href="tel:+14326920996" target="_blank" rel="noopener noreferrer" className="mt-4 block">
                     <Button className="w-full" variant="outline">Get Started</Button>
                   </a>
                 </CardContent>

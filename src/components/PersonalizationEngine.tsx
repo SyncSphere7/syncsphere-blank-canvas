@@ -160,7 +160,7 @@ const PersonalizationEngine: React.FC<PersonalizationEngineProps> = ({ children 
   // Device-specific CTA
   const getDeviceCTA = (deviceType: string) => {
     if (deviceType === 'mobile') {
-      return 'WhatsApp Us Now';
+      return 'Call Us Now';
     }
     return 'Schedule Consultation';
   };

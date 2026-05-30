@@ -62,7 +62,7 @@ const Portfolio = () => {
                 <CardContent className="p-8">
                   <h2 className="text-2xl font-bold text-foreground mb-4">Ready to Be Our Next Success Story?</h2>
                   <p className="text-muted-foreground mb-6">Tell us about your project and we'll get back to you within 24 hours.</p>
-                  <a href="https://wa.me/447424819094?text=Hi! I'd like to discuss a project." target="_blank" rel="noopener noreferrer">
+                  <a href="tel:+14326920996" target="_blank" rel="noopener noreferrer">
                     <Button className="bg-primary hover:bg-primary/90 text-primary-foreground">
                       Start Your Project <ArrowRight className="ml-2 h-4 w-4" />
                     </Button>

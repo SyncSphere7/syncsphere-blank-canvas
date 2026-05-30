@@ -26,7 +26,7 @@ const reasons = [
   {
     icon: Headphones,
     title: 'Dedicated Support',
-    description: 'Direct WhatsApp access to your project manager. Real humans, fast responses. We don\'t use ticketing systems or make you wait 48 hours for a reply. When you have a question, you get an answer — usually within minutes.'
+    description: 'Direct phone access to your project manager. Real humans, fast responses. We don\'t use ticketing systems or make you wait 48 hours for a reply. When you have a question, you get an answer — usually within minutes.'
   },
   {
     icon: CheckCircle,

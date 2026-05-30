@@ -72,7 +72,7 @@ const ServicesSection = () => {
         <ScrollReveal>
           <div className="mt-12 text-center">
             <p className="text-muted-foreground max-w-3xl mx-auto">
-              Not sure which service is right for you? <a href="https://wa.me/447424819094?text=Hi! I'd like to discuss my digital service needs." target="_blank" rel="noopener noreferrer" className="text-primary hover:underline font-medium">Chat with us on WhatsApp</a> for a free consultation. We'll analyze your business needs and recommend the perfect package — no pressure, no obligation.
+              Not sure which service is right for you? <a href="tel:+14326920996" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline font-medium">Call us</a> for a free consultation. We'll analyze your business needs and recommend the perfect package — no pressure, no obligation.
             </p>
           </div>
         </ScrollReveal>

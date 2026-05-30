@@ -131,7 +131,7 @@ const BehavioralTriggers: React.FC<BehavioralTriggersProps> = ({ onTrigger }) =>
           subtitle: "Get a free consultation before you go",
           content: "Join 500+ businesses that transformed with our AI solutions. Book a free 15-minute consultation now!",
           cta: "Book Free Consultation",
-          ctaLink: "https://wa.me/447424819094?text=Hi! I'd like to book a free consultation before I leave your site.",
+          ctaLink: "tel:+14326920996",
           icon: <Clock className="h-6 w-6 text-primary" />,
           badge: "Limited Time"
         };
@@ -152,8 +152,8 @@ const BehavioralTriggers: React.FC<BehavioralTriggersProps> = ({ onTrigger }) =>
           title: "Ready to Transform Your Business?",
           subtitle: "Get expert guidance in 15 minutes",
           content: "You've been exploring for 3 minutes. Let our AI experts show you exactly how we can help your business.",
-          cta: "WhatsApp Expert Now",
-          ctaLink: "https://wa.me/447424819094?text=Hi! I've been exploring your site and would like to speak with an AI expert.",
+          cta: "Call Us Now",
+          ctaLink: "tel:+14326920996",
           icon: <Users className="h-6 w-6 text-blue-500" />,
           badge: "Expert Available"
         };
@@ -175,7 +175,7 @@ const BehavioralTriggers: React.FC<BehavioralTriggersProps> = ({ onTrigger }) =>
           subtitle: "Ready to get started?",
           content: "This is your 3rd visit. Start with our £1,500 pilot program and see results in 7-14 days.",
           cta: "Start Pilot Program",
-          ctaLink: "https://wa.me/447424819094?text=Hi! I'm a returning visitor and ready to start with the £1,500 pilot program.",
+          ctaLink: "tel:+14326920996",
           icon: <Gift className="h-6 w-6 text-purple-500" />,
           badge: "Returning Visitor"
         };
@@ -222,7 +222,7 @@ const BehavioralTriggers: React.FC<BehavioralTriggersProps> = ({ onTrigger }) =>
           <div className="flex flex-col sm:flex-row gap-2 sm:gap-3">
             <a href={popup.ctaLink} target="_blank" rel="noopener noreferrer" className="flex-1">
               <Button className="w-full bg-primary hover:bg-primary/90 text-sm">
-                {popup.cta === 'WhatsApp Expert Now' ? (
+                {popup.cta === 'Call Us Now' ? (
                   <>
                     <Phone className="h-3 w-3 sm:h-4 sm:w-4 mr-2" />
                     <span className="truncate">{popup.cta}</span>

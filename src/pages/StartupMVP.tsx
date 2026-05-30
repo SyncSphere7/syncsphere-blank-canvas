@@ -57,7 +57,7 @@ const StartupMVP = () => {
                     </div>
                   </div>
                   <div className="mt-8 text-center">
-                    <a href="https://wa.me/447424819094?text=Hi! I'm interested in the Micro MVP package for my startup idea." target="_blank" rel="noopener noreferrer">
+                    <a href="tel:+14326920996" target="_blank" rel="noopener noreferrer">
                       <Button size="lg" className="bg-primary hover:bg-primary/90">Get Started<ArrowRight className="ml-2 h-4 w-4" /></Button>
                     </a>
                     <p className="text-foreground/50 text-sm mt-4 flex items-center justify-center gap-2"><CreditCard className="h-4 w-4" />50% upfront, 50% on delivery • PayPal accepted</p>
