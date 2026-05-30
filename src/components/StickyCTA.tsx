@@ -31,11 +31,11 @@ const StickyCTA = () => {
           <div className="container mx-auto flex items-center justify-between gap-4">
             <div className="hidden sm:block">
               <p className="text-sm font-medium text-foreground">
-                🚀 Limited slots this month — <span className="text-primary">3 spots left</span> for March delivery
+                🚀 Ready to start your project? <span className="text-primary">Call now to get started</span>
               </p>
             </div>
             <p className="sm:hidden text-xs font-medium text-foreground">
-              🚀 <span className="text-primary">3 spots left</span> for March
+              🚀 <span className="text-primary">Call now</span> to get started
             </p>
             <div className="flex items-center gap-2">
               <a href="tel:+14326920996" target="_blank" rel="noopener noreferrer">

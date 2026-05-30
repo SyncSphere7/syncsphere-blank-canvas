@@ -321,7 +321,7 @@ const Pricing = () => {
                   <p className="text-foreground/70 text-sm">Remaining 25% before your site goes live.</p>
                 </div>
               </div>
-              <p className="text-foreground/50 text-sm mt-6">All payments via PayPal • Prices in USD • GBP/EUR available on request</p>
+              <p className="text-foreground/50 text-sm mt-6">Payments via bank transfer, Visa, debit, or Stripe • Prices in USD • GBP/EUR available on request</p>
             </div>
           </section>
 
