@@ -29,6 +29,8 @@ interface AuditResult {
 const WebsiteGrader = () => {
   const [url, setUrl] = useState('');
   const [email, setEmail] = useState('');
+  const [emailSubmitted, setEmailSubmitted] = useState(false);
+  const [emailError, setEmailError] = useState('');
   const [loading, setLoading] = useState(false);
   const [result, setResult] = useState<AuditResult | null>(null);
   const [error, setError] = useState('');
@@ -182,6 +184,34 @@ const WebsiteGrader = () => {
       setStep('results');
     } catch (err: any) {
       setError(err.message || 'Failed to analyze the website. Please check the URL and try again.');
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const submitEmail = async () => {
+    if (!email || !email.includes('@')) {
+      setEmailError('Please enter a valid email address');
+      return;
+    }
+    setEmailError('');
+    setLoading(true);
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          email,
+          name: email,
+          message: `Website Grader lead — scored ${result?.score}/100 for ${result?.url}. Issues: ${result?.issues.map(i => i.message).join('; ')}`,
+          formType: 'website-grader',
+          source: 'website-grader',
+        }),
+      });
+      if (!response.ok) throw new Error('Failed to submit. Please try again.');
+      setEmailSubmitted(true);
+    } catch (err: any) {
+      setEmailError(err.message || 'Failed to submit. Please try again.');
     } finally {
       setLoading(false);
     }
@@ -344,20 +374,46 @@ const WebsiteGrader = () => {
 
                       {/* CTA */}
                       <div className="text-center pt-4 border-t border-border">
+                        <h3 className="text-lg font-semibold text-foreground mb-2">Want Us to Fix These Issues?</h3>
                         <p className="text-foreground/70 mb-4">
-                          Want us to fix these issues? Get a free consultation.
+                          Enter your email and we'll send you a detailed report with actionable recommendations — plus a free consultation call.
                         </p>
-                        <div className="flex flex-col sm:flex-row gap-3 justify-center">
-                          <Button asChild>
-                            <a href="/contact">
-                              Get Free Consultation
-                              <ArrowRight className="h-4 w-4 ml-2" />
-                            </a>
-                          </Button>
-                          <Button variant="outline" onClick={() => { setStep('input'); setResult(null); setUrl(''); }}>
-                            Grade Another Site
-                          </Button>
-                        </div>
+                        {emailSubmitted ? (
+                          <div className="bg-green-500/10 border border-green-500/20 rounded-lg p-4">
+                            <CheckCircle className="h-6 w-6 text-green-500 mx-auto mb-2" />
+                            <p className="text-green-500 font-medium">Report sent! We'll be in touch within 24 hours.</p>
+                          </div>
+                        ) : (
+                          <div className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+                            <Input
+                              type="email"
+                              placeholder="Enter your email address"
+                              value={email}
+                              onChange={(e) => setEmail(e.target.value)}
+                              onKeyDown={(e) => e.key === 'Enter' && submitEmail()}
+                              className="flex-1"
+                            />
+                            <Button onClick={submitEmail} disabled={loading} className="whitespace-nowrap">
+                              {loading ? (
+                                <>
+                                  <Loader2 className="h-4 w-4 mr-2 animate-spin" />
+                                  Sending...
+                                </>
+                              ) : (
+                                <>
+                                  <Mail className="h-4 w-4 mr-2" />
+                                  Get Full Report
+                                </>
+                              )}
+                            </Button>
+                          </div>
+                        )}
+                        {emailError && (
+                          <p className="text-red-500 text-sm mt-2">{emailError}</p>
+                        )}
+                        <Button variant="outline" className="mt-4" onClick={() => { setStep('input'); setResult(null); setUrl(''); }}>
+                          Grade Another Site
+                        </Button>
                       </div>
                     </CardContent>
                   </Card>

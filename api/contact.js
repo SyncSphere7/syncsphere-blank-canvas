@@ -18,6 +18,7 @@ export default async function handler(req, res) {
         case 'finance': return 'finance@syncsphereofficial.com';
         case 'compliance': return 'compliance@syncsphereofficial.com';
         case 'security': return 'security@syncsphereofficial.com';
+        case 'website-grader': return 'info@syncsphereofficial.com';
         default: return 'info@syncsphereofficial.com';
       }
     };
