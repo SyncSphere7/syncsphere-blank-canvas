@@ -76,7 +76,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ personalization }) => {
           className="flex flex-col items-center gap-4"
         >
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="tel:+14326920996" target="_blank" rel="noopener noreferrer">
+            <a href="tel:+143****0996">
               <Button 
                 className="group bg-gradient-to-r from-primary to-blue-400 hover:from-blue-400 hover:to-primary text-primary-foreground px-6 md:px-8 py-4 md:py-6 text-base md:text-lg flex items-center gap-2 border border-primary/30 shadow-lg shadow-primary/25 transition-all duration-300 hover:translate-y-[-2px] hover:shadow-xl hover:shadow-primary/30 w-full sm:w-auto" 
               >
@@ -97,7 +97,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ personalization }) => {
           </div>
           
           <div className="flex justify-center">
-            <a href="tel:+14326920996" target="_blank" rel="noopener noreferrer">
+            <a href="tel:+143****0996">
               <Button variant="ghost" className="text-muted-foreground hover:text-foreground text-sm flex items-center gap-2">
                 <MessageCircle className="h-4 w-4" />
                 Free Phone Consultation

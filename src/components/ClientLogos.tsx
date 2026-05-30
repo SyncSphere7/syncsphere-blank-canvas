@@ -3,10 +3,10 @@ import { motion } from 'framer-motion';
 import ScrollReveal from './ScrollReveal';
 
 const stats = [
-  { value: '150+', label: 'Projects Delivered' },
-  { value: '48hr', label: 'Fastest Delivery' },
-  { value: '98%', label: 'Client Satisfaction' },
-  { value: '12+', label: 'Countries Served' },
+  { value: '48hr', label: 'Fast Delivery Available' },
+  { value: '100%', label: 'Custom Design' },
+  { value: 'SSL', label: 'Included on Every Site' },
+  { value: 'PayPal', label: 'Protected Payments' },
 ];
 
 const ClientLogos = () => {
