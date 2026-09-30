@@ -5,8 +5,8 @@ import { motion } from 'framer-motion';
 const badges = [
   { icon: Shield, label: 'USA Registered Business' },
   { icon: Lock, label: 'SSL Secured' },
-  { icon: CreditCard, label: 'Stripe & Bank Transfer' },
-  { icon: null, label: '50% Upfront, 50% on Delivery' },
+  { icon: CreditCard, label: 'Cards, ACH & Bank Transfer' },
+  { icon: null, label: 'Milestone Billing: 50% / 25% / 25%' },
 ];
 
 const TrustBadges = () => {

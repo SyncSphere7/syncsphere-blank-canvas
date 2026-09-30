@@ -12,7 +12,7 @@ const Pricing = () => {
   return (
     <SEOProvider
       title="Pricing | Website Design & Digital Services | SyncSphere"
-      description="Transparent pricing for professional websites, social media, email marketing, and maintenance. Websites from $3,500. 50/25/25 payment terms. Stripe, bank transfer, Visa & debit accepted."
+      description="Transparent pricing for professional websites, social media, email marketing, and maintenance. Websites from $3,500. 50/25/25 payment terms. Major credit and debit cards, US ACH, and bank transfer accepted."
       keywords="website pricing, web design cost, social media management pricing, email marketing pricing, small business website"
     >
       <div className="min-h-screen bg-background">
@@ -26,12 +26,12 @@ const Pricing = () => {
                 Simple, <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-300">Transparent Pricing</span>
               </h1>
               <p className="text-foreground/80 text-xl mb-8 max-w-3xl mx-auto">
-                No hidden fees. 50% upfront, 25% at design approval, 25% on delivery. Stripe & bank transfer.
+                No hidden fees. 50% upfront, 25% at design approval, 25% on delivery. Cards, ACH & bank transfer.
               </p>
               <div className="flex flex-wrap justify-center gap-4 mb-8">
                 <Badge variant="outline" className="px-4 py-2 bg-white/5 border-white/10 text-foreground/80"><Shield className="h-4 w-4 mr-2" />USA Registered</Badge>
                 <Badge variant="outline" className="px-4 py-2 bg-white/5 border-white/10 text-foreground/80"><Lock className="h-4 w-4 mr-2" />SSL Secured</Badge>
-                <Badge variant="outline" className="px-4 py-2 bg-white/5 border-white/10 text-foreground/80"><CreditCard className="h-4 w-4 mr-2" />Stripe & Bank Transfer</Badge>
+                <Badge variant="outline" className="px-4 py-2 bg-white/5 border-white/10 text-foreground/80"><CreditCard className="h-4 w-4 mr-2" />Cards, ACH & Bank Transfer</Badge>
               </div>
             </div>
           </section>
@@ -321,7 +321,7 @@ const Pricing = () => {
                   <p className="text-foreground/70 text-sm">Remaining 25% before your site goes live.</p>
                 </div>
               </div>
-              <p className="text-foreground/50 text-sm mt-6">Payments via bank transfer, Visa, debit, or Stripe • Prices in USD • GBP/EUR available on request</p>
+              <p className="text-foreground/50 text-sm mt-6">Payments via major credit and debit cards, US ACH, or bank transfer • Prices in USD</p>
             </div>
           </section>
 

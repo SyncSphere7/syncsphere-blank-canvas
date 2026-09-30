@@ -23,7 +23,7 @@ const Footer = () => {
               </div>
               <div className="flex items-center gap-2 text-muted-foreground">
                 <CreditCard size={16} className="text-primary" />
-                <span>Stripe & Bank Transfer</span>
+                <span>Cards, ACH & Bank Transfer</span>
               </div>
               <div className="flex items-center gap-2 text-muted-foreground">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" className="text-primary">
@@ -64,7 +64,7 @@ const Footer = () => {
             <div className="mt-6 space-y-2 text-xs text-muted-foreground/70">
               <p>Payment: 50% upfront, 25% design approval, 25% on launch</p>
               <p>All prices in USD.</p>
-              <p>Payments accepted via Stripe, bank transfer, Visa and debit card.</p>
+              <p>Payments accepted via major credit and debit cards, US ACH, and bank transfer.</p>
             </div>
           </div>
           

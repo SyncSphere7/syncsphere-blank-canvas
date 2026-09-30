@@ -346,7 +346,7 @@ ${content.techStack || `
 - **Frontend:** React 18 + TypeScript + Tailwind CSS
 - **Backend:** Node.js + Express + PostgreSQL
 - **Authentication:** Auth0 or Firebase Auth
-- **Payments:** Stripe + PayPal integration
+- **Payments:** Card, ACH and bank transfer accepted
 - **Hosting:** Vercel (Frontend) + Railway (Backend)
 - **AI/ML:** OpenAI API + custom models
 `}

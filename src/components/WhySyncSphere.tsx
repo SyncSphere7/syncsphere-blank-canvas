@@ -15,8 +15,8 @@ const reasons = [
   },
   {
     icon: Shield,
-    title: 'Stripe & Bank Transfer',
-    description: 'All payments processed securely via Stripe, bank transfer, or card. You\'re protected by buyer protection policies. If something isn\'t right, you have recourse. We also offer a 30-day bug-fix guarantee after launch.'
+    title: 'Cards, ACH & Bank Transfer',
+    description: 'All payments are processed securely. We accept major credit and debit cards, US ACH, and bank transfer, and issue a secure payment link for every invoice. If something isn\'t right, you have recourse. We also offer a 30-day bug-fix guarantee after launch.'
   },
   {
     icon: Zap,

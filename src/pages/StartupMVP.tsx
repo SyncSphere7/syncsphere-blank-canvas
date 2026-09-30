@@ -60,7 +60,7 @@ const StartupMVP = () => {
                     <a href="tel:+256757727965" target="_blank" rel="noopener noreferrer">
                       <Button size="lg" className="bg-primary hover:bg-primary/90">Get Started<ArrowRight className="ml-2 h-4 w-4" /></Button>
                     </a>
-                    <p className="text-foreground/50 text-sm mt-4 flex items-center justify-center gap-2"><CreditCard className="h-4 w-4" />50% upfront, 50% on delivery • Stripe, bank transfer, Visa & debit accepted</p>
+                    <p className="text-foreground/50 text-sm mt-4 flex items-center justify-center gap-2"><CreditCard className="h-4 w-4" />50% upfront, 25% at design approval, 25% on delivery • Major credit and debit cards, US ACH, and bank transfer accepted</p>
                   </div>
                 </CardContent>
               </Card>

@@ -21,7 +21,7 @@ SyncSphere is a USA-registered digital agency helping businesses establish and g
 | **Brand Identity Kit** | $799 |
 | **Hosting & Maintenance** | $199/mo |
 
-**Payment:** 50% upfront, 25% at design approval, 25% on delivery. PayPal accepted.
+**Payment:** 50% upfront, 25% at design approval, 25% on delivery. Major credit and debit cards, US ACH, and bank transfer accepted.
 
 **Phone:** +256 757 727 965
 
@@ -32,14 +32,14 @@ SyncSphere is a USA-registered digital agency helping businesses establish and g
 - **Domain + SSL included** on all website packages
 - **Mobile-responsive** — works on all devices
 - **SEO optimized** — structured data, fast loading, clean code
-- **PayPal protected** payments
+- **Secure payments** via major credit and debit cards, US ACH, and bank transfer
 - **30-day bug-fix guarantee** after launch
 
 ## Industry Packages
 
 - **Medical & Dental** — $5,000 (appointment booking, HIPAA forms, service pages)
 - **Law Firm** — $6,500 (attorney profiles, practice areas, intake forms)
-- **E-Commerce** — $8,000+ (up to 100 products, Stripe/PayPal payments)
+- **E-Commerce** — $8,000+ (up to 100 products, card and ACH payment integration)
 
 ## Tech Stack
 
