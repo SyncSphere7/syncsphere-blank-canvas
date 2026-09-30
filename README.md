@@ -23,7 +23,7 @@ SyncSphere is a USA-registered digital agency helping businesses establish and g
 
 **Payment:** 50% upfront, 25% at design approval, 25% on delivery. PayPal accepted.
 
-**Phone:** +1 (432) 692-0996
+**Phone:** +256 757 727 965
 
 ## Features
 
@@ -50,7 +50,7 @@ SyncSphere is a USA-registered digital agency helping businesses establish and g
 
 ## Contact
 
-- 📞 **Phone:** +1 (432) 692-0996
+- 📞 **Phone:** +256 757 727 965
 - 🌐 **Website:** [syncspherellc.com](https://syncspherellc.com)
 
 ## Development

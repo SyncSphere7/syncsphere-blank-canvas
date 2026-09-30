@@ -141,9 +141,9 @@ ${content.roi || `
 ---
 
 **Contact Information:**
-- **WhatsApp:** +44 742 481 9094
-- **Email:** sales@syncsphereofficial.com
-- **Website:** syncsphereofficial.com
+- **WhatsApp:** +256 757 727 965
+- **Email:** sales@syncspherellc.com
+- **Website:** syncspherellc.com
 
 *This budget is valid for 30 days and subject to final requirements confirmation.*
 `;
@@ -269,9 +269,9 @@ ${content.metrics || `
 **Proposal Valid Until:** ${new Date(Date.now() + 30 * 24 * 60 * 60 * 1000).toLocaleDateString()}
 
 **Contact Information:**
-- **WhatsApp:** +44 742 481 9094
-- **Email:** sales@syncsphereofficial.com
-- **Direct Line:** +1 815 472 7760 (US) / +31 97010257248 (Netherlands)
+- **WhatsApp:** +256 757 727 965
+- **Email:** sales@syncspherellc.com
+- **Direct Line:** +256 757 727 965 (US) / +256 757 727 965 (Netherlands)
 
 *Ready to transform your idea into reality? Let's build something amazing together.*
 `;
@@ -504,9 +504,9 @@ ${content.opsBudget || `
 **Expected ROI:** 300-500% in Year 1  
 
 **Contact Information:**
-- **Project Manager:** development@syncsphereofficial.com
-- **WhatsApp:** +44 742 481 9094
-- **Emergency Contact:** +1 815 472 7760
+- **Project Manager:** development@syncspherellc.com
+- **WhatsApp:** +256 757 727 965
+- **Emergency Contact:** +256 757 727 965
 
 *This plan is a living document and will be updated based on user feedback and market conditions.*
 `;

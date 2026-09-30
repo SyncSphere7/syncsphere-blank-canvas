@@ -44,7 +44,7 @@ const ContactSection = () => {
       }
     } catch {
       setIsSubmitting(false);
-      toast({ title: "Error", description: "Please email us directly at info@syncsphereofficial.com", variant: "destructive" });
+      toast({ title: "Error", description: "Please email us directly at info@syncspherellc.com", variant: "destructive" });
     }
   };
 

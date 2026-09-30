@@ -18,28 +18,28 @@ const teamMembers: TeamMember[] = [
     position: "Founder & CEO",
     bio: "Cliff brings 10+ years of experience in AI development and business transformation globally, leading innovative technology solutions for enterprises worldwide.",
     linkedIn: "https://www.linkedin.com/in/cliff-evans-kyagaba-19127363/",
-    email: "ceo@syncsphereofficial.com"
+    email: "ceo@syncspherellc.com"
   },
   {
     name: "Amutuhaire Faith Ahabwe",
     position: "AI Solutions Architect",
     bio: "Faith specializes in designing custom AI solutions that address unique challenges faced by businesses worldwide, with expertise in scalable enterprise architectures.",
     linkedIn: "https://www.linkedin.com/in/amutuhaire-faith/",
-    email: "faith@syncsphereofficial.com"
+    email: "faith@syncspherellc.com"
   },
   {
     name: "Mateo Gomez",
     position: "Global Marketing Director",
     bio: "Based in Florida, Mateo drives SyncSphere's global marketing strategy, brand growth, and digital innovation with expertise in international market expansion and creative leadership.",
     linkedIn: "https://www.linkedin.com/in/mateo-gomez-b68292361?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
-    email: "mateo@syncsphereofficial.com"
+    email: "mateo@syncspherellc.com"
   },
   {
     name: "Brian Henry Vubya",
     position: "Head of Business Development",
     bio: "Brian works closely with clients globally to understand their needs and develop comprehensive strategies for AI implementation and digital transformation.",
     linkedIn: "https://www.linkedin.com/in/henry-brian-vubya-a1943537/",
-    email: "brian@syncsphereofficial.com"
+    email: "brian@syncspherellc.com"
   }
 ];
 

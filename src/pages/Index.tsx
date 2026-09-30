@@ -31,8 +31,8 @@ const Index = () => {
     "@type": "ProfessionalService",
     "name": "SyncSphere Digital Agency",
     "description": "Professional digital agency offering website design, social media management, email marketing, business automation, and brand identity. Websites from $3,500 with domain and SSL included.",
-    "url": "https://syncsphere-blank-canvas.vercel.app",
-    "logo": "https://syncsphere-blank-canvas.vercel.app/syncsphere-logo.png",
+    "url": "https://syncspherellc.com",
+    "logo": "https://syncspherellc.com/syncsphere-logo.png",
     "sameAs": [
       "https://twitter.com/SyncSphere",
       "https://www.linkedin.com/company/syncsphere"
@@ -59,7 +59,7 @@ const Index = () => {
       <Helmet>
         <title>SyncSphere | Premium Digital Agency — Websites, Marketing & Automation</title>
         <meta name="description" content="Professional websites from $3,500. Social media management, email marketing, business automation & brand identity. 50/25/25 payment terms. Stripe, bank transfer, Visa & debit accepted. Domain & SSL included." />
-        <link rel="canonical" href="https://syncsphere-blank-canvas.vercel.app" />
+        <link rel="canonical" href="https://syncspherellc.com" />
         <script type="application/ld+json">{JSON.stringify(businessSchema)}</script>
       </Helmet>
 

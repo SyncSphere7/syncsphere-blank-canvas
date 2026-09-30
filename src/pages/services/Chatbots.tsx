@@ -31,8 +31,8 @@ const Chatbots = () => {
     "provider": {
       "@type": "Organization",
       "name": "SyncSphere",
-      "url": "https://syncsphereofficial.com",
-      "logo": "https://syncsphereofficial.com/syncsphere-logo.png"
+      "url": "https://syncspherellc.com",
+      "logo": "https://syncspherellc.com/syncsphere-logo.png"
     },
     "areaServed": "Worldwide",
     "serviceType": "AI Chatbot Development",
@@ -125,12 +125,12 @@ const Chatbots = () => {
 
             <div className="mt-auto">
               <div className="space-y-3">
-                <a href="tel:+14326920996" target="_blank" rel="noopener noreferrer">
+                <a href="tel:+256757727965" target="_blank" rel="noopener noreferrer">
                   <button className="w-full bg-primary hover:bg-primary/90 text-white px-4 py-3 rounded-lg font-medium transition-colors flex items-center justify-center gap-2">
                     Start Chatbot Pilot (£1,500)
                   </button>
                 </a>
-                <a href="tel:+14326920996" target="_blank" rel="noopener noreferrer">
+                <a href="tel:+256757727965" target="_blank" rel="noopener noreferrer">
                   <button className="w-full bg-white/10 hover:bg-white/20 text-white px-4 py-2 rounded-lg font-medium transition-colors border border-white/20">
                     Phone Consultation
                   </button>

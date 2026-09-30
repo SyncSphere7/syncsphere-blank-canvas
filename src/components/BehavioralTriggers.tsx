@@ -131,7 +131,7 @@ const BehavioralTriggers: React.FC<BehavioralTriggersProps> = ({ onTrigger }) =>
           subtitle: "Get a free consultation before you go",
           content: "Join 500+ businesses that transformed with our AI solutions. Book a free 15-minute consultation now!",
           cta: "Book Free Consultation",
-          ctaLink: "tel:+14326920996",
+          ctaLink: "tel:+256757727965",
           icon: <Clock className="h-6 w-6 text-primary" />,
           badge: "Limited Time"
         };
@@ -153,7 +153,7 @@ const BehavioralTriggers: React.FC<BehavioralTriggersProps> = ({ onTrigger }) =>
           subtitle: "Get expert guidance in 15 minutes",
           content: "You've been exploring for 3 minutes. Let our AI experts show you exactly how we can help your business.",
           cta: "Call Us Now",
-          ctaLink: "tel:+14326920996",
+          ctaLink: "tel:+256757727965",
           icon: <Users className="h-6 w-6 text-blue-500" />,
           badge: "Expert Available"
         };
@@ -175,7 +175,7 @@ const BehavioralTriggers: React.FC<BehavioralTriggersProps> = ({ onTrigger }) =>
           subtitle: "Ready to get started?",
           content: "This is your 3rd visit. Start with our £1,500 pilot program and see results in 7-14 days.",
           cta: "Start Pilot Program",
-          ctaLink: "tel:+14326920996",
+          ctaLink: "tel:+256757727965",
           icon: <Gift className="h-6 w-6 text-purple-500" />,
           badge: "Returning Visitor"
         };

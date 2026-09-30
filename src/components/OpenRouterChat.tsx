@@ -209,7 +209,7 @@ const OpenRouterChat = () => {
   const callOpenRouterAPI = async (userMessage: string, chatMessages: Message[], files?: File[]) => {
     // Check if API key is available
     if (!OPENROUTER_API_KEY) {
-      return "I'm currently experiencing configuration issues. Please contact our team directly at info@syncsphereofficial.com, WhatsApp +44 742 481 9094, or call us at +1 815 472 7760 (US) / +31 97010257248 (Netherlands) for immediate assistance with your AI solution needs. Our experts are ready to discuss how we can transform your business with world-class AI technology.";
+      return "I'm currently experiencing configuration issues. Please contact our team directly at info@syncspherellc.com, WhatsApp +256 757 727 965, or call us at +256 757 727 965 (US) / +256 757 727 965 (Netherlands) for immediate assistance with your AI solution needs. Our experts are ready to discuss how we can transform your business with world-class AI technology.";
     }
 
     // Process files if provided
@@ -527,7 +527,7 @@ For any startup idea, evaluate:
 
 Remember: Position yourself as both strategic advisor AND technical partner. Provide real value through frameworks and honest guidance, then naturally transition to MVP development services.
 
-Contact: sales@syncsphereofficial.com | WhatsApp: +44 742 481 9094 | Phone: +1 815 472 7760 (US), +31 97010257248 (Netherlands)`;
+Contact: sales@syncspherellc.com | WhatsApp: +256 757 727 965 | Phone: +256 757 727 965 (US), +256 757 727 965 (Netherlands)`;
 
     try {
       const response = await fetch(`${OPENROUTER_BASE_URL}/chat/completions`, {
@@ -565,14 +565,14 @@ Contact: sales@syncsphereofficial.com | WhatsApp: +44 742 481 9094 | Phone: +1 8
       // Fallback responses for common errors
       if (error instanceof Error) {
         if (error.message.includes('429')) {
-          return "I'm currently experiencing high demand. Please try again in a moment, or contact us directly at info@syncsphereofficial.com for immediate assistance.";
+          return "I'm currently experiencing high demand. Please try again in a moment, or contact us directly at info@syncspherellc.com for immediate assistance.";
         }
         if (error.message.includes('401') || error.message.includes('403')) {
-          return "I'm having trouble connecting right now. Please contact our team directly at info@syncsphereofficial.com - we'd love to help you with your AI needs!";
+          return "I'm having trouble connecting right now. Please contact our team directly at info@syncspherellc.com - we'd love to help you with your AI needs!";
         }
       }
 
-      return "I apologize, but I'm experiencing some technical difficulties. Please contact our team at info@syncsphereofficial.com for immediate assistance with your AI solution needs.";
+      return "I apologize, but I'm experiencing some technical difficulties. Please contact our team at info@syncspherellc.com for immediate assistance with your AI solution needs.";
     }
   };
 

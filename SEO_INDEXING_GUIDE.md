@@ -61,11 +61,11 @@
 #### **1. Submit to Google Search Console**
 ```bash
 # URL to submit sitemap:
-https://syncsphereofficial.com/sitemap.xml
+https://syncspherellc.com/sitemap.xml
 
 # Steps:
 1. Go to https://search.google.com/search-console
-2. Add property: syncsphereofficial.com
+2. Add property: syncspherellc.com
 3. Verify ownership (DNS/HTML file)
 4. Submit sitemap: /sitemap.xml
 5. Request indexing for key pages
@@ -74,11 +74,11 @@ https://syncsphereofficial.com/sitemap.xml
 #### **2. Submit to Bing Webmaster Tools**
 ```bash
 # URL to submit sitemap:
-https://syncsphereofficial.com/sitemap.xml
+https://syncspherellc.com/sitemap.xml
 
 # Steps:
 1. Go to https://www.bing.com/webmasters
-2. Add site: syncsphereofficial.com
+2. Add site: syncspherellc.com
 3. Verify ownership
 4. Submit sitemap: /sitemap.xml
 ```
@@ -86,12 +86,12 @@ https://syncsphereofficial.com/sitemap.xml
 #### **3. Manual Indexing Requests**
 ```bash
 # Priority pages to request indexing:
-- https://syncsphereofficial.com/automations/uk
-- https://syncsphereofficial.com/automations/us
-- https://syncsphereofficial.com/automations/eu
-- https://syncsphereofficial.com/chatbots/uk
-- https://syncsphereofficial.com/chatbots/us
-- https://syncsphereofficial.com/chatbots/eu
+- https://syncspherellc.com/automations/uk
+- https://syncspherellc.com/automations/us
+- https://syncspherellc.com/automations/eu
+- https://syncspherellc.com/chatbots/uk
+- https://syncspherellc.com/chatbots/us
+- https://syncspherellc.com/chatbots/eu
 # ... (all 18 regional pages)
 ```
 
@@ -139,13 +139,13 @@ https://syncsphereofficial.com/sitemap.xml
 ```xml
 <!-- Example from our sitemap.xml -->
 <url>
-  <loc>https://syncsphereofficial.com/automations/uk</loc>
+  <loc>https://syncspherellc.com/automations/uk</loc>
   <lastmod>2025-01-17</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.95</priority>
-  <xhtml:link rel="alternate" hreflang="en-gb" href="https://syncsphereofficial.com/automations/uk" />
-  <xhtml:link rel="alternate" hreflang="en-us" href="https://syncsphereofficial.com/automations/us" />
-  <xhtml:link rel="alternate" hreflang="en" href="https://syncsphereofficial.com/automations/eu" />
+  <xhtml:link rel="alternate" hreflang="en-gb" href="https://syncspherellc.com/automations/uk" />
+  <xhtml:link rel="alternate" hreflang="en-us" href="https://syncspherellc.com/automations/us" />
+  <xhtml:link rel="alternate" hreflang="en" href="https://syncspherellc.com/automations/eu" />
 </url>
 ```
 

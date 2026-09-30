@@ -84,7 +84,7 @@ const PrivacyPolicy = () => {
             <section>
               <h2 className="text-2xl font-bold mb-4">Contact Us</h2>
               <p className="text-white/70">
-                If you have any questions about this privacy policy or our privacy practices, please contact us at info@syncsphereofficial.com.
+                If you have any questions about this privacy policy or our privacy practices, please contact us at info@syncspherellc.com.
               </p>
             </section>
           </div>

@@ -38,7 +38,7 @@ const StickyCTA = () => {
               🚀 <span className="text-primary">Call now</span> to get started
             </p>
             <div className="flex items-center gap-2">
-              <a href="tel:+14326920996" target="_blank" rel="noopener noreferrer">
+              <a href="tel:+256757727965" target="_blank" rel="noopener noreferrer">
                 <Button size="sm" className="bg-primary hover:bg-primary/90 text-primary-foreground text-xs md:text-sm whitespace-nowrap">
                   Claim Your Spot <ArrowRight className="ml-1 h-3 w-3" />
                 </Button>

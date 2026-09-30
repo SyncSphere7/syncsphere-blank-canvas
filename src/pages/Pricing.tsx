@@ -329,8 +329,8 @@ const Pricing = () => {
           <section className="py-20 bg-gradient-to-r from-primary to-blue-600 text-white">
             <div className="max-w-4xl mx-auto px-4 text-center">
               <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Get Started?</h2>
-              <p className="text-xl mb-8 opacity-90">Call us at +1 (432) 692-0996 for a free consultation and custom quote.</p>
-              <a href="tel:+14326920996" target="_blank" rel="noopener noreferrer">
+              <p className="text-xl mb-8 opacity-90">Call us at +256 757 727 965 for a free consultation and custom quote.</p>
+              <a href="tel:+256757727965" target="_blank" rel="noopener noreferrer">
                 <Button size="lg" variant="secondary" className="bg-white text-primary hover:bg-white/90 px-8 py-6 text-lg">
                   <Phone className="h-5 w-5 mr-2" />Call Us Now<ArrowRight className="ml-2 h-5 w-5" />
                 </Button>

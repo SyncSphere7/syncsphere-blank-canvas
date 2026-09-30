@@ -21,7 +21,7 @@ const MessageRenderer: React.FC<MessageRendererProps> = ({ content, className = 
             className="text-green-400 hover:text-green-300 underline"
             title="Call us"
           >
-            +1 (432) 692-0996
+            +256 757 727 965
           </a>
         )
       },
@@ -31,7 +31,7 @@ const MessageRenderer: React.FC<MessageRendererProps> = ({ content, className = 
         replacement: (match: string, number: string) => (
           <a
             key={`phone-us-${number}`}
-            href={`tel:+18154727760`}
+            href={`tel:+256757727965`}
             className="text-blue-400 hover:text-blue-300 underline"
             title="Call our US office"
           >
@@ -45,7 +45,7 @@ const MessageRenderer: React.FC<MessageRendererProps> = ({ content, className = 
         replacement: (match: string, number: string) => (
           <a
             key={`phone-nl-${number}`}
-            href={`tel:+3197010257248`}
+            href={`tel:+256757727965`}
             className="text-blue-400 hover:text-blue-300 underline"
             title="Call our Netherlands office"
           >

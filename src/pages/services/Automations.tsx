@@ -25,33 +25,31 @@ const Automations = () => {
   const serviceSchema = {
     "@context": "https://schema.org",
     "@type": "Service",
-    "name": "AI Workflow Automation Services",
-    "description": "Professional AI workflow automation and business process automation services. Automate repetitive tasks, reduce costs by 80%, and scale operations with intelligent automation solutions.",
+    "name": "Business Automation Services",
+    "description": "Professional business automation services. Automate repetitive tasks and business processes, reduce manual errors, and scale operations without increasing headcount. Packages from $2,500.",
     "provider": {
       "@type": "Organization",
-      "name": "SyncSphere AI Agency",
-      "url": "https://syncsphereofficial.com",
-      "logo": "https://syncsphereofficial.com/syncsphere-logo.png"
+      "name": "SyncSphere LLC",
+      "legalName": "SyncSphere LLC",
+      "url": "https://syncspherellc.com",
+      "logo": "https://syncspherellc.com/syncsphere-logo.png",
+      "email": "info@syncspherellc.com",
+      "telephone": "+256-757-727-965"
     },
-    "areaServed": ["United Kingdom", "United States", "European Union"],
+    "areaServed": ["United States", "United Kingdom", "European Union", "Uganda"],
     "serviceType": "Business Process Automation",
     "offers": {
       "@type": "Offer",
-      "priceRange": "£6400-£67500",
-      "description": "AI workflow automation services: Starter £6,400-£13,500, Professional £13,500-£31,500, Enterprise £31,500-£67,500",
-      "availability": "InStock",
-      "validFrom": "2024-01-01"
+      "priceCurrency": "USD",
+      "priceRange": "$2,500+",
+      "description": "Business automation packages from $2,500 for a one-time setup, scoped to workflow automation, CRM and ERP integrations, and document processing.",
+      "availability": "InStock"
     },
     "additionalProperty": [
       {
         "@type": "PropertyValue",
-        "name": "Cost Reduction",
-        "value": "Up to 80% operational cost reduction"
-      },
-      {
-        "@type": "PropertyValue",
-        "name": "ROI Timeline",
-        "value": "3-6 months payback period"
+        "name": "Payment Terms",
+        "value": "50% upfront, 25% at design approval, 25% on delivery"
       }
     ]
   };
@@ -64,19 +62,19 @@ const Automations = () => {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://syncsphereofficial.com"
+        "item": "https://syncspherellc.com"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Services",
-        "item": "https://syncsphereofficial.com/services"
+        "item": "https://syncspherellc.com/services"
       },
       {
         "@type": "ListItem",
         "position": 3,
         "name": "AI Workflow Automation",
-        "item": "https://syncsphereofficial.com/services/automations"
+        "item": "https://syncspherellc.com/services/automations"
       }
     ]
   };
@@ -87,7 +85,7 @@ const Automations = () => {
         <title>AI Workflow Automation Services | Business Process Automation | SyncSphere</title>
         <meta name="description" content="Professional AI workflow automation services. Automate business processes, reduce costs by 80%, eliminate errors. UK/US/EU pricing from £6,400. Get started free." />
         <meta name="keywords" content="AI workflow automation, business process automation, workflow automation services, automated business processes, intelligent automation, RPA services" />
-        <link rel="canonical" href="https://syncsphereofficial.com/services/automations" />
+        <link rel="canonical" href="https://syncspherellc.com/services/automations" />
         <script type="application/ld+json">
           {JSON.stringify(serviceSchema)}
         </script>
@@ -156,12 +154,12 @@ const Automations = () => {
 
             <div className="mt-auto">
               <div className="space-y-3">
-                <a href="tel:+14326920996" target="_blank" rel="noopener noreferrer">
+                <a href="tel:+256757727965" target="_blank" rel="noopener noreferrer">
                   <button className="w-full bg-primary hover:bg-primary/90 text-white px-4 py-3 rounded-lg font-medium transition-colors flex items-center justify-center gap-2">
                     Start Automation Pilot (£1,500)
                   </button>
                 </a>
-                <a href="tel:+14326920996" target="_blank" rel="noopener noreferrer">
+                <a href="tel:+256757727965" target="_blank" rel="noopener noreferrer">
                   <button className="w-full bg-white/10 hover:bg-white/20 text-white px-4 py-2 rounded-lg font-medium transition-colors border border-white/20">
                     Phone Consultation
                   </button>

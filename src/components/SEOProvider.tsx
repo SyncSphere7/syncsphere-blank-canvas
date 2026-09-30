@@ -16,8 +16,8 @@ interface SEOProps {
 const SEOProvider: React.FC<SEOProps> = ({
   title = "SyncSphere | Professional Websites, Marketing & Automation",
   description = "Professional websites from $3,500. Custom design, domain & SSL included. Social media management, email marketing & business automation. Stripe, bank transfer, Visa & debit accepted.",
-  canonicalUrl = "https://syncsphere-blank-canvas.vercel.app",
-  ogImageUrl = "https://syncsphere-blank-canvas.vercel.app/syncsphere-logo.png",
+  canonicalUrl = "https://syncspherellc.com",
+  ogImageUrl = "https://syncspherellc.com/syncsphere-logo.png",
   keywords = "website design, web development, social media management, email marketing, business automation, brand identity, digital agency, professional websites",
   region = 'global',
   service,
@@ -109,8 +109,8 @@ const SEOProvider: React.FC<SEOProps> = ({
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "SyncSphere",
-    "url": "https://syncsphere-blank-canvas.vercel.app",
-    "logo": "https://syncsphere-blank-canvas.vercel.app/syncsphere-logo.png",
+    "url": "https://syncspherellc.com",
+    "logo": "https://syncspherellc.com/syncsphere-logo.png",
     "description": "Professional digital agency offering website design, social media management, email marketing, business automation, and brand identity services.",
     "sameAs": [
       "https://twitter.com/SyncSphere",
