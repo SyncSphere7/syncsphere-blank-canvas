@@ -56,6 +56,7 @@ const Footer = () => {
               <Link to="/pricing" className="text-muted-foreground hover:text-primary transition-colors block text-sm">Pricing</Link>
               <Link to="/privacy-policy" className="text-muted-foreground hover:text-primary transition-colors block text-sm">Privacy Policy</Link>
               <Link to="/terms-of-service" className="text-muted-foreground hover:text-primary transition-colors block text-sm">Terms of Service</Link>
+              <Link to="/refund-policy" className="text-muted-foreground hover:text-primary transition-colors block text-sm">Refund &amp; Cancellation Policy</Link>
               <button onClick={() => window.dispatchEvent(new CustomEvent('openCookieSettings'))} className="text-muted-foreground hover:text-primary transition-colors text-left flex items-center gap-2 text-sm">
                 <Cookie size={14} />Cookie Settings
               </button>

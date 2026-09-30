@@ -33,6 +33,7 @@ import BlogPost from "./pages/BlogPost";
 // Policy Pages
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsOfService from "./pages/TermsOfService";
+import RefundPolicy from "./pages/RefundPolicy";
 import WebsiteGrader from "./pages/WebsiteGrader";
 
 // Pricing
@@ -77,6 +78,7 @@ const App = () => (
                 {/* Policy Routes */}
                 <Route path="/privacy-policy" element={<PrivacyPolicy />} />
                 <Route path="/terms-of-service" element={<TermsOfService />} />
+                <Route path="/refund-policy" element={<RefundPolicy />} />
 
                 {/* Tools */}
                 <Route path="/tools/website-grader" element={<WebsiteGrader />} />

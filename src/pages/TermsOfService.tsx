@@ -77,10 +77,36 @@ const TermsOfService = () => {
               </p>
             </section>
             
+            <section className="mb-10">
+              <h2 className="text-2xl font-bold mb-4">Governing Law and Disputes</h2>
+              <p className="text-white/70 mb-4">
+                These Terms are governed by the laws of the State of Montana, United States, without
+                regard to its conflict of law provisions. Any dispute arising out of or relating to
+                these Terms or your use of our services shall be resolved exclusively in the state
+                or federal courts located in Montana, and each party consents to the jurisdiction and
+                venue of those courts. We ask that you raise any concern with us directly first so
+                that it can be addressed promptly. Our refund and cancellation terms are set out in
+                the{' '}
+                <Link to="/refund-policy" className="text-primary hover:underline">
+                  Refund &amp; Cancellation Policy
+                </Link>
+                .
+              </p>
+            </section>
+
             <section>
               <h2 className="text-2xl font-bold mb-4">Contact Us</h2>
               <p className="text-white/70">
                 If you have any questions about these Terms, please contact us at info@syncspherellc.com.
+              </p>
+              <p className="text-white/70 mt-4">
+                SyncSphere LLC — a domestic limited liability company registered in Montana, USA
+                (File No. 16835344, EIN 35-2932039).
+                <br />
+                Registered office: 127 N Higgins Ave, Ste 307D #2082, Missoula, MT 59802, United
+                States.
+                <br />
+                Engineering &amp; operations: Plot 32 Lumumba Ave, Kampala, Uganda.
               </p>
             </section>
           </div>
