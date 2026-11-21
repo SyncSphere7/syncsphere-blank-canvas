@@ -8,7 +8,7 @@ import { site, whatsappLink } from '@/lib/site';
 export const metadata = pageMeta(
   '/contact',
   'Contact SyncSphere — WhatsApp, Phone or Email',
-  'Talk to SyncSphere about a website, WhatsApp automation or marketing. WhatsApp or call +256 757 727 965, or send us a message. Office on Lumumba Avenue, Kampala.',
+  'Talk to SyncSphere about a website, WhatsApp automation or marketing. WhatsApp or call +256 787 308 564, or send us a message. Office at Acacia Mall, Kampala.',
 );
 
 export default function ContactPage() {
@@ -29,8 +29,8 @@ export default function ContactPage() {
             </ul>
             <div className="overflow-hidden rounded-2xl border border-line">
               <iframe
-                title="SyncSphere office on Lumumba Avenue, Kampala"
-                src="https://www.google.com/maps?q=Lumumba+Avenue,+Kampala,+Uganda&output=embed"
+                title="SyncSphere office at Acacia Mall, Kampala"
+                src="https://www.google.com/maps?q=Acacia+Mall,+Kampala,+Uganda&output=embed"
                 className="h-64 w-full"
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"

@@ -227,10 +227,10 @@ export default function HomePage() {
               <p className="eyebrow text-cream/60">About us</p>
               <h2 className="display-xl mt-3 text-[clamp(36px,4.6vw,68px)]">A Kampala team you can visit.</h2>
               <p className="mt-5 max-w-[46ch] text-cream/80">
-                We work from Lumumba Avenue, reply on WhatsApp, and sign a written agreement for every project. Our US-registered company also serves clients abroad.
+                We work from Acacia Mall in Kampala, reply on WhatsApp, and sign a written agreement for every project. Our US-registered company also serves clients abroad.
               </p>
               <dl className="mt-8 grid grid-cols-2 gap-4">
-                <div className="border-t border-cream/15 pt-3"><dt className="eyebrow text-cream/60">Office</dt><dd className="mt-1 font-semibold">Plot 32 Lumumba Avenue</dd></div>
+                <div className="border-t border-cream/15 pt-3"><dt className="eyebrow text-cream/60">Office</dt><dd className="mt-1 font-semibold">4th Floor, Acacia Mall</dd></div>
                 <div className="border-t border-cream/15 pt-3"><dt className="eyebrow text-cream/60">Company</dt><dd className="mt-1 font-semibold">{site.legalName}, Montana</dd></div>
               </dl>
               <Link href="/about" className="mt-8 inline-block border-b border-cream/60 pb-0.5 font-semibold hover:border-brand-bright hover:text-brand-bright">More about us</Link>

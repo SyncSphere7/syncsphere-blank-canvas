@@ -52,7 +52,7 @@ const organization = {
   email: site.email,
   address: {
     '@type': 'PostalAddress',
-    streetAddress: 'Plot 32 Lumumba Avenue',
+    streetAddress: '4th Floor, Acacia Mall, Plot 14-18 Cooper Road',
     addressLocality: 'Kampala',
     addressCountry: 'UG',
   },

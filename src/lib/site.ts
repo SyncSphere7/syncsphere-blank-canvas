@@ -8,14 +8,14 @@ export const site = {
   tagline: 'Websites, WhatsApp automation and digital marketing for Ugandan businesses',
   description:
     'SyncSphere builds professional websites, WhatsApp Business automation and social media for businesses in Uganda and abroad. Kampala team, US-registered company, pay with Mobile Money or card.',
-  phone: '+256 757 727 965',
-  phoneHref: 'tel:+256757727965',
+  phone: '+256 787 308 564',
+  phoneHref: 'tel:+256787308564',
   /** Digits only, international format, for wa.me links. */
-  whatsapp: '256757727965',
+  whatsapp: '256787308564',
   email: 'info@syncspherellc.com',
   salesEmail: 'sales@syncspherellc.com',
   financeEmail: 'finance@syncspherellc.com',
-  kampalaAddress: 'Plot 32 Lumumba Avenue, Kampala, Uganda',
+  kampalaAddress: '4th Floor, Acacia Mall, Plot 14-18 Cooper Road, Kampala, Uganda',
   registration: {
     state: 'Montana, USA',
     fileNo: '16835344',
