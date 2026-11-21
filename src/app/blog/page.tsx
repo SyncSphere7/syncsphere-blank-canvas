@@ -6,15 +6,15 @@ import { pageMeta } from '@/lib/meta';
 
 export const metadata = pageMeta(
   '/blog',
-  'Blog — Practical Online Marketing Tips for Ugandan Businesses',
-  'Plain-language guides on websites, WhatsApp Business, Google Maps and social media for businesses in Uganda.',
+  'Blog — Guides to Websites, Apps and AI for Ugandan Businesses',
+  'Plain-language guides on websites, web and mobile apps, AI chatbots, WhatsApp Business and Google Maps for businesses in Uganda — with real prices.',
 );
 
 export default function BlogPage() {
   const sorted = [...posts].sort((a, b) => b.date.localeCompare(a.date));
   return (
     <>
-      <PageHero eyebrow="Blog" title="Practical guides for growing your business online" intro="Short, plain-language advice for Ugandan business owners." />
+      <PageHero eyebrow="Blog" title="Practical guides to websites, apps and AI" intro="Short, plain-language advice for Ugandan business owners." />
       <section className="section">
         <div className="container grid gap-5 md:grid-cols-3">
           {sorted.map((p) => (
