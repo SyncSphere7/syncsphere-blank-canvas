@@ -54,7 +54,7 @@ export function Consent() {
         </>
       )}
       {ready && choice === null && (
-        <div role="dialog" aria-label="Cookie preferences" className="fixed inset-x-3 bottom-[92px] z-50 mx-auto max-w-xl rounded-2xl border border-line bg-white p-4 shadow-card sm:inset-x-6 lg:bottom-3">
+        <div role="dialog" aria-label="Cookie preferences" className="fixed inset-x-3 bottom-[92px] z-50 mx-auto max-w-xl rounded-2xl border border-line bg-white p-4 shadow-card sm:inset-x-6 lg:inset-x-auto lg:bottom-6 lg:left-6 lg:max-w-md">
           <p className="text-sm text-ink-soft">
             We use analytics cookies to understand how visitors use this site. No advertising cookies.{' '}
             <a href="/privacy-policy" className="font-medium text-brand underline">Privacy policy</a>

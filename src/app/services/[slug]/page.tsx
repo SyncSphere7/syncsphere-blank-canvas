@@ -49,8 +49,8 @@ export default async function ServicePage({ params }: Props) {
             <WhatsAppIcon className="h-4 w-4" /> Ask on WhatsApp
           </a>
           <Link href="/pricing" className="btn-outline">See all prices</Link>
-          <p className="text-sm text-ink-soft sm:ml-3">
-            <span className="font-semibold text-ink">{s.price.ug}</span> · International: {s.price.intl}
+          <p className="text-sm text-cream/70 sm:ml-3">
+            <span className="font-semibold text-cream">{s.price.ug}</span> · International: {s.price.intl}
           </p>
         </div>
       </PageHero>
