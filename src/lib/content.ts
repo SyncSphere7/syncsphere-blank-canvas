@@ -1,3 +1,5 @@
+import type { PackageSlug } from './pricing';
+
 export type IconName =
   | 'globe'
   | 'message'
@@ -11,9 +13,17 @@ export type IconName =
   | 'heart'
   | 'school'
   | 'cart'
-  | 'briefcase';
+  | 'briefcase'
+  | 'app'
+  | 'phone'
+  | 'bot'
+  | 'document'
+  | 'training';
 
 export type Faq = { q: string; a: string };
+
+/** The three things SyncSphere sells first, in the order they appear on the home page. */
+export type Pillar = 'websites' | 'apps' | 'ai';
 
 export type Service = {
   slug: string;
@@ -26,6 +36,10 @@ export type Service = {
   goodFor: string[];
   price: { ug: string; intl: string };
   faqs: Faq[];
+  /** Which home-page pillar the service sits under, if any. */
+  pillar?: Pillar;
+  /** Set when the service has its own packages in pricing.ts. */
+  packages?: PackageSlug;
 };
 
 export const services: Service[] = [
@@ -52,6 +66,137 @@ export const services: Service[] = [
       { q: 'Do I own the website?', a: 'Yes. Once the final payment is made, the domain, design and content are yours.' },
       { q: 'Can I update it myself?', a: 'Business and Premium websites include an easy editor and a training session. On Starter, we make small changes for you under the website care plan.' },
     ],
+    pillar: 'websites',
+  },
+  {
+    slug: 'web-apps',
+    name: 'Web app development',
+    icon: 'app',
+    summary: 'Booking, ordering, stock, school and clinic systems your team and customers use every day.',
+    headline: 'Replace the spreadsheets and paper with a system built for you',
+    intro:
+      'When a business grows, Excel sheets, notebooks and WhatsApp groups stop keeping up. We build web apps that do one job properly — bookings, orders, stock, fees, patient records or a client portal — with Mobile Money built in, working on any phone or computer.',
+    includes: [
+      'A short planning session to agree exactly what the system must do',
+      'Clickable design you approve before we build',
+      'Staff and customer logins with the right permissions',
+      'MTN MoMo, Airtel Money and card payments',
+      'Reports and exports for the owner',
+      'Hosting, backups and 60 days of free fixes after launch',
+    ],
+    goodFor: ['Schools managing fees and report cards', 'Clinics, pharmacies and labs', 'Shops and distributors tracking stock and orders', 'Any business run on spreadsheets that keep breaking'],
+    price: { ug: 'From UGX 8,000,000', intl: 'From $7,500' },
+    faqs: [
+      { q: 'How is a web app different from a website?', a: 'A website tells people about your business. A web app does work: people log in, book, order, pay, and your team manages it all from a dashboard.' },
+      { q: 'Do I own the code?', a: 'Yes. Once the final payment is made, the code and the data are yours, and we hand over everything needed to run it.' },
+      { q: 'Can it work when the internet is slow?', a: 'Yes. We build for mobile data first, and parts of the app can keep working offline and sync when the connection returns.' },
+      { q: 'What does the monthly care fee cover?', a: 'Hosting, backups, security updates, monitoring and small fixes. New features are quoted separately.' },
+    ],
+    pillar: 'apps',
+    packages: 'web-apps',
+  },
+  {
+    slug: 'mobile-apps',
+    name: 'Mobile app development',
+    icon: 'phone',
+    summary: 'Android and iPhone apps for ordering, booking, delivery, savings and field teams.',
+    headline: 'Your business in your customers’ pockets',
+    intro:
+      'An app keeps your business one tap away: customers order, book, pay and get updates without searching for you. We build Android-first, because that is what most Ugandans use, and add iPhone from the same code when you need it.',
+    includes: [
+      'Android app published on Google Play under your business name',
+      'iPhone version on the App Store (Android + iPhone package)',
+      'Logins, push notifications and Mobile Money payments',
+      'Offline mode for customers and staff in low-signal areas',
+      'Admin panel to manage products, orders and users',
+      'Store listings, screenshots and review process handled',
+    ],
+    goodFor: ['Restaurants, delivery and boda services', 'Salons, clinics and anyone taking bookings', 'SACCOs and savings groups', 'Companies with sales or field staff'],
+    price: { ug: 'From UGX 15,000,000', intl: 'From $12,000' },
+    faqs: [
+      { q: 'Do I need an app, or is a web app enough?', a: 'Often a web app that installs on the phone is enough, and costs less. We will tell you honestly which one fits before you spend money.' },
+      { q: 'Who pays the store fees?', a: 'Google Play charges a one-time USD 25 and Apple charges USD 99 a year. The accounts are in your name and paid directly by you, so you always own the listing.' },
+      { q: 'How long does it take?', a: 'An Android app is usually on Google Play in 8–10 weeks. Android and iPhone together take 10–14 weeks, including store review.' },
+    ],
+    pillar: 'apps',
+    packages: 'mobile-apps',
+  },
+  {
+    slug: 'ai-chatbots',
+    name: 'AI chatbots for WhatsApp',
+    icon: 'bot',
+    summary: 'An AI assistant that answers customers, takes orders and books appointments on WhatsApp, day and night.',
+    headline: 'Answer every customer in seconds — even at 2 a.m.',
+    intro:
+      'Customers who wait for a reply buy somewhere else. We build AI assistants trained on your own prices, products and policies. They answer on WhatsApp and your website in English, Luganda or Swahili, take orders and bookings, and hand the chat to your staff whenever a person is needed.',
+    includes: [
+      'Trained on your price list, services, hours and common questions',
+      'Works on your WhatsApp Business number and your website',
+      'Takes orders, bookings and appointments (Sales bot)',
+      'Mobile Money payment requests inside the chat (Sales bot)',
+      'Hands over to your staff, with the full conversation',
+      'Monthly report of what customers ask, and answers kept up to date',
+    ],
+    goodFor: ['Shops and restaurants flooded with “how much?” messages', 'Hotels, lodges and tour operators', 'Clinics and salons taking appointments', 'Schools answering parents’ questions'],
+    price: { ug: 'From UGX 2,500,000', intl: 'From $2,500' },
+    faqs: [
+      { q: 'Will it give customers wrong answers?', a: 'It only answers from the information you approve. When it is not sure, it says so and passes the chat to your staff. You can read every conversation.' },
+      { q: 'Does it work with my current WhatsApp number?', a: 'Usually yes, through the official WhatsApp Business Platform. We check your number first and explain any change before we make it.' },
+      { q: 'What does the monthly fee cover?', a: 'The AI usage, hosting, monitoring and updating the answers when your prices or products change. WhatsApp’s own message fees from Meta are passed on at cost.' },
+      { q: 'Can it speak Luganda?', a: 'The Sales bot replies in English, Luganda or Swahili. We test it with real questions from your customers before it goes live.' },
+    ],
+    pillar: 'ai',
+    packages: 'ai-chatbots',
+  },
+  {
+    slug: 'document-ai',
+    name: 'Document AI',
+    icon: 'document',
+    summary: 'AI reads your invoices, receipts and forms and types the data into your spreadsheets or accounts.',
+    headline: 'Stop typing invoices and receipts by hand',
+    intro:
+      'Many teams spend hours every week copying numbers from paper and PDFs into Excel or accounting software. We set up AI that reads those documents — invoices, receipts, delivery notes, application forms, IDs — and enters the data for you, flagging anything unclear for a person to check.',
+    includes: [
+      'Documents received by email, WhatsApp photo or upload',
+      'Data extracted and checked against simple rules',
+      'Entered into Google Sheets, Excel or your accounting system',
+      'Unclear items flagged for review, never guessed',
+      'Monthly accuracy report',
+    ],
+    goodFor: ['Accounts teams entering supplier invoices', 'Distributors handling delivery notes', 'Schools, banks and SACCOs processing application forms', 'NGOs collecting receipts from the field'],
+    price: { ug: 'From UGX 4,000,000', intl: 'From $3,000' },
+    faqs: [
+      { q: 'Can it read handwriting and phone photos?', a: 'Clear handwriting and reasonable phone photos, yes. We test it on a sample of your real documents first and show you the accuracy before you commit.' },
+      { q: 'Is our data safe?', a: 'Documents are processed securely, kept only as long as you choose, and handled in line with Uganda’s Data Protection and Privacy Act.' },
+    ],
+    pillar: 'ai',
+    packages: 'document-ai',
+  },
+  {
+    slug: 'ai-training',
+    name: 'AI training and consulting',
+    icon: 'training',
+    summary: 'Workshops that teach your team to use AI safely, and an assessment of where AI pays off in your business.',
+    headline: 'Get your team using AI properly — this month',
+    intro:
+      'Your staff are probably already trying ChatGPT, often with company information they should not share. We run practical workshops that teach them to write, analyse and plan faster with AI, set clear rules for safe use, and show you where AI can save real money in your business.',
+    includes: [
+      'Hands-on sessions with ChatGPT, Claude and Microsoft Copilot',
+      'Real tasks from your business: emails, reports, Excel, proposals, marketing',
+      'Clear rules on what not to share with AI tools',
+      'Prompt guide for every participant',
+      'An AI use policy for your company',
+      'Optional assessment with a written plan and costs',
+    ],
+    goodFor: ['Management teams and boards', 'Banks, SACCOs, NGOs and schools', 'Sales, marketing and admin teams', 'Owners who want to know where to start'],
+    price: { ug: 'From UGX 1,500,000', intl: 'From $1,200' },
+    faqs: [
+      { q: 'Do my staff need to be good with computers?', a: 'No. If they can use WhatsApp and email, they can follow the workshop. We adapt the exercises to each group.' },
+      { q: 'Which AI tools do you teach?', a: 'The ones your team will actually use: usually ChatGPT, Claude and Microsoft Copilot. We do not sell any of them, so the advice is independent.' },
+      { q: 'What happens after the assessment?', a: 'You get a written report and plan. You can build it with us or anyone else. If you build with us within three months, the assessment fee is credited.' },
+    ],
+    pillar: 'ai',
+    packages: 'ai-training',
   },
   {
     slug: 'whatsapp-automation',
@@ -239,10 +384,25 @@ export const industries: Industry[] = [
   },
 ];
 
+/** The three headline offers. `href` is the hub page that lists every service in the pillar. */
+export const pillars: { id: Pillar; name: string; line: string; from: string; href: string }[] = [
+  { id: 'websites', name: 'Websites', line: 'Fast, mobile-friendly websites and online shops that turn visitors into enquiries.', from: 'From UGX 1,800,000', href: '/services/websites' },
+  { id: 'apps', name: 'Apps', line: 'Web and mobile apps for bookings, orders, stock, schools and clinics, with Mobile Money built in.', from: 'From UGX 8,000,000', href: '/apps' },
+  { id: 'ai', name: 'AI', line: 'AI that answers customers on WhatsApp, reads your paperwork and makes your team faster.', from: 'From UGX 1,500,000', href: '/ai' },
+];
+
 export const homeFaqs: Faq[] = [
   {
     q: 'How much does a website cost in Uganda?',
     a: 'Our websites start at UGX 1,800,000 for a Starter site (up to 5 pages). Business websites start at UGX 4,000,000 and online shops or booking systems from UGX 9,000,000. You get a fixed written quote before we start.',
+  },
+  {
+    q: 'Do you build mobile apps and web apps?',
+    a: 'Yes. Web apps such as booking, stock, school and clinic systems start from UGX 8,000,000. Android apps start from UGX 15,000,000, and Android plus iPhone from UGX 28,000,000. We will tell you honestly if a cheaper web app would do the job.',
+  },
+  {
+    q: 'What can AI actually do for my business?',
+    a: 'The most useful things today: an AI assistant that answers customers and takes orders on WhatsApp (from UGX 2,500,000), AI that reads invoices and receipts into your accounts (from UGX 4,000,000), and training so your staff use AI safely (from UGX 1,500,000).',
   },
   {
     q: 'How do I pay?',

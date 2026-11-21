@@ -3,22 +3,26 @@ import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 import { FaqList, JsonLd } from '@/components/ui';
 import { HeroSlot, KampalaTime } from '@/components/HeroMotion';
-import { homeFaqs, industries, processSteps, services } from '@/lib/content';
+import { homeFaqs, industries, pillars, processSteps, services } from '@/lib/content';
 import { paymentTerms, websitePlans } from '@/lib/pricing';
 import { pageMeta } from '@/lib/meta';
 import { site, whatsappLink } from '@/lib/site';
 
 export const metadata = pageMeta(
   '/',
-  'SyncSphere | Website Design in Uganda — Websites, WhatsApp & Marketing',
-  'Professional websites for Ugandan businesses from UGX 1,800,000. WhatsApp Business automation, social media and Google Maps setup. Kampala team, pay with Mobile Money.',
+  'SyncSphere | Websites, Apps & AI for Ugandan Businesses',
+  'Websites from UGX 1,800,000, web and mobile apps from UGX 8,000,000, and AI chatbots for WhatsApp from UGX 2,500,000. Kampala team at Acacia Mall, pay with Mobile Money.',
 );
 
-const groups = [
-  { name: 'Build', slugs: ['websites', 'branding'] },
-  { name: 'Grow', slugs: ['social-media', 'google-business-profile'] },
-  { name: 'Run', slugs: ['whatsapp-automation', 'business-automation', 'maintenance'] },
-];
+/** Services listed under each pillar on the home page, in order. */
+const pillarSlugs: Record<string, string[]> = {
+  websites: ['websites', 'branding', 'google-business-profile', 'maintenance'],
+  apps: ['web-apps', 'mobile-apps'],
+  ai: ['ai-chatbots', 'document-ai', 'ai-training'],
+};
+const moreSlugs = ['whatsapp-automation', 'social-media', 'business-automation'];
+const priceStrip = ['web-apps', 'mobile-apps', 'ai-chatbots', 'document-ai', 'ai-training'];
+const bySlug = (slug: string) => services.find((x) => x.slug === slug)!;
 
 const ugx = (n: number) => n.toLocaleString('en-US');
 
@@ -50,16 +54,16 @@ export default function HomePage() {
           </div>
 
           <h1 className="display-xl mt-8 text-[clamp(50px,8.2vw,132px)] sm:mt-12">
-            <span className="sr-only">Websites that sell for Ugandan businesses</span>
-            <span className="block overflow-hidden pb-[0.02em]" aria-hidden="true"><span className="inline-block animate-rise">Websites</span></span>
-            <span className="block overflow-hidden pb-[0.02em]" aria-hidden="true"><span className="inline-block animate-rise [animation-delay:.1s]">that sell for</span></span>
+            <span className="sr-only">Websites, apps and AI for Ugandan businesses</span>
+            <span className="block overflow-hidden pb-[0.02em]" aria-hidden="true"><span className="inline-block animate-rise">Websites, apps</span></span>
+            <span className="block overflow-hidden pb-[0.02em]" aria-hidden="true"><span className="inline-block animate-rise [animation-delay:.1s]">&amp; <span className="text-brand-bright">AI</span> for</span></span>
             <span className="block overflow-hidden pb-[0.02em]"><span className="inline-block animate-rise [animation-delay:.2s]"><HeroSlot /></span></span>
           </h1>
 
           <div className="mt-12 grid items-end gap-10 lg:grid-cols-12 lg:gap-4">
             <div className="animate-fade-up [animation-delay:.35s] lg:col-span-5">
               <p className="max-w-[34rem] text-lg leading-relaxed text-cream/80 sm:text-[19px]">
-                We build your website, set up WhatsApp Business and run your social media. One Kampala team, one written price in shillings, paid by Mobile Money.
+                We build websites and apps, and put AI to work in your business: answering customers on WhatsApp, reading your paperwork, training your team. One Kampala team, one written price in shillings, paid by Mobile Money.
               </p>
               <div className="mt-8 flex flex-wrap items-center gap-6">
                 <a href={whatsappLink()} target="_blank" rel="noopener noreferrer" className="btn-chip">
@@ -74,9 +78,9 @@ export default function HomePage() {
 
             <dl className="animate-fade-up border-t-2 border-cream font-mono text-sm [animation-delay:.5s] lg:col-span-3 lg:col-start-7">
               {[
-                ['Starter website', starter.price],
-                ['Live in', '5–7 working days'],
-                ['After launch', '30 days free fixes'],
+                ['Website from', starter.price],
+                ['Web app from', bySlug('web-apps').price.ug.replace('From ', '')],
+                ['AI chatbot from', bySlug('ai-chatbots').price.ug.replace('From ', '')],
               ].map(([k, v]) => (
                 <div key={k} className="border-b border-cream/15 py-2.5">
                   <dt className="text-xs uppercase tracking-[0.1em] text-cream/60">{k}</dt>
@@ -108,37 +112,49 @@ export default function HomePage() {
 
         {/* Services */}
         <div className="container mt-28 sm:mt-36">
-          <SecHead label="Services" title={<>Build it. Grow it. <em className="not-italic text-brand-bright">Run it.</em></>} />
-          <div className="grid gap-10 md:grid-cols-3 md:gap-4">
-            {groups.map((g) => {
-              const items = g.slugs.map((s) => services.find((x) => x.slug === s)).filter((x): x is (typeof services)[number] => Boolean(x));
-              return (
-                <div key={g.name}>
-                  <h3 className="display-xl flex items-baseline justify-between border-b-2 border-brand-bright pb-3 text-[34px]">
-                    {g.name} <sup className="font-mono text-xs font-normal text-cream/60">{String(items.length).padStart(2, '0')}</sup>
-                  </h3>
-                  <ul>
-                    {items.map((s) => (
-                      <li key={s.slug} className="border-b border-cream/15">
-                        <Link href={`/services/${s.slug}`} className="group block py-5 transition-[padding] duration-300 ease-out hover:pl-2.5">
-                          <span className="block text-xl font-bold group-hover:text-brand-bright">{s.name}</span>
-                          <span className="mt-1 block text-[15px] text-cream/65">{s.summary}</span>
-                          <span className="mt-2.5 block font-mono text-[13px] text-brand-bright">{s.price.ug}</span>
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              );
-            })}
+          <SecHead label="What we do" title={<>Websites. Apps. <em className="not-italic text-brand-bright">AI.</em></>} />
+          <div className="grid gap-14 md:grid-cols-3 md:gap-4">
+            {pillars.map((p) => (
+              <div key={p.id} className="flex flex-col">
+                <Link href={p.href} className="group block border-b-2 border-brand-bright pb-5">
+                  <span className="display-xl flex items-end justify-between gap-3 text-[clamp(56px,6.4vw,96px)] transition-colors group-hover:text-brand-bright">
+                    {p.name}
+                    <span className="mb-2 grid h-11 w-11 shrink-0 place-items-center rounded-full border border-cream/30 transition-[transform,background-color,border-color] duration-300 ease-out group-hover:-rotate-45 group-hover:border-brand-bright group-hover:bg-brand-bright">
+                      <ArrowRight className="h-5 w-5" aria-hidden="true" />
+                    </span>
+                  </span>
+                  <span className="mt-3 block max-w-[34ch] text-[15px] text-cream/75">{p.line}</span>
+                  <span className="mt-3 block font-mono text-sm text-brand-bright">{p.from}</span>
+                </Link>
+                <ul>
+                  {pillarSlugs[p.id].map(bySlug).map((s) => (
+                    <li key={s.slug} className="border-b border-cream/15">
+                      <Link href={`/services/${s.slug}`} className="group block py-4 transition-[padding] duration-300 ease-out hover:pl-2.5">
+                        <span className="flex items-baseline justify-between gap-3">
+                          <span className="text-lg font-bold group-hover:text-brand-bright">{s.name}</span>
+                          <span className="shrink-0 font-mono text-[12px] text-cream/55">{s.price.ug.replace('From ', '').replace(' / month', '/mo')}</span>
+                        </span>
+                        <span className="mt-1 block text-[14.5px] text-cream/60">{s.summary}</span>
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
           </div>
+          <p className="mt-12 flex flex-wrap items-baseline gap-x-6 gap-y-2 border-t border-cream/15 pt-5">
+            <span className="font-mono text-xs uppercase tracking-[0.1em] text-cream/60">Also</span>
+            {moreSlugs.map(bySlug).map((s) => (
+              <Link key={s.slug} href={`/services/${s.slug}`} className="font-semibold link-grow hover:text-brand-bright">{s.name}</Link>
+            ))}
+          </p>
         </div>
       </section>
 
       {/* Prices */}
       <section className="sheet pb-28 pt-20 sm:pb-36 sm:pt-28">
         <div className="container">
-          <SecHead label="Prices · UGX" title={<>One price, in writing, <em className="not-italic text-brand">before we start.</em></>} />
+          <SecHead label="Prices · UGX · Websites" title={<>One price, in writing, <em className="not-italic text-brand">before we start.</em></>} />
           <div className="overflow-x-auto">
             <table className="w-full min-w-[760px] border-separate border-spacing-0 text-left text-[15px] tabular-nums">
               <thead>
@@ -187,6 +203,22 @@ export default function HomePage() {
               </tbody>
             </table>
           </div>
+
+          <div className="mt-16">
+            <p className="font-mono text-xs uppercase tracking-[0.1em] text-ink-muted">Apps and AI · starting prices</p>
+            <ul className="mt-3 grid border-t-2 border-ink sm:grid-cols-2 lg:grid-cols-5">
+              {priceStrip.map(bySlug).map((s) => (
+                <li key={s.slug} className="border-b border-ink/15 lg:border-b-0 lg:border-r lg:last:border-r-0">
+                  <Link href={`/services/${s.slug}`} className="group flex h-full flex-col gap-1 py-4 transition-colors hover:text-brand lg:px-4 lg:first:pl-0">
+                    <span className="font-bold leading-snug">{s.name}</span>
+                    <span className="font-mono text-[15px] font-semibold tabular-nums">{s.price.ug.replace('From ', '')}</span>
+                    <span className="mt-auto pt-1 text-sm text-ink-soft group-hover:text-brand">See packages <ArrowRight className="inline h-3.5 w-3.5" aria-hidden="true" /></span>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
           <div className="mt-8 flex flex-wrap items-center gap-2.5 text-sm">
             {paymentTerms.ug.slice(0, 2).map((t) => (
               <span key={t} className="rounded-full border border-ink/20 px-4 py-2">{t}</span>

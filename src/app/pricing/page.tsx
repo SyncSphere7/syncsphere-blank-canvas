@@ -4,8 +4,8 @@ import { pageMeta } from '@/lib/meta';
 
 export const metadata = pageMeta(
   '/pricing',
-  'Website Prices in Uganda (UGX) and International (USD)',
-  'Website packages from UGX 1,800,000. Monthly website care and social media plans. Pay with MTN Mobile Money, Airtel Money, card or bank transfer.',
+  'Prices for Websites, Apps and AI in Uganda (UGX) and International (USD)',
+  'Websites from UGX 1,800,000, web apps from UGX 8,000,000, mobile apps from UGX 15,000,000 and AI chatbots from UGX 2,500,000. Pay with MTN Mobile Money, Airtel Money, card or bank transfer.',
 );
 
 export default function PricingPage() {

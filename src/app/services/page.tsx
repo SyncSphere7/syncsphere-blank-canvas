@@ -7,8 +7,8 @@ import { pageMeta } from '@/lib/meta';
 
 export const metadata = pageMeta(
   '/services',
-  'Services — Websites, WhatsApp Automation, Social Media',
-  'Website design, WhatsApp Business automation, social media management, branding, Google Business Profile, website care and business automation for Ugandan businesses.',
+  'Services — Websites, Apps, AI, WhatsApp and Social Media',
+  'Website design, web and mobile app development, AI chatbots for WhatsApp, document AI, AI training, WhatsApp automation, social media and branding for Ugandan businesses.',
 );
 
 export default function ServicesPage() {

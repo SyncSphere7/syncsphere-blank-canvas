@@ -29,9 +29,9 @@ export default function OpengraphImage() {
           SYNCSPHERE
         </div>
         <div style={{ display: 'flex', flexDirection: 'column' }}>
-          <div style={{ fontSize: 68, fontWeight: 800, lineHeight: 1.1, maxWidth: 980 }}>WEBSITES THAT SELL FOR UGANDAN BUSINESSES.</div>
+          <div style={{ fontSize: 68, fontWeight: 800, lineHeight: 1.1, maxWidth: 980 }}>WEBSITES, APPS &amp; AI FOR UGANDAN BUSINESSES.</div>
           <div style={{ fontSize: 32, marginTop: 24, color: 'rgba(242,231,211,0.8)' }}>
-            Websites · WhatsApp automation · Social media — Kampala, Uganda
+            Websites · Web &amp; mobile apps · AI chatbots — Kampala, Uganda
           </div>
         </div>
         <div style={{ display: 'flex', fontSize: 26, color: '#D4582B', fontWeight: 700 }}>syncspherellc.com</div>

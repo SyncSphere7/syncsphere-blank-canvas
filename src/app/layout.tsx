@@ -16,7 +16,7 @@ const mono = IBM_Plex_Mono({ subsets: ['latin'], weight: ['400', '500', '600'], 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
-    default: 'SyncSphere | Website Design in Uganda — Websites, WhatsApp & Marketing',
+    default: 'SyncSphere | Websites, Apps & AI for Ugandan Businesses',
     template: '%s | SyncSphere',
   },
   description: site.description,
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     siteName: site.name,
     locale: 'en_UG',
     url: site.url,
-    title: 'SyncSphere | Websites, WhatsApp automation & marketing',
+    title: 'SyncSphere | Websites, apps & AI for Ugandan businesses',
     description: site.description,
   },
   twitter: { card: 'summary_large_image', site: '@syncsphereoffic' },

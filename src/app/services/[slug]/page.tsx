@@ -3,7 +3,9 @@ import { notFound } from 'next/navigation';
 import { ArrowRight } from 'lucide-react';
 import { CheckList, CtaBand, FaqList, JsonLd, PageHero } from '@/components/ui';
 import { WhatsAppIcon } from '@/components/WhatsAppIcon';
+import { PlanCards } from '@/components/PlanCards';
 import { services } from '@/lib/content';
+import { servicePackages } from '@/lib/pricing';
 import { pageMeta } from '@/lib/meta';
 import { site, whatsappLink } from '@/lib/site';
 
@@ -27,7 +29,11 @@ export default async function ServicePage({ params }: Props) {
   const s = services.find((x) => x.slug === slug);
   if (!s) notFound();
 
-  const others = services.filter((x) => x.slug !== s.slug).slice(0, 3);
+  // Suggest services from the same pillar first, then the rest.
+  const others = [
+    ...services.filter((x) => x.slug !== s.slug && s.pillar && x.pillar === s.pillar),
+    ...services.filter((x) => x.slug !== s.slug && !(s.pillar && x.pillar === s.pillar)),
+  ].slice(0, 3);
   const message = `Hello SyncSphere, I'd like to know more about ${s.name.toLowerCase()} for my business.`;
 
   return (
@@ -67,6 +73,21 @@ export default async function ServicePage({ params }: Props) {
           </div>
         </div>
       </section>
+
+      {s.packages && (
+        <section className="pb-20 sm:pb-28">
+          <div className="container">
+            <div className="mb-10 grid gap-3 border-t-2 border-ink pt-3.5 md:grid-cols-12 md:gap-4">
+              <p className="eyebrow md:col-span-3">Packages · UGX</p>
+              <h2 className="text-[clamp(34px,4.6vw,64px)] md:col-span-9">Pick a starting point</h2>
+            </div>
+            <PlanCards plans={servicePackages[s.packages].ug} service={s.name.toLowerCase()} />
+            <p className="mt-8 text-sm text-ink-soft">
+              International clients: see USD prices on the <Link href={`/pricing#international`} className="underline">price list</Link>. Every project gets a fixed written quote before we start.
+            </p>
+          </div>
+        </section>
+      )}
 
       <section className="section bg-surface">
         <div className="container max-w-3xl">

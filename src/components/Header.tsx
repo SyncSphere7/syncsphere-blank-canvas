@@ -9,12 +9,12 @@ import { site, whatsappLink } from '@/lib/site';
 import { LogoMark } from './Logo';
 
 const nav = [
-  { href: '/services', label: 'Services' },
+  { href: '/services/websites', label: 'Websites' },
+  { href: '/apps', label: 'Apps' },
+  { href: '/ai', label: 'AI' },
   { href: '/pricing', label: 'Prices' },
   { href: '/industries', label: 'Industries' },
   { href: '/about', label: 'About' },
-  { href: '/international', label: 'International' },
-  { href: '/blog', label: 'Blog' },
 ];
 
 export function Header() {
@@ -86,7 +86,7 @@ export function Header() {
       {open && (
         <nav id="mobile-nav" className="h-[calc(100dvh-72px)] overflow-y-auto bg-bark lg:hidden" aria-label="Mobile">
           <div className="container flex flex-col py-6">
-            {[...nav, { href: '/contact', label: 'Contact' }].map((item) => (
+            {[...nav, { href: '/international', label: 'International' }, { href: '/blog', label: 'Blog' }, { href: '/contact', label: 'Contact' }].map((item) => (
               <Link
                 key={item.href}
                 href={item.href}

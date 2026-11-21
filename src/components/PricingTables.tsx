@@ -1,11 +1,18 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { ArrowRight } from 'lucide-react';
 import clsx from 'clsx';
 import { CheckList } from './ui';
-import { addOns, paymentTerms, retainers, websitePlans, type Market } from '@/lib/pricing';
-import { whatsappLink } from '@/lib/site';
+import { PlanCards } from './PlanCards';
+import { addOns, paymentTerms, retainers, servicePackages, websitePlans, type Market, type PackageSlug } from '@/lib/pricing';
+
+const PACKAGE_SECTIONS: { slug: PackageSlug; label: string; title: string }[] = [
+  { slug: 'web-apps', label: 'Apps', title: 'Web apps' },
+  { slug: 'mobile-apps', label: 'Apps', title: 'Mobile apps' },
+  { slug: 'ai-chatbots', label: 'AI', title: 'AI chatbots for WhatsApp' },
+  { slug: 'document-ai', label: 'AI', title: 'Document AI' },
+  { slug: 'ai-training', label: 'AI', title: 'AI training and consulting' },
+];
 
 export function PricingTables({ initial = 'ug' }: { initial?: Market }) {
   const [market, setMarket] = useState<Market>(initial);
@@ -35,36 +42,14 @@ export function PricingTables({ initial = 'ug' }: { initial?: Market }) {
       </div>
 
       <Heading label={label} title="Website packages" />
-      <div className="grid gap-4 lg:grid-cols-3">
-        {websitePlans[market].map((p) => (
-          <div
-            key={p.id}
-            className={clsx('flex flex-col rounded-2xl p-6 sm:p-7', p.featured ? 'bark text-cream' : 'border-t-2 border-ink !rounded-none !px-0')}
-          >
-            <div className="flex items-center justify-between gap-3">
-              <h3 className="display-xl text-4xl">{p.name}</h3>
-              {p.featured && <span className="rounded-full bg-brand-bright px-2.5 py-1 font-mono text-[11px] uppercase tracking-[0.08em] text-cream">Most chosen</span>}
-            </div>
-            <p className="mt-2 text-[15px] opacity-70">{p.note}</p>
-            <p className="mt-6 font-mono text-[28px] font-semibold tabular-nums leading-none">{p.price}</p>
-            <p className="mt-2 font-mono text-xs uppercase tracking-[0.08em] opacity-70">{p.delivery}</p>
-            <CheckList items={p.features} className="mt-6 flex-1" />
-            <a
-              href={whatsappLink(`Hello SyncSphere, I'm interested in the ${p.name} website package (${p.price}).`)}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={clsx('mt-8 self-start', p.featured ? 'btn-chip' : 'btn-outline')}
-            >
-              Ask about {p.name}
-              {p.featured ? (
-                <span className="chip"><ArrowRight className="h-4 w-4" aria-hidden="true" /></span>
-              ) : (
-                <ArrowRight className="h-4 w-4" aria-hidden="true" />
-              )}
-            </a>
-          </div>
-        ))}
-      </div>
+      <PlanCards plans={websitePlans[market]} service="a website" />
+
+      {PACKAGE_SECTIONS.map(({ slug, label, title }) => (
+        <div key={slug} id={slug} className="scroll-mt-24">
+          <Heading label={label} title={title} />
+          <PlanCards plans={servicePackages[slug][market]} service={title.toLowerCase()} />
+        </div>
+      ))}
 
       <Heading label="Every month" title="Monthly plans" />
       <div className={clsx('grid gap-x-4 gap-y-10 sm:grid-cols-2', market === 'ug' ? 'lg:grid-cols-3' : 'lg:grid-cols-4')}>

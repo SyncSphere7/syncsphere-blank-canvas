@@ -1,4 +1,9 @@
 import {
+  AppWindow,
+  Bot,
+  FileText,
+  GraduationCap,
+  Smartphone,
   BriefcaseBusiness,
   Globe,
   HeartHandshake,
@@ -30,6 +35,11 @@ const icons: Record<IconName, LucideIcon> = {
   school: School,
   cart: ShoppingCart,
   briefcase: BriefcaseBusiness,
+  app: AppWindow,
+  phone: Smartphone,
+  bot: Bot,
+  document: FileText,
+  training: GraduationCap,
 };
 
 export function Icon({ name, className }: { name: IconName; className?: string }) {
