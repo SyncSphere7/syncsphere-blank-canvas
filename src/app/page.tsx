@@ -113,11 +113,11 @@ export default function HomePage() {
         {/* Services */}
         <div className="container mt-28 sm:mt-36">
           <SecHead label="What we do" title={<>Websites. Apps. <em className="not-italic text-brand-bright">AI.</em></>} />
-          <div className="grid gap-14 md:grid-cols-3 md:gap-4">
+          <div className="grid gap-14 lg:grid-cols-3 lg:gap-6">
             {pillars.map((p) => (
-              <div key={p.id} className="flex flex-col">
+              <div key={p.id} className="flex min-w-0 flex-col">
                 <Link href={p.href} className="group block border-b-2 border-brand-bright pb-5">
-                  <span className="display-xl flex items-end justify-between gap-3 text-[clamp(56px,6.4vw,96px)] transition-colors group-hover:text-brand-bright">
+                  <span className="display-xl flex items-end justify-between gap-3 text-[clamp(56px,5.6vw,88px)] transition-colors group-hover:text-brand-bright">
                     {p.name}
                     <span className="mb-2 grid h-11 w-11 shrink-0 place-items-center rounded-full border border-cream/30 transition-[transform,background-color,border-color] duration-300 ease-out group-hover:-rotate-45 group-hover:border-brand-bright group-hover:bg-brand-bright">
                       <ArrowRight className="h-5 w-5" aria-hidden="true" />
