@@ -30,7 +30,13 @@ export const metadata: Metadata = {
     description: site.description,
   },
   twitter: { card: 'summary_large_image', site: '@syncsphereoffic' },
-  icons: { icon: '/favicon.png', apple: '/syncsphere-logo.png' },
+  icons: {
+    icon: [
+      { url: '/favicon.ico', sizes: '48x48' },
+      { url: '/icon.svg', type: 'image/svg+xml' },
+    ],
+    apple: '/apple-icon.png',
+  },
   verification: { google: site.googleSiteVerification },
 };
 

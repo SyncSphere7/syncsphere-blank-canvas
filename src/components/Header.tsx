@@ -40,8 +40,8 @@ export function Header() {
     <header className="sticky top-0 z-40 bg-bark text-cream">
       <div className="container flex h-[72px] items-center justify-between gap-6 border-b border-cream/15">
         <Link href="/" className="flex items-center gap-2.5" aria-label="SyncSphere home">
-          <LogoMark className="h-6 w-6" />
-          <span className="font-display text-[22px] font-extrabold tracking-tight" style={{ fontStretch: '85%', fontVariationSettings: "'wdth' 85" }}>
+          <LogoMark className="h-7 w-7" />
+          <span className="font-display text-[25px] font-extrabold uppercase leading-none tracking-[0.01em]" style={{ fontStretch: '70%', fontVariationSettings: "'wdth' 70" }}>
             SyncSphere
           </span>
         </Link>

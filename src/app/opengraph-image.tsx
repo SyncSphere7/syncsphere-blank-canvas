@@ -1,4 +1,5 @@
 import { ImageResponse } from 'next/og';
+import { S_PATH, TILE_PATH } from '@/components/Logo';
 
 export const alt = 'SyncSphere — Websites, WhatsApp automation and marketing for Ugandan businesses';
 export const size = { width: 1200, height: 630 };
@@ -20,9 +21,12 @@ export default function OpengraphImage() {
           fontFamily: 'sans-serif',
         }}
       >
-        <div style={{ display: 'flex', alignItems: 'center', gap: 16, fontSize: 36, fontWeight: 800 }}>
-          <div style={{ width: 20, height: 20, borderRadius: 999, background: '#D4582B' }} />
-          SyncSphere
+        <div style={{ display: 'flex', alignItems: 'center', gap: 18, fontSize: 38, fontWeight: 800, letterSpacing: 1 }}>
+          <svg width="56" height="56" viewBox="6 6 52 52">
+            <path d={TILE_PATH} fill="#D4582B" />
+            <path d={S_PATH} fill="none" stroke="#1D130D" strokeWidth="7.4" strokeLinejoin="round" />
+          </svg>
+          SYNCSPHERE
         </div>
         <div style={{ display: 'flex', flexDirection: 'column' }}>
           <div style={{ fontSize: 68, fontWeight: 800, lineHeight: 1.1, maxWidth: 980 }}>WEBSITES THAT SELL FOR UGANDAN BUSINESSES.</div>
