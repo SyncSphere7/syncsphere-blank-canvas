@@ -10,7 +10,7 @@ import { whatsappLink } from '@/lib/site';
 
 export const metadata = pageMeta(
   '/',
-  'Website Design in Uganda — Websites, WhatsApp & Marketing',
+  'SyncSphere | Website Design in Uganda — Websites, WhatsApp & Marketing',
   'Professional websites for Ugandan businesses from UGX 1,800,000. WhatsApp Business automation, social media and Google Maps setup. Kampala team, pay with Mobile Money.',
 );
 
