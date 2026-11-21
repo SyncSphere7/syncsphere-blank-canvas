@@ -1,111 +1,87 @@
-import React, { useState } from 'react';
-import { Menu, X, Zap } from 'lucide-react';
-import { Button } from "@/components/ui/button";
-import { ThemeToggle } from './ThemeToggle';
-import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { 
-  NavigationMenu, NavigationMenuContent, NavigationMenuItem,
-  NavigationMenuLink, NavigationMenuList, NavigationMenuTrigger,
-} from "@/components/ui/navigation-menu";
+'use client';
 
-const Header = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const location = useLocation();
-  const navigate = useNavigate();
-  const isHomePage = location.pathname === '/';
-  const homeLink = isHomePage ? "#home" : "/";
+import Image from 'next/image';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import { useEffect, useState } from 'react';
+import { Menu, X } from 'lucide-react';
+import clsx from 'clsx';
+import { whatsappLink } from '@/lib/site';
+import { WhatsAppIcon } from './WhatsAppIcon';
 
-  const servicesItems = [
-    { title: "Website Design & Development", path: "/services/web-development" },
-    { title: "Social Media Management", path: "/services/social-media" },
-    { title: "Email Marketing", path: "/services/email-marketing" },
-    { title: "Maintenance & Support", path: "/pricing" },
-    { title: "Brand Identity", path: "/services/brand-identity" },
-    { title: "Business Automation", path: "/services/automations" },
-  ];
+const nav = [
+  { href: '/services', label: 'Services' },
+  { href: '/industries', label: 'Industries' },
+  { href: '/pricing', label: 'Pricing' },
+  { href: '/international', label: 'International' },
+  { href: '/about', label: 'About' },
+  { href: '/blog', label: 'Blog' },
+];
 
-  const handleContactClick = (e: React.MouseEvent) => {
-    e.preventDefault();
-    if (isHomePage) {
-      document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
-    } else {
-      navigate('/', { replace: true });
-      setTimeout(() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }), 100);
-    }
-  };
+export function Header() {
+  const [open, setOpen] = useState(false);
+  const pathname = usePathname();
+
+  useEffect(() => setOpen(false), [pathname]);
 
   return (
-    <header className="bg-background/95 backdrop-blur-md py-4 px-6 sticky top-0 z-50 border-b border-border">
-      <div className="container mx-auto flex justify-between items-center">
-        <Link to="/" className="flex items-center">
-          <img src="/syncsphere-logo.png" alt="SyncSphere Logo" className="h-12 mr-2" loading="lazy" />
+    <header className="sticky top-0 z-40 border-b border-line/80 bg-white/90 backdrop-blur">
+      <div className="container flex h-16 items-center justify-between gap-4">
+        <Link href="/" className="flex items-center gap-2" aria-label="SyncSphere home">
+          <Image src="/syncsphere-logo.png" alt="" width={36} height={36} priority />
+          <span className="text-lg font-extrabold tracking-tight text-ink">SyncSphere</span>
         </Link>
-        
-        <nav className="hidden md:flex items-center space-x-6">
-          <Link to={homeLink} className="text-muted-foreground hover:text-foreground transition-colors text-sm font-medium">Home</Link>
-          
-          <NavigationMenu>
-            <NavigationMenuList>
-              <NavigationMenuItem>
-                <NavigationMenuTrigger className="text-muted-foreground hover:text-foreground transition-colors bg-transparent text-sm font-medium">Services</NavigationMenuTrigger>
-                <NavigationMenuContent>
-                  <ul className="grid grid-cols-2 gap-1 p-3 w-[420px]">
-                    {servicesItems.map((service) => (
-                      <li key={service.path}>
-                        <NavigationMenuLink asChild>
-                          <Link to={service.path} className="block select-none rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-primary hover:text-primary-foreground focus:bg-accent focus:text-accent-foreground">
-                            <div className="text-sm font-medium leading-none">{service.title}</div>
-                          </Link>
-                        </NavigationMenuLink>
-                      </li>
-                    ))}
-                  </ul>
-                </NavigationMenuContent>
-              </NavigationMenuItem>
-            </NavigationMenuList>
-          </NavigationMenu>
 
-          <Link to="/portfolio" className="text-muted-foreground hover:text-foreground transition-colors text-sm font-medium">Portfolio</Link>
-          <Link to="/blog" className="text-muted-foreground hover:text-foreground transition-colors text-sm font-medium">Blog</Link>
-          <Link to="/pricing" className="text-muted-foreground hover:text-foreground transition-colors text-sm font-medium">Pricing</Link>
-          <Link to="/tools/website-grader" className="text-primary hover:text-primary/80 transition-colors text-sm font-medium flex items-center gap-1">
-            <Zap className="h-3 w-3" /> Free Grader
-          </Link>
-          <a href="#contact" onClick={handleContactClick} className="text-muted-foreground hover:text-foreground transition-colors cursor-pointer text-sm font-medium">Contact</a>
-          <ThemeToggle />
+        <nav className="hidden items-center gap-1 lg:flex" aria-label="Main">
+          {nav.map((item) => (
+            <Link
+              key={item.href}
+              href={item.href}
+              className={clsx(
+                'rounded-lg px-3 py-2 text-sm font-medium transition-colors',
+                pathname?.startsWith(item.href) ? 'text-brand' : 'text-ink-soft hover:text-ink',
+              )}
+            >
+              {item.label}
+            </Link>
+          ))}
         </nav>
-        
-        <div className="md:hidden flex items-center gap-4">
-          <ThemeToggle />
-          <Button variant="ghost" className="text-foreground p-2" onClick={() => setIsMenuOpen(!isMenuOpen)}>
-            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-          </Button>
+
+        <div className="hidden items-center gap-2 lg:flex">
+          <Link href="/contact" className="btn-outline py-2.5">
+            Contact
+          </Link>
+          <a href={whatsappLink()} target="_blank" rel="noopener noreferrer" className="btn-whatsapp py-2.5">
+            <WhatsAppIcon className="h-4 w-4" /> WhatsApp us
+          </a>
         </div>
+
+        <button
+          type="button"
+          className="rounded-lg p-2 text-ink lg:hidden"
+          onClick={() => setOpen((v) => !v)}
+          aria-expanded={open}
+          aria-controls="mobile-nav"
+          aria-label={open ? 'Close menu' : 'Open menu'}
+        >
+          {open ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+        </button>
       </div>
-      
-      {isMenuOpen && (
-        <div className="md:hidden bg-background/95 backdrop-blur-md w-full py-4 px-4 absolute left-0 top-full border-b border-border z-50 max-h-[80vh] overflow-y-auto">
-          <nav className="flex flex-col space-y-1">
-            <Link to={homeLink} className="text-muted-foreground hover:text-foreground py-2 px-3 rounded-md hover:bg-accent" onClick={() => setIsMenuOpen(false)}>Home</Link>
-            <div className="flex flex-col">
-              <div className="text-foreground font-medium py-2 px-3 text-sm">Services</div>
-              <div className="pl-3 flex flex-col">
-                {servicesItems.map((service) => (
-                  <Link key={service.path} to={service.path} className="text-muted-foreground hover:text-primary text-sm py-2 px-3 rounded-md hover:bg-accent" onClick={() => setIsMenuOpen(false)}>
-                    {service.title}
-                  </Link>
-                ))}
-              </div>
-            </div>
-            <Link to="/portfolio" className="text-muted-foreground hover:text-foreground py-2 px-3 rounded-md hover:bg-accent" onClick={() => setIsMenuOpen(false)}>Portfolio</Link>
-            <Link to="/blog" className="text-muted-foreground hover:text-foreground py-2 px-3 rounded-md hover:bg-accent" onClick={() => setIsMenuOpen(false)}>Blog</Link>
-            <Link to="/pricing" className="text-muted-foreground hover:text-foreground py-2 px-3 rounded-md hover:bg-accent" onClick={() => setIsMenuOpen(false)}>Pricing</Link>
-            <a href="#contact" onClick={(e) => { handleContactClick(e); setIsMenuOpen(false); }} className="text-muted-foreground hover:text-foreground py-2 px-3 rounded-md hover:bg-accent cursor-pointer">Contact</a>
-          </nav>
-        </div>
+
+      {open && (
+        <nav id="mobile-nav" className="border-t border-line bg-white lg:hidden" aria-label="Mobile">
+          <div className="container flex flex-col py-3">
+            {[...nav, { href: '/contact', label: 'Contact' }].map((item) => (
+              <Link key={item.href} href={item.href} className="rounded-lg px-2 py-3 text-base font-medium text-ink">
+                {item.label}
+              </Link>
+            ))}
+            <a href={whatsappLink()} target="_blank" rel="noopener noreferrer" className="btn-whatsapp mt-2">
+              <WhatsAppIcon className="h-4 w-4" /> WhatsApp us
+            </a>
+          </div>
+        </nav>
       )}
     </header>
   );
-};
-
-export default Header;
+}

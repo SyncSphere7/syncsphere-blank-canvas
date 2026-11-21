@@ -1,105 +1,87 @@
-import React from 'react';
-import { Facebook, Instagram, Linkedin, Mail, Phone, Twitter, Cookie, CreditCard } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
+import { Facebook, Instagram, Linkedin, Mail, MapPin, Phone, Twitter } from 'lucide-react';
+import { site, whatsappLink } from '@/lib/site';
+import { services, industries } from '@/lib/content';
+import { CookieSettingsButton } from './Consent';
 
-const Footer = () => {
+export function Footer() {
   return (
-    <footer className="bg-background py-16 border-t border-border">
-      <div className="container mx-auto px-6">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
-          <div>
-            <h3 className="text-foreground text-2xl font-bold mb-6">SyncSphere LLC</h3>
-            <p className="text-muted-foreground mb-4 max-w-md">
-              Your full-service digital agency. Websites, marketing, automation, and branding — all under one roof.
-            </p>
-            <div className="space-y-2">
-              <div className="flex items-center gap-2 text-muted-foreground">
-                <Phone size={16} className="text-primary" />
-                <a href="tel:+256757727965" className="hover:text-primary transition-colors">+256 757 727 965</a>
-              </div>
-              <div className="flex items-center gap-2 text-muted-foreground">
-                <Mail size={16} className="text-primary" />
-                <span>info@syncspherellc.com</span>
-              </div>
-              <div className="flex items-center gap-2 text-muted-foreground">
-                <CreditCard size={16} className="text-primary" />
-                <span>Cards, ACH & Bank Transfer</span>
-              </div>
-              <div className="flex items-center gap-2 text-muted-foreground">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" className="text-primary">
-                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.893 3.386"/>
-                </svg>
-                <a href="tel:+256757727965" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
-                  Call Us
-                </a>
-              </div>
-            </div>
-          </div>
-          
-          <div>
-            <h3 className="text-foreground text-lg font-bold mb-6">Services</h3>
-            <div className="space-y-3">
-              <Link to="/services/web-development" className="text-muted-foreground hover:text-primary transition-colors block text-sm">Website Design</Link>
-              <Link to="/services/social-media" className="text-muted-foreground hover:text-primary transition-colors block text-sm">Social Media</Link>
-              <Link to="/services/email-marketing" className="text-muted-foreground hover:text-primary transition-colors block text-sm">Email Marketing</Link>
-              <Link to="/pricing" className="text-muted-foreground hover:text-primary transition-colors block text-sm">Maintenance & Support</Link>
-              <Link to="/services/automations" className="text-muted-foreground hover:text-primary transition-colors block text-sm">Business Automation</Link>
-              <Link to="/services/brand-identity" className="text-muted-foreground hover:text-primary transition-colors block text-sm">Brand Identity</Link>
-            </div>
-          </div>
+    <footer className="bg-ink text-white/80">
+      <div className="container grid gap-10 py-14 sm:grid-cols-2 lg:grid-cols-4">
+        <div>
+          <p className="text-lg font-extrabold text-white">SyncSphere</p>
+          <p className="mt-3 text-sm leading-relaxed">
+            Websites, WhatsApp automation and digital marketing for businesses in Uganda and around the world.
+          </p>
+          <ul className="mt-5 space-y-2 text-sm">
+            <li className="flex gap-2"><MapPin className="mt-0.5 h-4 w-4 shrink-0" /> {site.kampalaAddress}</li>
+            <li><a className="flex gap-2 hover:text-white" href={site.phoneHref}><Phone className="mt-0.5 h-4 w-4" /> {site.phone}</a></li>
+            <li><a className="flex gap-2 hover:text-white" href={`mailto:${site.email}`}><Mail className="mt-0.5 h-4 w-4" /> {site.email}</a></li>
+          </ul>
+        </div>
 
-          <div>
-            <h3 className="text-foreground text-lg font-bold mb-6">Company</h3>
-            <div className="space-y-3">
-              <Link to="/portfolio" className="text-muted-foreground hover:text-primary transition-colors block text-sm">Portfolio</Link>
-              <Link to="/blog" className="text-muted-foreground hover:text-primary transition-colors block text-sm">Blog</Link>
-              <Link to="/pricing" className="text-muted-foreground hover:text-primary transition-colors block text-sm">Pricing</Link>
-              <Link to="/privacy-policy" className="text-muted-foreground hover:text-primary transition-colors block text-sm">Privacy Policy</Link>
-              <Link to="/terms-of-service" className="text-muted-foreground hover:text-primary transition-colors block text-sm">Terms of Service</Link>
-              <Link to="/refund-policy" className="text-muted-foreground hover:text-primary transition-colors block text-sm">Refund &amp; Cancellation Policy</Link>
-              <button onClick={() => window.dispatchEvent(new CustomEvent('openCookieSettings'))} className="text-muted-foreground hover:text-primary transition-colors text-left flex items-center gap-2 text-sm">
-                <Cookie size={14} />Cookie Settings
-              </button>
-            </div>
-            <div className="mt-6 space-y-2 text-xs text-muted-foreground/70">
-              <p>Payment: 50% upfront, 25% design approval, 25% on launch</p>
-              <p>All prices in USD.</p>
-              <p>Payments accepted via major credit and debit cards, US ACH, and bank transfer.</p>
-            </div>
-          </div>
-          
-          <div className="flex flex-col md:items-end">
-            <h3 className="text-foreground text-lg font-bold mb-6">Connect With Us</h3>
-            <div className="flex gap-3">
-              {[
-                { href: "https://www.facebook.com/syncsphereofficial", icon: Facebook },
-                { href: "https://www.instagram.com/syncsphereofficial/", icon: Instagram },
-                { href: "https://www.linkedin.com/company/106670846", icon: Linkedin },
-                { href: "https://x.com/syncsphereoffic", icon: Twitter },
-              ].map(({ href, icon: Icon }) => (
-                <a key={href} href={href} target="_blank" rel="noopener noreferrer" className="bg-card/50 border border-border p-3 rounded-full hover:bg-primary/10 hover:border-primary/30 transition-all duration-300">
-                  <Icon size={20} className="text-foreground" />
-                </a>
-              ))}
-            </div>
+        <div>
+          <p className="font-semibold text-white">Services</p>
+          <ul className="mt-4 space-y-2 text-sm">
+            {services.map((s) => (
+              <li key={s.slug}><Link className="hover:text-white" href={`/services/${s.slug}`}>{s.name}</Link></li>
+            ))}
+          </ul>
+        </div>
+
+        <div>
+          <p className="font-semibold text-white">Industries</p>
+          <ul className="mt-4 space-y-2 text-sm">
+            {industries.map((i) => (
+              <li key={i.slug}><Link className="hover:text-white" href={`/industries/${i.slug}`}>{i.name}</Link></li>
+            ))}
+          </ul>
+        </div>
+
+        <div>
+          <p className="font-semibold text-white">Company</p>
+          <ul className="mt-4 space-y-2 text-sm">
+            <li><Link className="hover:text-white" href="/about">About</Link></li>
+            <li><Link className="hover:text-white" href="/pricing">Pricing</Link></li>
+            <li><Link className="hover:text-white" href="/international">International clients</Link></li>
+            <li><Link className="hover:text-white" href="/blog">Blog</Link></li>
+            <li><Link className="hover:text-white" href="/tools/website-grader">Free website grader</Link></li>
+            <li><Link className="hover:text-white" href="/pay">Pay an invoice</Link></li>
+            <li><Link className="hover:text-white" href="/contact">Contact</Link></li>
+            <li><a className="hover:text-white" href={whatsappLink()} target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
+          </ul>
+          <div className="mt-5 flex gap-2">
+            {[
+              { href: site.social.facebook, Icon: Facebook, label: 'Facebook' },
+              { href: site.social.instagram, Icon: Instagram, label: 'Instagram' },
+              { href: site.social.linkedin, Icon: Linkedin, label: 'LinkedIn' },
+              { href: site.social.x, Icon: Twitter, label: 'X' },
+            ].map(({ href, Icon, label }) => (
+              <a key={label} href={href} target="_blank" rel="noopener noreferrer" aria-label={label} className="rounded-full border border-white/15 p-2 hover:border-white/40 hover:text-white">
+                <Icon className="h-4 w-4" />
+              </a>
+            ))}
           </div>
         </div>
-        
-        <div className="border-t border-border mt-12 pt-8 text-center text-muted-foreground/70 space-y-2">
-          <p className="text-sm">&copy; {new Date().getFullYear()} SyncSphere LLC. All rights reserved.</p>
-          <p className="text-xs">
-            SyncSphere LLC is a domestic limited liability company registered in Montana, USA
-            (File No. 16835344, EIN 35-2932039).
-          </p>
-          <p className="text-xs">
-            Registered office: 127 N Higgins Ave, Ste 307D #2082, Missoula, MT 59802, United States.
-            <br />
-            Engineering &amp; operations: Plot 32 Lumumba Ave, Kampala, Uganda.
-          </p>
+      </div>
+
+      <div className="border-t border-white/10">
+        <div className="container flex flex-col gap-3 py-6 text-xs text-white/60 md:flex-row md:items-start md:justify-between">
+          <div className="space-y-1">
+            <p>© {new Date().getFullYear()} {site.legalName}. All rights reserved.</p>
+            <p>
+              {site.legalName} is a limited liability company registered in {site.registration.state} (File No. {site.registration.fileNo}).
+              Registered office: {site.registration.office}. Operations: {site.kampalaAddress}.
+            </p>
+          </div>
+          <div className="flex flex-wrap gap-x-4 gap-y-1">
+            <Link className="hover:text-white" href="/privacy-policy">Privacy</Link>
+            <Link className="hover:text-white" href="/terms-of-service">Terms</Link>
+            <Link className="hover:text-white" href="/refund-policy">Refunds</Link>
+            <CookieSettingsButton />
+          </div>
         </div>
       </div>
     </footer>
   );
-};
-
-export default Footer;
+}

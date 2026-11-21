@@ -1,64 +1,30 @@
-
-import type { Config } from "tailwindcss";
+import type { Config } from 'tailwindcss';
+import typography from '@tailwindcss/typography';
 
 export default {
-  darkMode: ["class"],
-  content: [
-    "./pages/**/*.{ts,tsx}",
-    "./components/**/*.{ts,tsx}",
-    "./app/**/*.{ts,tsx}",
-    "./src/**/*.{ts,tsx}",
-  ],
-  prefix: "",
+  content: ['./src/**/*.{ts,tsx}'],
   theme: {
     container: {
       center: true,
-      padding: "2rem",
-      screens: {
-        "2xl": "1400px",
-      },
+      padding: { DEFAULT: '1rem', sm: '1.5rem', lg: '2rem' },
+      screens: { '2xl': '1200px' },
     },
     extend: {
       colors: {
-        primary: {
-          DEFAULT: "#0055A4", // Primary Blue
-        },
-        secondary: {
-          DEFAULT: "#003366", // Dark Blue
-        },
-        background: "#000000", // Black
-        "light-blue": "#E6F0FA", // Light Gray-Blue
-        white: "#FFFFFF", // White
-        border: "hsl(var(--border))",
-        input: "hsl(var(--input))",
-        ring: "hsl(var(--ring))",
-        foreground: "hsl(var(--foreground))",
+        ink: { DEFAULT: '#0B1B2B', soft: '#3D4B5C', muted: '#64748B' },
+        brand: { DEFAULT: '#0055A4', deep: '#003366', tint: '#E8F1FB' },
+        sun: { DEFAULT: '#F5B000', tint: '#FFF6DB' },
+        surface: '#F6F8FB',
+        line: '#E2E8F0',
+        whatsapp: { DEFAULT: '#1FA855', dark: '#178A45' },
       },
-      borderRadius: {
-        lg: "var(--radius)",
-        md: "calc(var(--radius) - 2px)",
-        sm: "calc(var(--radius) - 4px)",
+      fontFamily: {
+        sans: ['var(--font-sans)', 'system-ui', 'sans-serif'],
       },
-      keyframes: {
-        "accordion-down": {
-          from: { height: "0" },
-          to: { height: "var(--radix-accordion-content-height)" },
-        },
-        "accordion-up": {
-          from: { height: "var(--radix-accordion-content-height)" },
-          to: { height: "0" },
-        },
-        fadeIn: {
-          "0%": { opacity: "0", transform: "translateY(10px)" },
-          "100%": { opacity: "1", transform: "translateY(0)" },
-        },
-      },
-      animation: {
-        "accordion-down": "accordion-down 0.2s ease-out",
-        "accordion-up": "accordion-up 0.2s ease-out",
-        fadeIn: "fadeIn 0.5s ease-out forwards",
+      boxShadow: {
+        card: '0 1px 2px rgba(11,27,43,0.04), 0 8px 24px -12px rgba(11,27,43,0.12)',
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [typography],
 } satisfies Config;

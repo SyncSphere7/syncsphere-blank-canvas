@@ -1,74 +1,46 @@
-# SyncSphere
+# SyncSphere website
 
-**Professional Websites, Marketing & Automation**
+The website for [syncspherellc.com](https://www.syncspherellc.com): websites, WhatsApp automation and digital marketing for Ugandan and international businesses.
 
-🌐 **Website:** [syncspherellc.com](https://syncspherellc.com)
+Built with Next.js (App Router), TypeScript and Tailwind CSS, hosted on Vercel.
 
-## About SyncSphere
+## Where things are
 
-SyncSphere is a USA-registered digital agency helping businesses establish and grow their online presence. We provide professional websites, social media management, email marketing, business automation, and brand identity services.
+| What | File |
+|---|---|
+| Phone, WhatsApp, email, address, company details | `src/lib/site.ts` |
+| All prices (UGX and USD) and payment terms | `src/lib/pricing.ts` |
+| Services, industries, FAQs, process steps | `src/lib/content.ts` |
+| Blog posts | `src/lib/blog.ts` |
+| Pages | `src/app/**/page.tsx` |
+| Contact form email | `src/app/api/contact/route.ts` |
+| Flutterwave payments | `src/lib/payments.ts`, `src/app/api/pay/*`, `src/app/pay/*` |
+| Free website grader | `src/lib/grader.ts`, `src/app/api/grader/route.ts` |
+| Old URLs redirected to new ones | `next.config.mjs` |
 
-### What We Offer
+Change a price or phone number in `src/lib/` and every page that shows it updates.
 
-| Service | Starting At |
-|---------|------------|
-| **Starter Website** (3 pages, 48-hour delivery) | $3,500 |
-| **Professional Website** (7 pages, 5 days) | $6,500 |
-| **Premium Website** (custom, unlimited) | $10,000+ |
-| **Social Media Management** | $999/mo |
-| **Email Marketing** | $599/mo |
-| **Business Automation** | $2,500 |
-| **Brand Identity Kit** | $799 |
-| **Hosting & Maintenance** | $199/mo |
-
-**Payment:** 50% upfront, 25% at design approval, 25% on delivery. Major credit and debit cards, US ACH, and bank transfer accepted.
-
-**Phone:** +256 757 727 965
-
-## Features
-
-- **48-hour delivery** for Starter websites
-- **Custom design** — every site built from scratch
-- **Domain + SSL included** on all website packages
-- **Mobile-responsive** — works on all devices
-- **SEO optimized** — structured data, fast loading, clean code
-- **Secure payments** via major credit and debit cards, US ACH, and bank transfer
-- **30-day bug-fix guarantee** after launch
-
-## Industry Packages
-
-- **Medical & Dental** — $5,000 (appointment booking, HIPAA forms, service pages)
-- **Law Firm** — $6,500 (attorney profiles, practice areas, intake forms)
-- **E-Commerce** — $8,000+ (up to 100 products, card and ACH payment integration)
-
-## Tech Stack
-
-- **Frontend:** React, TypeScript, Vite, Tailwind CSS, shadcn/ui, Framer Motion
-- **Hosting:** Vercel
-- **Analytics:** Google Analytics 4
-- **Forms:** Serverless functions with Resend
-
-## Contact
-
-- 📞 **Phone:** +256 757 727 965
-- 🌐 **Website:** [syncspherellc.com](https://syncspherellc.com)
-
-## Development
+## Run locally
 
 ```bash
-# Install dependencies
 npm install
-
-# Start development server
+cp .env.example .env.local   # fill in the values you have
 npm run dev
-
-# Build for production
-npm run build
-
-# Deploy to Vercel
-vercel --prod
 ```
 
-## License
+## Environment variables
 
-Copyright © 2026 SyncSphere. All rights reserved.
+See `.env.example`. In short:
+
+- `RESEND_API_KEY` — needed for the contact form and grader leads.
+- `FLW_SECRET_KEY`, `PAYMENT_SIGNING_SECRET`, `FLW_WEBHOOK_HASH` — Flutterwave. Until the first two are set, `/pay` shows a "contact us to pay" message instead of a checkout.
+
+## Turning on Flutterwave payments
+
+1. Get the merchant account approved and copy the **live secret key**.
+2. In Vercel → Project → Settings → Environment Variables (Production), add:
+   - `FLW_SECRET_KEY` — the secret key
+   - `PAYMENT_SIGNING_SECRET` — any long random string
+   - `FLW_WEBHOOK_HASH` — any long random string
+3. In Flutterwave → Settings → Webhooks, set the URL to `https://www.syncspherellc.com/api/pay/webhook` and paste the same value as `FLW_WEBHOOK_HASH` into "Secret hash".
+4. Redeploy. Test with a small Mobile Money payment; a notification email goes to finance@syncspherellc.com.
