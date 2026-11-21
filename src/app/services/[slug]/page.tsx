@@ -5,6 +5,7 @@ import { CheckList, CtaBand, FaqList, JsonLd, PageHero } from '@/components/ui';
 import { WhatsAppIcon } from '@/components/WhatsAppIcon';
 import { PlanCards } from '@/components/PlanCards';
 import { services } from '@/lib/content';
+import { getServicePost } from '@/lib/blog';
 import { servicePackages } from '@/lib/pricing';
 import { pageMeta } from '@/lib/meta';
 import { site, whatsappLink } from '@/lib/site';
@@ -34,6 +35,7 @@ export default async function ServicePage({ params }: Props) {
     ...services.filter((x) => x.slug !== s.slug && s.pillar && x.pillar === s.pillar),
     ...services.filter((x) => x.slug !== s.slug && !(s.pillar && x.pillar === s.pillar)),
   ].slice(0, 3);
+  const article = getServicePost(s.slug);
   const message = `Hello SyncSphere, I'd like to know more about ${s.name.toLowerCase()} for my business.`;
 
   return (
@@ -93,6 +95,12 @@ export default async function ServicePage({ params }: Props) {
         <div className="container max-w-3xl">
           <h2 className="text-2xl font-extrabold">Questions about {s.name.toLowerCase()}</h2>
           <div className="mt-6"><FaqList faqs={s.faqs} /></div>
+          {article && (
+            <Link href={`/blog/${article.slug}`} className="mt-10 block border-t-2 border-ink pt-4 transition-colors hover:text-brand">
+              <p className="eyebrow">Read the guide · {article.readTime}</p>
+              <p className="mt-2 text-xl font-extrabold">{article.title} <ArrowRight className="inline h-5 w-5" /></p>
+            </Link>
+          )}
         </div>
       </section>
 
