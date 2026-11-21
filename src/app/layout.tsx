@@ -1,15 +1,17 @@
 import type { ReactNode } from 'react';
 import type { Metadata, Viewport } from 'next';
-import { Plus_Jakarta_Sans } from 'next/font/google';
+import { Archivo, Figtree, IBM_Plex_Mono } from 'next/font/google';
 import './globals.css';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
-import { WhatsAppFloat } from '@/components/WhatsAppFloat';
+import { MobileDock } from '@/components/MobileDock';
 import { Consent } from '@/components/Consent';
 import { JsonLd } from '@/components/ui';
 import { site } from '@/lib/site';
 
-const font = Plus_Jakarta_Sans({ subsets: ['latin'], variable: '--font-sans', display: 'swap' });
+const sans = Figtree({ subsets: ['latin'], variable: '--font-sans', display: 'swap' });
+const display = Archivo({ subsets: ['latin'], axes: ['wdth'], variable: '--font-display', display: 'swap' });
+const mono = IBM_Plex_Mono({ subsets: ['latin'], weight: ['400', '500', '600'], variable: '--font-mono', display: 'swap' });
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
@@ -33,7 +35,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: '#0055A4',
+  themeColor: '#1D130D',
   width: 'device-width',
   initialScale: 1,
 };
@@ -61,9 +63,9 @@ const organization = {
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="en" className={font.variable}>
-      <body className="flex min-h-screen flex-col font-sans">
-        <a href="#main" className="sr-only focus:not-sr-only focus:absolute focus:left-3 focus:top-3 focus:z-50 focus:rounded-lg focus:bg-white focus:px-4 focus:py-2">
+    <html lang="en" className={`${sans.variable} ${display.variable} ${mono.variable}`}>
+      <body className="flex min-h-screen flex-col pb-[76px] font-sans lg:pb-0">
+        <a href="#main" className="sr-only focus:not-sr-only focus:absolute focus:left-3 focus:top-3 focus:z-50 focus:rounded-full focus:bg-cream focus:px-4 focus:py-2">
           Skip to content
         </a>
         <JsonLd data={organization} />
@@ -72,7 +74,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           {children}
         </main>
         <Footer />
-        <WhatsAppFloat />
+        <MobileDock />
         <Consent />
       </body>
     </html>

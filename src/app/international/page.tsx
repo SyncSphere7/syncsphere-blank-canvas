@@ -51,7 +51,7 @@ export default function InternationalPage() {
           <h2 className="text-2xl font-extrabold sm:text-3xl">Website packages (USD)</h2>
           <div className="mt-6 grid gap-5 lg:grid-cols-3">
             {websitePlans.intl.map((p) => (
-              <div key={p.id} className={`card flex flex-col ${p.featured ? 'border-brand ring-1 ring-brand' : ''}`}>
+              <div key={p.id} className={`card flex flex-col ${p.featured ? 'border-brand' : ''}`}>
                 <h3 className="text-lg font-bold">{p.name}</h3>
                 <p className="mt-3 text-3xl font-extrabold">{p.price}</p>
                 <p className="mt-1 text-sm text-ink-muted">{p.delivery}</p>

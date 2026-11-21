@@ -19,7 +19,7 @@ export default function ServicesPage() {
         <div className="container grid gap-5 md:grid-cols-2">
           {services.map((s) => (
             <Link key={s.slug} href={`/services/${s.slug}`} className="card group flex gap-5 transition-colors hover:border-brand">
-              <span className="inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-brand-tint text-brand">
+              <span className="inline-flex h-12 w-12 shrink-0 items-center justify-center text-brand">
                 <Icon name={s.icon} className="h-6 w-6" />
               </span>
               <div>

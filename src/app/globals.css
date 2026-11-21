@@ -5,45 +5,136 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    background: theme('colors.cream.DEFAULT');
   }
   body {
-    @apply bg-white text-ink antialiased;
+    @apply bg-cream text-ink antialiased;
   }
-  h1, h2, h3, h4 {
-    @apply tracking-tight text-ink;
+  ::selection {
+    background: rgba(212, 88, 43, 0.35);
+  }
+  /* Display headings: condensed, uppercase, tight. */
+  h1,
+  h2 {
+    @apply font-display font-extrabold uppercase;
+    font-stretch: 70%;
+    font-variation-settings: 'wdth' 70;
+    letter-spacing: -0.01em;
+    line-height: 0.92;
     text-wrap: balance;
   }
+  h3,
+  h4 {
+    @apply font-bold tracking-tight;
+    text-wrap: balance;
+  }
+  /* Long-form text (blog, legal) reads better in the body face. */
+  .prose h2,
+  .prose h3 {
+    @apply font-sans normal-case;
+    font-stretch: normal;
+    font-variation-settings: normal;
+    letter-spacing: -0.01em;
+    line-height: 1.25;
+  }
   :focus-visible {
-    @apply outline-none ring-2 ring-brand ring-offset-2;
+    @apply outline-none ring-2 ring-brand ring-offset-2 ring-offset-cream;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
   }
 }
 
 @layer components {
   .btn {
-    @apply inline-flex items-center justify-center gap-2 rounded-xl px-5 py-3 text-sm font-semibold transition-colors disabled:cursor-not-allowed disabled:opacity-60;
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-[15px] font-semibold transition-colors duration-200 active:scale-[0.97] disabled:cursor-not-allowed disabled:opacity-60;
   }
   .btn-primary {
-    @apply btn bg-brand text-white hover:bg-brand-deep;
+    @apply btn bg-brand text-cream hover:bg-bark;
   }
   .btn-whatsapp {
-    @apply btn bg-whatsapp text-white hover:bg-whatsapp-dark;
+    @apply btn bg-brand text-cream hover:bg-bark;
   }
   .btn-outline {
-    @apply btn border border-line bg-white text-ink hover:border-brand hover:text-brand;
+    @apply btn border border-current bg-transparent text-current hover:bg-bark hover:text-cream;
+  }
+  /* Pill with an arrow chip that turns on hover. */
+  .btn-chip {
+    @apply inline-flex items-center gap-3 rounded-full bg-brand py-2 pl-6 pr-2 text-[15px] font-semibold text-cream transition-colors hover:bg-brand-dark;
+  }
+  .btn-chip .chip {
+    @apply grid h-10 w-10 place-items-center rounded-full bg-cream text-ink transition-transform duration-300 ease-out;
+  }
+  .btn-chip:hover .chip {
+    transform: rotate(-45deg);
   }
   .eyebrow {
-    @apply text-xs font-bold uppercase tracking-[0.14em] text-brand;
+    @apply font-mono text-xs font-medium uppercase tracking-[0.12em] text-ink-muted;
   }
   .section {
-    @apply py-16 sm:py-20;
+    @apply py-20 sm:py-28;
   }
+  /* A Swiss rule-topped block instead of a floating card. */
   .card {
-    @apply rounded-2xl border border-line bg-white p-6 shadow-card;
+    @apply border-t-2 border-current pb-2 pt-5;
   }
   .field {
-    @apply w-full rounded-xl border border-line bg-white px-4 py-3 text-sm text-ink placeholder:text-ink-muted focus:border-brand focus:outline-none focus:ring-2 focus:ring-brand/20;
+    @apply w-full rounded-lg border border-line bg-white px-4 py-3 text-[15px] text-ink placeholder:text-ink-muted focus:border-brand focus:outline-none focus:ring-2 focus:ring-brand/20;
   }
   .label {
-    @apply mb-1.5 block text-sm font-medium text-ink;
+    @apply mb-1.5 block text-sm font-semibold text-ink;
   }
+  .display-xl {
+    @apply font-display font-extrabold uppercase;
+    font-stretch: 66%;
+    font-variation-settings: 'wdth' 66;
+    line-height: 0.86;
+  }
+  .link-grow {
+    @apply relative;
+  }
+  .link-grow::after {
+    content: '';
+    @apply absolute inset-x-0 -bottom-1 h-px origin-left scale-x-0 bg-current transition-transform duration-300 ease-out;
+  }
+  .link-grow:hover::after {
+    @apply scale-x-100;
+  }
+  /* Dark bark-cloth band with a fibre grain. */
+  .bark {
+    @apply relative isolate bg-bark text-cream;
+  }
+  .bark::before {
+    content: '';
+    @apply pointer-events-none absolute inset-0 -z-10 opacity-60;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.014 .6' numOctaves='3' seed='4'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 .9 0 0 0 0 .75 0 0 0 .1 0'/%3E%3C/filter%3E%3Crect width='220' height='220' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+  /* A cream sheet that slides up over the band above it. */
+  .sheet {
+    @apply relative z-10 -mt-10 rounded-t-[2rem] bg-cream text-ink sm:-mt-12 sm:rounded-t-[3rem];
+  }
+}
+
+/* Sections slide up as they enter the viewport (transform only, so text is never hidden). */
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .reveal {
+      animation: reveal-up linear both;
+      animation-timeline: view();
+      animation-range: entry 0% entry 45%;
+    }
+  }
+}
+@keyframes reveal-up {
+  from { transform: translateY(36px); }
+  to { transform: none; }
 }

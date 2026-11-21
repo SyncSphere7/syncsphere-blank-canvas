@@ -54,7 +54,7 @@ export function Consent() {
         </>
       )}
       {ready && choice === null && (
-        <div role="dialog" aria-label="Cookie preferences" className="fixed inset-x-3 bottom-3 z-50 mx-auto max-w-xl rounded-2xl border border-line bg-white p-4 shadow-card sm:inset-x-6">
+        <div role="dialog" aria-label="Cookie preferences" className="fixed inset-x-3 bottom-[92px] z-50 mx-auto max-w-xl rounded-2xl border border-line bg-white p-4 shadow-card sm:inset-x-6 lg:bottom-3">
           <p className="text-sm text-ink-soft">
             We use analytics cookies to understand how visitors use this site. No advertising cookies.{' '}
             <a href="/privacy-policy" className="font-medium text-brand underline">Privacy policy</a>
@@ -71,7 +71,7 @@ export function Consent() {
 
 export function CookieSettingsButton() {
   return (
-    <button type="button" className="hover:text-white" onClick={() => window.dispatchEvent(new Event('ss-consent-open'))}>
+    <button type="button" className="hover:text-cream" onClick={() => window.dispatchEvent(new Event('ss-consent-open'))}>
       Cookie settings
     </button>
   );

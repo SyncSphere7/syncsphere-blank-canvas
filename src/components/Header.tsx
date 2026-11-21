@@ -1,20 +1,19 @@
 'use client';
 
-import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useEffect, useState } from 'react';
-import { Menu, X } from 'lucide-react';
+import { ArrowRight, Menu, X } from 'lucide-react';
 import clsx from 'clsx';
-import { whatsappLink } from '@/lib/site';
-import { WhatsAppIcon } from './WhatsAppIcon';
+import { site, whatsappLink } from '@/lib/site';
+import { LogoMark } from './Logo';
 
 const nav = [
   { href: '/services', label: 'Services' },
+  { href: '/pricing', label: 'Prices' },
   { href: '/industries', label: 'Industries' },
-  { href: '/pricing', label: 'Pricing' },
-  { href: '/international', label: 'International' },
   { href: '/about', label: 'About' },
+  { href: '/international', label: 'International' },
   { href: '/blog', label: 'Blog' },
 ];
 
@@ -24,41 +23,57 @@ export function Header() {
 
   useEffect(() => setOpen(false), [pathname]);
 
+  // Lock page scroll while the mobile menu is open; close it with Escape.
+  useEffect(() => {
+    if (!open) return;
+    const prev = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    const onKey = (e: KeyboardEvent) => e.key === 'Escape' && setOpen(false);
+    window.addEventListener('keydown', onKey);
+    return () => {
+      document.body.style.overflow = prev;
+      window.removeEventListener('keydown', onKey);
+    };
+  }, [open]);
+
   return (
-    <header className="sticky top-0 z-40 border-b border-line/80 bg-white/90 backdrop-blur">
-      <div className="container flex h-16 items-center justify-between gap-4">
-        <Link href="/" className="flex items-center gap-2" aria-label="SyncSphere home">
-          <Image src="/syncsphere-logo.png" alt="" width={36} height={36} priority />
-          <span className="text-lg font-extrabold tracking-tight text-ink">SyncSphere</span>
+    <header className="sticky top-0 z-40 bg-bark text-cream">
+      <div className="container flex h-[72px] items-center justify-between gap-6 border-b border-cream/15">
+        <Link href="/" className="flex items-center gap-2.5" aria-label="SyncSphere home">
+          <LogoMark className="h-6 w-6" />
+          <span className="font-display text-[22px] font-extrabold tracking-tight" style={{ fontStretch: '85%', fontVariationSettings: "'wdth' 85" }}>
+            SyncSphere
+          </span>
         </Link>
 
-        <nav className="hidden items-center gap-1 lg:flex" aria-label="Main">
+        <nav className="hidden items-center gap-7 lg:flex" aria-label="Main">
           {nav.map((item) => (
             <Link
               key={item.href}
               href={item.href}
-              className={clsx(
-                'rounded-lg px-3 py-2 text-sm font-medium transition-colors',
-                pathname?.startsWith(item.href) ? 'text-brand' : 'text-ink-soft hover:text-ink',
-              )}
+              className={clsx('link-grow text-[15px] transition-colors', pathname?.startsWith(item.href) ? 'text-cream' : 'text-cream/70 hover:text-cream')}
+              aria-current={pathname?.startsWith(item.href) ? 'page' : undefined}
             >
               {item.label}
             </Link>
           ))}
         </nav>
 
-        <div className="hidden items-center gap-2 lg:flex">
-          <Link href="/contact" className="btn-outline py-2.5">
-            Contact
-          </Link>
-          <a href={whatsappLink()} target="_blank" rel="noopener noreferrer" className="btn-whatsapp py-2.5">
-            <WhatsAppIcon className="h-4 w-4" /> WhatsApp us
-          </a>
-        </div>
+        <a
+          href={whatsappLink()}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="group hidden items-center gap-2.5 rounded-full bg-cream py-1.5 pl-5 pr-1.5 text-[15px] font-semibold text-ink lg:inline-flex"
+        >
+          Get a quote
+          <span className="grid h-8 w-8 place-items-center rounded-full bg-brand-bright text-cream transition-transform duration-300 ease-out group-hover:-rotate-45">
+            <ArrowRight className="h-4 w-4" aria-hidden="true" />
+          </span>
+        </a>
 
         <button
           type="button"
-          className="rounded-lg p-2 text-ink lg:hidden"
+          className="-mr-2 rounded-full p-2 lg:hidden"
           onClick={() => setOpen((v) => !v)}
           aria-expanded={open}
           aria-controls="mobile-nav"
@@ -69,16 +84,19 @@ export function Header() {
       </div>
 
       {open && (
-        <nav id="mobile-nav" className="border-t border-line bg-white lg:hidden" aria-label="Mobile">
-          <div className="container flex flex-col py-3">
+        <nav id="mobile-nav" className="h-[calc(100dvh-72px)] overflow-y-auto bg-bark lg:hidden" aria-label="Mobile">
+          <div className="container flex flex-col py-6">
             {[...nav, { href: '/contact', label: 'Contact' }].map((item) => (
-              <Link key={item.href} href={item.href} className="rounded-lg px-2 py-3 text-base font-medium text-ink">
+              <Link
+                key={item.href}
+                href={item.href}
+                className="display-xl border-b border-cream/15 py-3 text-[44px] text-cream transition-colors hover:text-brand-bright"
+              >
                 {item.label}
               </Link>
             ))}
-            <a href={whatsappLink()} target="_blank" rel="noopener noreferrer" className="btn-whatsapp mt-2">
-              <WhatsAppIcon className="h-4 w-4" /> WhatsApp us
-            </a>
+            <p className="mt-8 font-mono text-xs uppercase tracking-[0.12em] text-cream/60">WhatsApp or call</p>
+            <a href={site.phoneHref} className="mt-1 text-xl font-semibold">{site.phone}</a>
           </div>
         </nav>
       )}

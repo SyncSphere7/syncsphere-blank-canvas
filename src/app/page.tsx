@@ -1,12 +1,12 @@
+import type { ReactNode } from 'react';
 import Link from 'next/link';
-import { ArrowRight, BadgeCheck, Clock, Smartphone, Wallet } from 'lucide-react';
-import { CheckList, CtaBand, FaqList, JsonLd, SectionHeading } from '@/components/ui';
-import { Icon } from '@/components/Icon';
-import { WhatsAppIcon } from '@/components/WhatsAppIcon';
+import { ArrowRight } from 'lucide-react';
+import { FaqList, JsonLd } from '@/components/ui';
+import { HeroSlot, KampalaTime } from '@/components/HeroMotion';
 import { homeFaqs, industries, processSteps, services } from '@/lib/content';
 import { paymentTerms, websitePlans } from '@/lib/pricing';
 import { pageMeta } from '@/lib/meta';
-import { whatsappLink } from '@/lib/site';
+import { site, whatsappLink } from '@/lib/site';
 
 export const metadata = pageMeta(
   '/',
@@ -14,18 +14,19 @@ export const metadata = pageMeta(
   'Professional websites for Ugandan businesses from UGX 1,800,000. WhatsApp Business automation, social media and Google Maps setup. Kampala team, pay with Mobile Money.',
 );
 
-const reasons = [
-  { Icon: Smartphone, title: 'Built for phones', text: 'Most of your customers will find you on a phone, often on mobile data. Our sites are light, fast and easy to use on small screens.' },
-  { Icon: WhatsAppIconBadge, title: 'WhatsApp at the centre', text: 'Every site makes it one tap to message you on WhatsApp — where Ugandan customers already want to talk.' },
-  { Icon: Wallet, title: 'Clear prices, local payments', text: 'Fixed written quotes in shillings. Pay with MTN Mobile Money, Airtel Money, card or bank transfer.' },
-  { Icon: BadgeCheck, title: 'A company you can hold to account', text: 'A Kampala team backed by a registered US company, with written terms, a refund policy and 30 days of free fixes.' },
+const groups = [
+  { name: 'Build', slugs: ['websites', 'branding'] },
+  { name: 'Grow', slugs: ['social-media', 'google-business-profile'] },
+  { name: 'Run', slugs: ['whatsapp-automation', 'business-automation', 'maintenance'] },
 ];
 
-function WhatsAppIconBadge({ className }: { className?: string }) {
-  return <WhatsAppIcon className={className} />;
-}
+const ugx = (n: number) => n.toLocaleString('en-US');
 
 export default function HomePage() {
+  const starter = websitePlans.ug[0];
+  const starterTotal = Number(starter.price.replace(/\D/g, ''));
+  const deposit = Math.round(starterTotal * 0.6);
+
   return (
     <>
       <JsonLd
@@ -37,194 +38,249 @@ export default function HomePage() {
       />
 
       {/* Hero */}
-      <section className="relative overflow-hidden bg-surface">
-        <div className="pointer-events-none absolute -left-24 top-24 h-72 w-72 rounded-full bg-brand/10 blur-3xl" aria-hidden="true" />
-        <div className="pointer-events-none absolute -right-10 -top-10 h-72 w-72 rounded-full bg-sun/20 blur-3xl" aria-hidden="true" />
-        <div className="container relative grid items-center gap-12 py-14 sm:py-20 lg:grid-cols-[1.1fr_0.9fr]">
-          <div>
-            <p className="inline-flex items-center gap-2 rounded-full border border-line bg-white px-3 py-1 text-xs font-semibold text-ink-soft">
-              <span className="h-2 w-2 rounded-full bg-whatsapp" aria-hidden="true" /> Kampala-based team · Serving Uganda and abroad
-            </p>
-            <h1 className="mt-5 text-4xl font-extrabold leading-[1.1] sm:text-6xl">
-              Websites that win you <span className="text-brand">customers</span>, not just visitors.
-            </h1>
-            <p className="mt-6 max-w-xl text-lg leading-relaxed text-ink-soft">
-              We build professional websites, set up WhatsApp Business and run social media for Ugandan businesses — with clear prices in shillings and payment by Mobile Money.
-            </p>
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <a href={whatsappLink()} target="_blank" rel="noopener noreferrer" className="btn-whatsapp px-6 py-3.5 text-base">
-                <WhatsAppIcon className="h-5 w-5" /> Get a free quote on WhatsApp
-              </a>
-              <Link href="/pricing" className="btn-outline px-6 py-3.5 text-base">
-                See prices <ArrowRight className="h-4 w-4" />
-              </Link>
+      <section className="bark pb-28 sm:pb-36">
+        <div className="container pt-8 sm:pt-12">
+          <div className="flex flex-wrap justify-between gap-3 font-mono text-xs uppercase tracking-[0.1em] text-cream/60">
+            <span className="inline-flex items-center gap-2">
+              <span className="h-[7px] w-[7px] animate-dot rounded-full bg-sun" aria-hidden="true" /> Taking new projects
+            </span>
+            <span>
+              Kampala 0.3476° N, 32.5825° E · <KampalaTime />
+            </span>
+          </div>
+
+          <h1 className="display-xl mt-8 text-[clamp(50px,8.2vw,132px)] sm:mt-12">
+            <span className="sr-only">Websites that sell for Ugandan businesses</span>
+            <span className="block overflow-hidden pb-[0.02em]" aria-hidden="true"><span className="inline-block animate-rise">Websites</span></span>
+            <span className="block overflow-hidden pb-[0.02em]" aria-hidden="true"><span className="inline-block animate-rise [animation-delay:.1s]">that sell for</span></span>
+            <span className="block overflow-hidden pb-[0.02em]"><span className="inline-block animate-rise [animation-delay:.2s]"><HeroSlot /></span></span>
+          </h1>
+
+          <div className="mt-12 grid items-end gap-10 lg:grid-cols-12 lg:gap-4">
+            <div className="animate-fade-up [animation-delay:.35s] lg:col-span-5">
+              <p className="max-w-[34rem] text-lg leading-relaxed text-cream/80 sm:text-[19px]">
+                We build your website, set up WhatsApp Business and run your social media. One Kampala team, one written price in shillings, paid by Mobile Money.
+              </p>
+              <div className="mt-8 flex flex-wrap items-center gap-6">
+                <a href={whatsappLink()} target="_blank" rel="noopener noreferrer" className="btn-chip">
+                  Get a quote on WhatsApp
+                  <span className="chip"><ArrowRight className="h-4 w-4" aria-hidden="true" /></span>
+                </a>
+                <Link href="/pricing" className="border-b border-cream/60 pb-0.5 font-semibold transition-colors hover:border-brand-bright hover:text-brand-bright">
+                  See all prices
+                </Link>
+              </div>
             </div>
-            <ul className="mt-8 flex flex-wrap gap-x-6 gap-y-2 text-sm text-ink-soft">
-              <li className="flex items-center gap-2"><Clock className="h-4 w-4 text-brand" /> Starter sites live in 5–7 days</li>
-              <li className="flex items-center gap-2"><Wallet className="h-4 w-4 text-brand" /> From UGX 1,800,000</li>
-              <li className="flex items-center gap-2"><BadgeCheck className="h-4 w-4 text-brand" /> 30 days of free fixes</li>
-            </ul>
-          </div>
 
-          <HeroVisual />
-        </div>
-      </section>
+            <dl className="animate-fade-up border-t-2 border-cream font-mono text-sm [animation-delay:.5s] lg:col-span-3 lg:col-start-7">
+              {[
+                ['Starter website', starter.price],
+                ['Live in', '5–7 working days'],
+                ['After launch', '30 days free fixes'],
+              ].map(([k, v]) => (
+                <div key={k} className="border-b border-cream/15 py-2.5">
+                  <dt className="text-xs uppercase tracking-[0.1em] text-cream/60">{k}</dt>
+                  <dd className="mt-0.5 uppercase tabular-nums">{v}</dd>
+                </div>
+              ))}
+            </dl>
 
-      {/* Services */}
-      <section className="section">
-        <div className="container">
-          <SectionHeading eyebrow="What we do" title="Everything you need to get customers online" intro="Start with a website, or pick the one thing your business needs most right now." />
-          <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            {services.slice(0, 6).map((s) => (
-              <Link key={s.slug} href={`/services/${s.slug}`} className="card group transition-colors hover:border-brand">
-                <span className="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-brand-tint text-brand">
-                  <Icon name={s.icon} className="h-5 w-5" />
-                </span>
-                <h3 className="mt-4 text-lg font-bold">{s.name}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-ink-soft">{s.summary}</p>
-                <p className="mt-4 text-sm font-semibold text-brand">
-                  {s.price.ug} <ArrowRight className="inline h-4 w-4 transition-transform group-hover:translate-x-1" />
+            <div
+              className="max-w-[340px] -rotate-2 animate-card rounded-2xl bg-cream p-5 pb-3 text-ink shadow-lift transition-transform duration-500 ease-out [animation-delay:.6s] hover:rotate-0 lg:col-span-3"
+              aria-label={`Example payment schedule for a Starter website: ${ugx(deposit)} shillings deposit by Mobile Money, ${ugx(starterTotal - deposit)} at launch.`}
+            >
+              <p className="flex justify-between border-b border-ink/15 pb-2.5 font-mono text-xs uppercase tracking-[0.1em] text-ink-muted">
+                <span>Example</span><span>Starter site</span>
+              </p>
+              {[
+                ['Deposit 60% · MoMo', ugx(deposit), true],
+                ['At launch 40%', ugx(starterTotal - deposit), false],
+                ['Total UGX', ugx(starterTotal), false],
+              ].map(([k, v, done]) => (
+                <p key={String(k)} className="flex justify-between gap-3 border-b border-dashed border-ink/20 py-2.5 text-sm tabular-nums last:border-0">
+                  <span>{done ? <span className="font-bold text-[#5E7A1E]">✓ </span> : null}{k}</span>
+                  <b>{v}</b>
                 </p>
-              </Link>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
-      </section>
 
-      {/* Why */}
-      <section className="section bg-surface">
-        <div className="container">
-          <SectionHeading eyebrow="Why SyncSphere" title="Made for how Ugandan customers actually buy" />
-          <div className="mt-10 grid gap-5 sm:grid-cols-2">
-            {reasons.map(({ Icon: I, title, text }) => (
-              <div key={title} className="flex gap-4 rounded-2xl bg-white p-6 shadow-card">
-                <span className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-sun-tint text-ink">
-                  <I className="h-5 w-5" />
-                </span>
-                <div>
-                  <h3 className="font-bold">{title}</h3>
-                  <p className="mt-1.5 text-sm leading-relaxed text-ink-soft">{text}</p>
+        {/* Services */}
+        <div className="container mt-28 sm:mt-36">
+          <SecHead label="Services" title={<>Build it. Grow it. <em className="not-italic text-brand-bright">Run it.</em></>} />
+          <div className="grid gap-10 md:grid-cols-3 md:gap-4">
+            {groups.map((g) => {
+              const items = g.slugs.map((s) => services.find((x) => x.slug === s)).filter((x): x is (typeof services)[number] => Boolean(x));
+              return (
+                <div key={g.name}>
+                  <h3 className="display-xl flex items-baseline justify-between border-b-2 border-brand-bright pb-3 text-[34px]">
+                    {g.name} <sup className="font-mono text-xs font-normal text-cream/60">{String(items.length).padStart(2, '0')}</sup>
+                  </h3>
+                  <ul>
+                    {items.map((s) => (
+                      <li key={s.slug} className="border-b border-cream/15">
+                        <Link href={`/services/${s.slug}`} className="group block py-5 transition-[padding] duration-300 ease-out hover:pl-2.5">
+                          <span className="block text-xl font-bold group-hover:text-brand-bright">{s.name}</span>
+                          <span className="mt-1 block text-[15px] text-cream/65">{s.summary}</span>
+                          <span className="mt-2.5 block font-mono text-[13px] text-brand-bright">{s.price.ug}</span>
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
 
-      {/* Pricing preview */}
-      <section className="section">
+      {/* Prices */}
+      <section className="sheet pb-28 pt-20 sm:pb-36 sm:pt-28">
         <div className="container">
-          <SectionHeading eyebrow="Pricing" title="Website packages in Uganda shillings" intro="Fixed written quote before we start. Domain and SSL included for the first year." />
-          <div className="mt-10 grid gap-5 lg:grid-cols-3">
-            {websitePlans.ug.map((p) => (
-              <div key={p.id} className={`card flex flex-col ${p.featured ? 'border-brand ring-1 ring-brand' : ''}`}>
-                <div className="flex items-center justify-between">
-                  <h3 className="text-lg font-bold">{p.name}</h3>
-                  {p.featured && <span className="rounded-full bg-brand px-2.5 py-1 text-xs font-semibold text-white">Most chosen</span>}
-                </div>
-                <p className="mt-1 text-sm text-ink-muted">{p.note}</p>
-                <p className="mt-4 text-3xl font-extrabold">{p.price}</p>
-                <p className="mt-1 text-sm text-ink-muted">{p.delivery}</p>
-                <CheckList items={p.features.slice(0, 4)} className="mt-5 flex-1" />
-              </div>
-            ))}
+          <SecHead label="Prices · UGX" title={<>One price, in writing, <em className="not-italic text-brand">before we start.</em></>} />
+          <div className="overflow-x-auto">
+            <table className="w-full min-w-[760px] border-separate border-spacing-0 text-left text-[15px] tabular-nums">
+              <thead>
+                <tr>
+                  <th className="w-1/4" />
+                  {websitePlans.ug.map((p) => (
+                    <th key={p.id} className={p.featured ? 'rounded-t-2xl bg-bark px-4 pb-5 pt-4 align-bottom text-cream' : 'border-b-2 border-ink px-4 pb-5 align-bottom'}>
+                      {p.featured && <span className="mb-2.5 inline-block rounded-full bg-brand-bright px-2.5 py-1 font-mono text-[11px] uppercase tracking-[0.08em] text-cream">Most chosen</span>}
+                      <span className="display-xl block text-4xl">{p.name}</span>
+                      <span className="mt-2 block font-mono text-lg font-semibold">{p.price.replace('UGX ', '')}</span>
+                    </th>
+                  ))}
+                </tr>
+              </thead>
+              <tbody>
+                {[
+                  { k: 'Best for', v: (p: (typeof websitePlans.ug)[number]) => p.note },
+                  { k: 'Live in', v: (p: (typeof websitePlans.ug)[number]) => p.delivery.replace(/^Live in /, '') },
+                  {
+                    k: "What's included",
+                    v: (p: (typeof websitePlans.ug)[number]) => (
+                      <ul className="space-y-2">
+                        {p.features.map((f) => (
+                          <li key={f} className="flex gap-2.5"><span className="mt-[7px] h-2 w-2 shrink-0 rounded-full bg-brand-bright" aria-hidden="true" />{f}</li>
+                        ))}
+                      </ul>
+                    ),
+                  },
+                ].map((row, ri, rows) => (
+                  <tr key={row.k}>
+                    <th scope="row" className="border-b border-ink/15 py-4 pr-4 align-top font-mono text-xs font-medium uppercase tracking-[0.08em] text-ink-muted">{row.k}</th>
+                    {websitePlans.ug.map((p) => (
+                      <td
+                        key={p.id}
+                        className={
+                          p.featured
+                            ? `bg-bark px-4 py-4 align-top text-cream ${ri === rows.length - 1 ? 'rounded-b-2xl' : 'border-b border-cream/15'}`
+                            : 'border-b border-ink/15 px-4 py-4 align-top'
+                        }
+                      >
+                        {row.v(p)}
+                      </td>
+                    ))}
+                  </tr>
+                ))}
+              </tbody>
+            </table>
           </div>
-          <div className="mt-6 flex flex-col items-start justify-between gap-4 rounded-2xl bg-surface p-5 text-sm text-ink-soft sm:flex-row sm:items-center">
-            <p>{paymentTerms.ug[0]} {paymentTerms.ug[2]}</p>
-            <Link href="/pricing" className="btn-primary shrink-0">Full pricing <ArrowRight className="h-4 w-4" /></Link>
+          <div className="mt-8 flex flex-wrap items-center gap-2.5 text-sm">
+            {paymentTerms.ug.slice(0, 2).map((t) => (
+              <span key={t} className="rounded-full border border-ink/20 px-4 py-2">{t}</span>
+            ))}
+            <span className="rounded-full border border-ink/20 px-4 py-2">MTN MoMo · Airtel Money · Card · Bank</span>
+            <Link href="/pricing" className="btn-primary ml-auto">
+              Full price list <ArrowRight className="h-4 w-4" aria-hidden="true" />
+            </Link>
           </div>
         </div>
       </section>
 
-      {/* Industries */}
-      <section className="section bg-surface">
+      {/* Industries, about and process */}
+      <section className="bark relative z-20 -mt-10 overflow-hidden rounded-t-[2rem] pb-28 pt-20 sm:-mt-12 sm:rounded-t-[3rem] sm:pb-36 sm:pt-28">
         <div className="container">
-          <SectionHeading eyebrow="Industries" title="We know what your customers look for" />
-          <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          <SecHead label="Industries" title={<>We know who your <em className="not-italic text-brand-bright">customers</em> are.</>} />
+          <ul className="border-t border-cream/15">
             {industries.map((i) => (
-              <Link key={i.slug} href={`/industries/${i.slug}`} className="flex items-center gap-4 rounded-2xl bg-white p-5 shadow-card transition-colors hover:text-brand">
-                <Icon name={i.icon} className="h-6 w-6 shrink-0 text-brand" />
-                <div>
-                  <p className="font-bold">{i.name}</p>
-                  <p className="text-sm text-ink-soft">{i.summary}</p>
-                </div>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Process */}
-      <section className="section">
-        <div className="container">
-          <SectionHeading eyebrow="How it works" title="From first message to live website" center />
-          <ol className="mt-10 grid gap-5 md:grid-cols-5">
-            {processSteps.map((step, idx) => (
-              <li key={step.title} className="rounded-2xl border border-line p-5">
-                <span className="text-sm font-bold text-brand">Step {idx + 1}</span>
-                <h3 className="mt-2 font-bold">{step.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-ink-soft">{step.text}</p>
+              <li key={i.slug} className="reveal border-b border-cream/15">
+                <Link href={`/industries/${i.slug}`} className="group grid items-baseline gap-1 py-3.5 md:grid-cols-[1fr_auto] md:gap-4">
+                  <span className="display-xl text-[clamp(34px,5.6vw,84px)] leading-[0.95] transition-[color,transform] duration-300 ease-out group-hover:translate-x-3.5 group-hover:text-brand-bright">
+                    {i.name}
+                  </span>
+                  <span className="max-w-[30ch] text-[15px] text-cream/60 md:text-right">{i.summary}</span>
+                </Link>
               </li>
             ))}
-          </ol>
-        </div>
-      </section>
+          </ul>
 
-      {/* International teaser */}
-      <section className="pb-4">
-        <div className="container">
-          <div className="flex flex-col items-start justify-between gap-6 rounded-3xl border border-line p-8 md:flex-row md:items-center">
-            <div>
-              <p className="eyebrow">Outside Uganda?</p>
-              <h2 className="mt-2 text-2xl font-extrabold">We also work with clients in the US, UK and the diaspora.</h2>
-              <p className="mt-2 text-ink-soft">USD pricing, card and bank payments, and a US-registered company to contract with.</p>
+          <div className="mt-24 grid items-center gap-10 md:grid-cols-12 md:gap-4 sm:mt-32">
+            <div
+              className="flex aspect-[4/5] max-w-[420px] items-end rounded-b-[18px] rounded-t-full border border-cream/15 p-5 md:col-span-5 md:max-w-none"
+              style={{ background: 'repeating-linear-gradient(172deg, rgba(242,231,211,.05) 0 2px, transparent 2px 9px), linear-gradient(165deg, #7B4A2A, #45291A 55%, #24170F)' }}
+            >
+              <p className="rounded-lg bg-bark/75 px-3 py-2 text-[13px] text-cream/80">Photo: the SyncSphere team in Kampala (coming soon)</p>
             </div>
-            <Link href="/international" className="btn-outline shrink-0">International clients <ArrowRight className="h-4 w-4" /></Link>
+            <div className="md:col-span-6 md:col-start-7">
+              <p className="eyebrow text-cream/60">About us</p>
+              <h2 className="display-xl mt-3 text-[clamp(36px,4.6vw,68px)]">A Kampala team you can visit.</h2>
+              <p className="mt-5 max-w-[46ch] text-cream/80">
+                We work from Lumumba Avenue, reply on WhatsApp, and sign a written agreement for every project. Our US-registered company also serves clients abroad.
+              </p>
+              <dl className="mt-8 grid grid-cols-2 gap-4">
+                <div className="border-t border-cream/15 pt-3"><dt className="eyebrow text-cream/60">Office</dt><dd className="mt-1 font-semibold">Plot 32 Lumumba Avenue</dd></div>
+                <div className="border-t border-cream/15 pt-3"><dt className="eyebrow text-cream/60">Company</dt><dd className="mt-1 font-semibold">{site.legalName}, Montana</dd></div>
+              </dl>
+              <Link href="/about" className="mt-8 inline-block border-b border-cream/60 pb-0.5 font-semibold hover:border-brand-bright hover:text-brand-bright">More about us</Link>
+            </div>
+          </div>
+
+          <div className="mt-28 sm:mt-36">
+            <SecHead label="Process" title={<>{processSteps.length} steps to <em className="not-italic text-brand-bright">launch.</em></>} />
+            <ol className="grid gap-6 md:grid-cols-5 md:gap-4">
+              {processSteps.map((s, n) => (
+                <li key={s.title} className={`border-t-[6px] pt-3.5 transition-colors hover:border-brand-bright ${n === 0 ? 'border-brand-bright' : 'border-cream/15'}`}>
+                  <span className="font-mono text-xs uppercase tracking-[0.1em] text-cream/60">Step {n + 1}</span>
+                  <h3 className="mt-2 text-[19px] leading-tight">{s.title}</h3>
+                  <p className="mt-1.5 text-[15px] text-cream/65">{s.text}</p>
+                </li>
+              ))}
+            </ol>
+          </div>
+
+          <div className="mt-24 flex flex-col items-start justify-between gap-6 border-y border-cream/15 py-8 md:flex-row md:items-center">
+            <p className="max-w-xl text-lg">
+              <span className="font-semibold">Outside Uganda?</span> <span className="text-cream/70">We work with clients in the US, UK and the diaspora, with USD prices and a US company to contract with.</span>
+            </p>
+            <Link href="/international" className="btn-outline shrink-0">International clients <ArrowRight className="h-4 w-4" aria-hidden="true" /></Link>
           </div>
         </div>
       </section>
 
       {/* FAQ */}
-      <section className="section">
-        <div className="container grid gap-10 lg:grid-cols-[0.8fr_1.2fr]">
-          <SectionHeading eyebrow="Questions" title="Common questions" intro="Can’t find your answer? Message us on WhatsApp and a real person will reply during working hours." />
-          <FaqList faqs={homeFaqs} />
+      <section className="sheet pb-24 pt-20 sm:pb-32 sm:pt-28">
+        <div className="container grid gap-10 lg:grid-cols-12 lg:gap-4">
+          <div className="lg:col-span-4">
+            <p className="eyebrow">Questions</p>
+            <h2 className="mt-3 text-[clamp(40px,5vw,72px)]">Common questions</h2>
+            <p className="mt-5 max-w-sm text-ink-soft">Can’t find your answer? Message us on WhatsApp and a real person will reply during working hours.</p>
+          </div>
+          <div className="lg:col-span-7 lg:col-start-6">
+            <FaqList faqs={homeFaqs} />
+          </div>
         </div>
       </section>
-
-      <CtaBand />
     </>
   );
 }
 
-function HeroVisual() {
+function SecHead({ label, title }: { label: string; title: ReactNode }) {
   return (
-    <div className="relative mx-auto w-full max-w-sm" aria-hidden="true">
-      <div className="rounded-[2.2rem] border-[10px] border-ink bg-white shadow-2xl">
-        <div className="rounded-t-[1.4rem] bg-brand-deep px-5 pb-6 pt-5 text-white">
-          <div className="flex items-center justify-between text-[10px] text-white/70"><span>9:41</span><span>4G</span></div>
-          <p className="mt-5 text-[11px] font-semibold uppercase tracking-widest text-sun">Nile Safaris</p>
-          <p className="mt-1 text-xl font-extrabold leading-tight">Gorilla treks from Kampala</p>
-          <p className="mt-1 text-xs text-white/75">3-day packages · Small groups</p>
-          <span className="mt-4 inline-block rounded-lg bg-sun px-3 py-1.5 text-xs font-bold text-ink">Book a trip</span>
-        </div>
-        <div className="space-y-3 p-5">
-          {['Bwindi 3-day trek', 'Murchison Falls safari', 'Jinja adventure weekend'].map((t, i) => (
-            <div key={t} className="flex items-center gap-3 rounded-xl border border-line p-3">
-              <span className={`h-10 w-10 rounded-lg ${['bg-brand/20', 'bg-sun/30', 'bg-whatsapp/20'][i]}`} />
-              <div className="flex-1">
-                <p className="text-xs font-bold text-ink">{t}</p>
-                <p className="text-[10px] text-ink-muted">From USD {[680, 450, 220][i]}</p>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-      <div className="absolute -bottom-6 -left-6 w-56 rounded-2xl bg-white p-3 shadow-card sm:-left-12">
-        <p className="flex items-center gap-1.5 text-[11px] font-bold text-whatsapp"><WhatsAppIcon className="h-3.5 w-3.5" /> New WhatsApp enquiry</p>
-        <p className="mt-1 text-xs text-ink-soft">“Hi! Is the Bwindi trek available on 12 March for 2 people?”</p>
-      </div>
-      <p className="mt-10 text-center text-xs text-ink-muted">Example design for illustration</p>
+    <div className="reveal mb-12 grid gap-3 border-t-2 border-current pt-3.5 sm:mb-16 md:grid-cols-12 md:gap-4">
+      <p className="font-mono text-xs uppercase tracking-[0.1em] opacity-70 md:col-span-3">{label}</p>
+      <h2 className="text-[clamp(40px,6.4vw,96px)] leading-[0.88] md:col-span-9">{title}</h2>
     </div>
   );
 }

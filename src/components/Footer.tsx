@@ -1,73 +1,76 @@
 import Link from 'next/link';
-import { Facebook, Instagram, Linkedin, Mail, MapPin, Phone, Twitter } from 'lucide-react';
 import { site, whatsappLink } from '@/lib/site';
 import { services, industries } from '@/lib/content';
 import { CookieSettingsButton } from './Consent';
 
+const label = 'font-mono text-xs uppercase tracking-[0.12em] text-cream/70';
+
 export function Footer() {
   return (
-    <footer className="bg-ink text-white/80">
-      <div className="container grid gap-10 py-14 sm:grid-cols-2 lg:grid-cols-4">
-        <div>
-          <p className="text-lg font-extrabold text-white">SyncSphere</p>
-          <p className="mt-3 text-sm leading-relaxed">
-            Websites, WhatsApp automation and digital marketing for businesses in Uganda and around the world.
-          </p>
-          <ul className="mt-5 space-y-2 text-sm">
-            <li className="flex gap-2"><MapPin className="mt-0.5 h-4 w-4 shrink-0" /> {site.kampalaAddress}</li>
-            <li><a className="flex gap-2 hover:text-white" href={site.phoneHref}><Phone className="mt-0.5 h-4 w-4" /> {site.phone}</a></li>
-            <li><a className="flex gap-2 hover:text-white" href={`mailto:${site.email}`}><Mail className="mt-0.5 h-4 w-4" /> {site.email}</a></li>
-          </ul>
-        </div>
+    <footer className="bg-brand-dark text-cream">
+      <div className="container pb-10 pt-16 sm:pt-20">
+        <p className={label}>WhatsApp or call</p>
+        <a
+          href={whatsappLink()}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="display-xl mt-3 block whitespace-nowrap text-[clamp(40px,10.4vw,168px)] tabular-nums transition-colors hover:text-bark"
+        >
+          {site.phone}
+        </a>
 
-        <div>
-          <p className="font-semibold text-white">Services</p>
-          <ul className="mt-4 space-y-2 text-sm">
-            {services.map((s) => (
-              <li key={s.slug}><Link className="hover:text-white" href={`/services/${s.slug}`}>{s.name}</Link></li>
-            ))}
-          </ul>
-        </div>
+        <div className="mt-14 grid gap-10 border-t-2 border-cream pt-6 sm:grid-cols-2 lg:grid-cols-4">
+          <div>
+            <p className={label}>Visit or write</p>
+            <p className="mt-3 font-semibold">{site.kampalaAddress}</p>
+            <a className="mt-2 block font-semibold hover:underline" href={`mailto:${site.email}`}>{site.email}</a>
+            <a className="mt-1 block font-semibold hover:underline" href={site.phoneHref}>{site.phone}</a>
+          </div>
 
-        <div>
-          <p className="font-semibold text-white">Industries</p>
-          <ul className="mt-4 space-y-2 text-sm">
-            {industries.map((i) => (
-              <li key={i.slug}><Link className="hover:text-white" href={`/industries/${i.slug}`}>{i.name}</Link></li>
-            ))}
-          </ul>
-        </div>
+          <div>
+            <p className={label}>Services</p>
+            <ul className="mt-3 space-y-1.5">
+              {services.map((s) => (
+                <li key={s.slug}><Link className="hover:underline" href={`/services/${s.slug}`}>{s.name}</Link></li>
+              ))}
+            </ul>
+          </div>
 
-        <div>
-          <p className="font-semibold text-white">Company</p>
-          <ul className="mt-4 space-y-2 text-sm">
-            <li><Link className="hover:text-white" href="/about">About</Link></li>
-            <li><Link className="hover:text-white" href="/pricing">Pricing</Link></li>
-            <li><Link className="hover:text-white" href="/international">International clients</Link></li>
-            <li><Link className="hover:text-white" href="/blog">Blog</Link></li>
-            <li><Link className="hover:text-white" href="/tools/website-grader">Free website grader</Link></li>
-            <li><Link className="hover:text-white" href="/pay">Pay an invoice</Link></li>
-            <li><Link className="hover:text-white" href="/contact">Contact</Link></li>
-            <li><a className="hover:text-white" href={whatsappLink()} target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
-          </ul>
-          <div className="mt-5 flex gap-2">
-            {[
-              { href: site.social.facebook, Icon: Facebook, label: 'Facebook' },
-              { href: site.social.instagram, Icon: Instagram, label: 'Instagram' },
-              { href: site.social.linkedin, Icon: Linkedin, label: 'LinkedIn' },
-              { href: site.social.x, Icon: Twitter, label: 'X' },
-            ].map(({ href, Icon, label }) => (
-              <a key={label} href={href} target="_blank" rel="noopener noreferrer" aria-label={label} className="rounded-full border border-white/15 p-2 hover:border-white/40 hover:text-white">
-                <Icon className="h-4 w-4" />
-              </a>
-            ))}
+          <div>
+            <p className={label}>Industries</p>
+            <ul className="mt-3 space-y-1.5">
+              {industries.map((i) => (
+                <li key={i.slug}><Link className="hover:underline" href={`/industries/${i.slug}`}>{i.name}</Link></li>
+              ))}
+            </ul>
+          </div>
+
+          <div>
+            <p className={label}>Company</p>
+            <ul className="mt-3 space-y-1.5">
+              <li><Link className="hover:underline" href="/about">About</Link></li>
+              <li><Link className="hover:underline" href="/pricing">Prices</Link></li>
+              <li><Link className="hover:underline" href="/international">International clients</Link></li>
+              <li><Link className="hover:underline" href="/blog">Blog</Link></li>
+              <li><Link className="hover:underline" href="/tools/website-grader">Free website grader</Link></li>
+              <li><Link className="hover:underline" href="/pay">Pay an invoice</Link></li>
+              <li><Link className="hover:underline" href="/contact">Contact</Link></li>
+            </ul>
+            <ul className="mt-5 flex flex-wrap gap-x-4 gap-y-1 font-mono text-xs uppercase tracking-[0.08em]">
+              {[
+                { href: site.social.facebook, label: 'Facebook' },
+                { href: site.social.instagram, label: 'Instagram' },
+                { href: site.social.linkedin, label: 'LinkedIn' },
+                { href: site.social.x, label: 'X' },
+              ].map((s) => (
+                <li key={s.label}><a href={s.href} target="_blank" rel="noopener noreferrer" className="hover:underline">{s.label}</a></li>
+              ))}
+            </ul>
           </div>
         </div>
-      </div>
 
-      <div className="border-t border-white/10">
-        <div className="container flex flex-col gap-3 py-6 text-xs text-white/60 md:flex-row md:items-start md:justify-between">
-          <div className="space-y-1">
+        <div className="mt-14 flex flex-col gap-3 border-t border-cream/25 pt-6 text-xs text-cream/75 md:flex-row md:items-start md:justify-between">
+          <div className="max-w-3xl space-y-1">
             <p>© {new Date().getFullYear()} {site.legalName}. All rights reserved.</p>
             <p>
               {site.legalName} is a limited liability company registered in {site.registration.state} (File No. {site.registration.fileNo}).
@@ -75,9 +78,9 @@ export function Footer() {
             </p>
           </div>
           <div className="flex flex-wrap gap-x-4 gap-y-1">
-            <Link className="hover:text-white" href="/privacy-policy">Privacy</Link>
-            <Link className="hover:text-white" href="/terms-of-service">Terms</Link>
-            <Link className="hover:text-white" href="/refund-policy">Refunds</Link>
+            <Link className="hover:text-cream" href="/privacy-policy">Privacy</Link>
+            <Link className="hover:text-cream" href="/terms-of-service">Terms</Link>
+            <Link className="hover:text-cream" href="/refund-policy">Refunds</Link>
             <CookieSettingsButton />
           </div>
         </div>

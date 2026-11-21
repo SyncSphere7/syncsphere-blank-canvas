@@ -15,22 +15,22 @@ export default function OpengraphImage() {
           flexDirection: 'column',
           justifyContent: 'space-between',
           padding: 72,
-          background: 'linear-gradient(135deg, #003366 0%, #0055A4 100%)',
-          color: 'white',
+          background: '#1D130D',
+          color: '#F2E7D3',
           fontFamily: 'sans-serif',
         }}
       >
         <div style={{ display: 'flex', alignItems: 'center', gap: 16, fontSize: 36, fontWeight: 800 }}>
-          <div style={{ width: 20, height: 20, borderRadius: 999, background: '#F5B000' }} />
+          <div style={{ width: 20, height: 20, borderRadius: 999, background: '#D4582B' }} />
           SyncSphere
         </div>
         <div style={{ display: 'flex', flexDirection: 'column' }}>
-          <div style={{ fontSize: 68, fontWeight: 800, lineHeight: 1.1, maxWidth: 980 }}>Websites that win you customers.</div>
-          <div style={{ fontSize: 32, marginTop: 24, color: 'rgba(255,255,255,0.85)' }}>
+          <div style={{ fontSize: 68, fontWeight: 800, lineHeight: 1.1, maxWidth: 980 }}>WEBSITES THAT SELL FOR UGANDAN BUSINESSES.</div>
+          <div style={{ fontSize: 32, marginTop: 24, color: 'rgba(242,231,211,0.8)' }}>
             Websites · WhatsApp automation · Social media — Kampala, Uganda
           </div>
         </div>
-        <div style={{ display: 'flex', fontSize: 26, color: '#F5B000', fontWeight: 700 }}>syncspherellc.com</div>
+        <div style={{ display: 'flex', fontSize: 26, color: '#D4582B', fontWeight: 700 }}>syncspherellc.com</div>
       </div>
     ),
     size,

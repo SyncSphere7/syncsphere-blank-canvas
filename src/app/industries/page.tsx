@@ -19,7 +19,7 @@ export default function IndustriesPage() {
         <div className="container grid gap-5 md:grid-cols-2 lg:grid-cols-3">
           {industries.map((i) => (
             <Link key={i.slug} href={`/industries/${i.slug}`} className="card group transition-colors hover:border-brand">
-              <span className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-sun-tint text-ink">
+              <span className="inline-flex h-12 w-12 items-center justify-center text-brand">
                 <Icon name={i.icon} className="h-6 w-6" />
               </span>
               <h2 className="mt-4 text-lg font-bold">{i.name}</h2>
