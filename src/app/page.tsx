@@ -130,11 +130,9 @@ export default function HomePage() {
                   {pillarSlugs[p.id].map(bySlug).map((s) => (
                     <li key={s.slug} className="border-b border-cream/15">
                       <Link href={`/services/${s.slug}`} className="group block py-4 transition-[padding] duration-300 ease-out hover:pl-2.5">
-                        <span className="flex items-baseline justify-between gap-3">
-                          <span className="text-lg font-bold group-hover:text-brand-bright">{s.name}</span>
-                          <span className="shrink-0 font-mono text-[12px] text-cream/55">{s.price.ug.replace('From ', '').replace(' / month', '/mo')}</span>
-                        </span>
+                        <span className="block text-lg font-bold group-hover:text-brand-bright">{s.name}</span>
                         <span className="mt-1 block text-[14.5px] text-cream/60">{s.summary}</span>
+                        <span className="mt-2 block font-mono text-[12.5px] text-brand-bright/90">{s.price.ug}</span>
                       </Link>
                     </li>
                   ))}
