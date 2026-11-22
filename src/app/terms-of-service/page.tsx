@@ -14,7 +14,7 @@ export default function TermsPage() {
       <p>Every project is based on a written quote or statement of work that sets out the scope, price, timeline and payment schedule. Where a signed quote or statement of work sets out different terms for a project, it takes precedence over these Terms for that project.</p>
 
       <h2>Payments</h2>
-      <p>Payments are made against the milestones in your quote. Payments may be processed by our payment partner, Flutterwave, which supports Mobile Money, card and bank payments. Our refund and cancellation terms are set out in the <Link href="/refund-policy">Refund &amp; Cancellation Policy</Link>.</p>
+      <p>Payments are made against the milestones in your quote. Payments may be processed by our payment partner, Flutterwave, which supports bank, card and Mobile Money payments. Our refund and cancellation terms are set out in the <Link href="/refund-policy">Refund &amp; Cancellation Policy</Link>.</p>
 
       <h2>Use of services</h2>
       <p>You agree to use our services only for lawful purposes. You agree not to:</p>

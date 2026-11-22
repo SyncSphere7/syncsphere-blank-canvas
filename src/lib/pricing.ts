@@ -183,7 +183,7 @@ export const paymentTerms: Record<Market, string[]> = {
   ug: [
     'Projects under UGX 5,000,000: 60% to start, 40% at launch.',
     'Larger projects: 50% to start, 25% at design approval, 25% at launch.',
-    'Pay with MTN Mobile Money, Airtel Money, card or bank transfer.',
+    'Pay by bank transfer, Visa card, MTN Mobile Money or Airtel Money.',
   ],
   intl: [
     '50% to start, 25% at design approval, 25% at launch.',

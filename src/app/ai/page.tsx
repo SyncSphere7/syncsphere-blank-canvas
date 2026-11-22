@@ -4,7 +4,7 @@ import { pageMeta } from '@/lib/meta';
 export const metadata = pageMeta(
   '/ai',
   'AI for Businesses in Uganda — WhatsApp Chatbots, Document AI, Training',
-  'AI chatbots that answer customers on WhatsApp from UGX 2,500,000, AI that reads invoices and receipts, and AI training for your staff. Kampala team, pay with Mobile Money.',
+  'AI chatbots that answer customers on WhatsApp from UGX 2,500,000, AI that reads invoices and receipts, and AI training for your staff. Kampala team. Pay by bank transfer, Visa card or Mobile Money.',
 );
 
 export default function AiPage() {

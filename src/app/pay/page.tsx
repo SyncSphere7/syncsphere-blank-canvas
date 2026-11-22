@@ -8,7 +8,7 @@ import { whatsappLink } from '@/lib/site';
 
 export const dynamic = 'force-dynamic';
 
-export const metadata = pageMeta('/pay', 'Pay an Invoice', 'Pay a SyncSphere invoice or deposit securely with Mobile Money or card.', { noindex: true });
+export const metadata = pageMeta('/pay', 'Pay an Invoice', 'Pay a SyncSphere invoice or deposit securely by Visa card or Mobile Money.', { noindex: true });
 
 export default function PayPage() {
   const enabled = paymentsEnabled();
@@ -27,7 +27,7 @@ export default function PayPage() {
             <div className="card">
               <h2 className="text-xl font-bold">Online payment is coming soon</h2>
               <p className="mt-3 text-ink-soft">
-                We are finishing the setup of our online payments. In the meantime, message us and we will send you Mobile Money or bank details for your invoice.
+                We are finishing the setup of our online payments. In the meantime, message us and we will send you bank or Mobile Money details for your invoice.
               </p>
               <a href={whatsappLink('Hello SyncSphere, I would like to pay my invoice.')} target="_blank" rel="noopener noreferrer" className="btn-whatsapp mt-6">
                 <WhatsAppIcon className="h-4 w-4" /> Ask for payment details
@@ -37,7 +37,7 @@ export default function PayPage() {
           <aside className="rounded-2xl bg-surface p-6 text-sm leading-relaxed text-ink-soft">
             <h2 className="text-base font-bold text-ink">Good to know</h2>
             <ul className="mt-3 list-disc space-y-2 pl-5">
-              <li>Uganda: MTN Mobile Money, Airtel Money or card, in UGX.</li>
+              <li>Uganda: Visa card, MTN Mobile Money or Airtel Money, in UGX. Bank transfer on request.</li>
               <li>International: debit or credit card, in USD.</li>
               <li>You will receive a receipt by email from Flutterwave.</li>
               <li>Read our <Link href="/refund-policy" className="text-brand underline">refund policy</Link>.</li>

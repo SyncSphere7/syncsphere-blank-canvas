@@ -75,7 +75,7 @@ export const services: Service[] = [
     summary: 'Booking, ordering, stock, school and clinic systems your team and customers use every day.',
     headline: 'Replace the spreadsheets and paper with a system built for you',
     intro:
-      'When a business grows, Excel sheets, notebooks and WhatsApp groups stop keeping up. We build web apps that do one job properly — bookings, orders, stock, fees, patient records or a client portal — with Mobile Money built in, working on any phone or computer.',
+      'When a business grows, Excel sheets, notebooks and WhatsApp groups stop keeping up. We build web apps that do one job properly — bookings, orders, stock, fees, patient records or a client portal — with card and Mobile Money payments built in, working on any phone or computer.',
     includes: [
       'A short planning session to agree exactly what the system must do',
       'Clickable design you approve before we build',
@@ -387,7 +387,7 @@ export const industries: Industry[] = [
 /** The three headline offers. `href` is the hub page that lists every service in the pillar. */
 export const pillars: { id: Pillar; name: string; line: string; from: string; href: string }[] = [
   { id: 'websites', name: 'Websites', line: 'Fast, mobile-friendly websites and online shops that turn visitors into enquiries.', from: 'From UGX 1,800,000', href: '/services/websites' },
-  { id: 'apps', name: 'Apps', line: 'Web and mobile apps for bookings, orders, stock, schools and clinics, with Mobile Money built in.', from: 'From UGX 8,000,000', href: '/apps' },
+  { id: 'apps', name: 'Apps', line: 'Web and mobile apps for bookings, orders, stock, schools and clinics, with card and Mobile Money payments built in.', from: 'From UGX 8,000,000', href: '/apps' },
   { id: 'ai', name: 'AI', line: 'AI that answers customers on WhatsApp, reads your paperwork and makes your team faster.', from: 'From UGX 1,500,000', href: '/ai' },
 ];
 
@@ -406,7 +406,7 @@ export const homeFaqs: Faq[] = [
   },
   {
     q: 'How do I pay?',
-    a: 'MTN Mobile Money, Airtel Money, card or bank transfer. Projects under UGX 5,000,000 are paid 60% to start and 40% at launch. Larger projects are paid 50% / 25% / 25%.',
+    a: 'Bank transfer, Visa card, MTN Mobile Money or Airtel Money. Projects under UGX 5,000,000 are paid 60% to start and 40% at launch. Larger projects are paid 50% / 25% / 25%.',
   },
   {
     q: 'How fast can you deliver?',

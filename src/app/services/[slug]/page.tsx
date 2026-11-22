@@ -22,7 +22,7 @@ export async function generateMetadata({ params }: Props) {
   const { slug } = await params;
   const s = services.find((x) => x.slug === slug);
   if (!s) return {};
-  return pageMeta(`/services/${s.slug}`, `${s.name} in Uganda`, `${s.summary} ${s.price.ug}. Kampala team, pay with Mobile Money.`);
+  return pageMeta(`/services/${s.slug}`, `${s.name} in Uganda`, `${s.summary} ${s.price.ug}. Kampala team. Pay by bank, Visa or Mobile Money.`);
 }
 
 export default async function ServicePage({ params }: Props) {

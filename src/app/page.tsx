@@ -11,7 +11,7 @@ import { site, whatsappLink } from '@/lib/site';
 export const metadata = pageMeta(
   '/',
   'SyncSphere | Websites, Apps & AI for Ugandan Businesses',
-  'Websites from UGX 1,800,000, web and mobile apps from UGX 8,000,000, and AI chatbots for WhatsApp from UGX 2,500,000. Kampala team at Acacia Mall, pay with Mobile Money.',
+  'Websites from UGX 1,800,000, web and mobile apps from UGX 8,000,000, and AI chatbots for WhatsApp from UGX 2,500,000. Kampala team at Acacia Mall. Pay by bank transfer, Visa card or Mobile Money.',
 );
 
 /** Services listed under each pillar on the home page, in order. */
@@ -63,7 +63,7 @@ export default function HomePage() {
           <div className="mt-12 grid items-end gap-10 lg:grid-cols-12 lg:gap-4">
             <div className="animate-fade-up [animation-delay:.35s] lg:col-span-5">
               <p className="max-w-[34rem] text-lg leading-relaxed text-cream/80 sm:text-[19px]">
-                We build websites and apps, and put AI to work in your business: answering customers on WhatsApp, reading your paperwork, training your team. One Kampala team, one written price in shillings, paid by Mobile Money.
+                We build websites and apps, and put AI to work in your business: answering customers on WhatsApp, reading your paperwork, training your team. One Kampala team, one written price in shillings, paid by bank transfer, Visa card or Mobile Money.
               </p>
               <div className="mt-8 flex flex-wrap items-center gap-6">
                 <a href={whatsappLink()} target="_blank" rel="noopener noreferrer" className="btn-chip">
@@ -91,13 +91,13 @@ export default function HomePage() {
 
             <div
               className="max-w-[340px] -rotate-2 animate-card rounded-2xl bg-cream p-5 pb-3 text-ink shadow-lift transition-transform duration-500 ease-out [animation-delay:.6s] hover:rotate-0 lg:col-span-3"
-              aria-label={`Example payment schedule for a Starter website: ${ugx(deposit)} shillings deposit by Mobile Money, ${ugx(starterTotal - deposit)} at launch.`}
+              aria-label={`Example payment schedule for a Starter website: ${ugx(deposit)} shillings deposit, ${ugx(starterTotal - deposit)} at launch.`}
             >
               <p className="flex justify-between border-b border-ink/15 pb-2.5 font-mono text-xs uppercase tracking-[0.1em] text-ink-muted">
                 <span>Example</span><span>Starter site</span>
               </p>
               {[
-                ['Deposit 60% · MoMo', ugx(deposit), true],
+                ['Deposit 60%', ugx(deposit), true],
                 ['At launch 40%', ugx(starterTotal - deposit), false],
                 ['Total UGX', ugx(starterTotal), false],
               ].map(([k, v, done]) => (
@@ -221,7 +221,7 @@ export default function HomePage() {
             {paymentTerms.ug.slice(0, 2).map((t) => (
               <span key={t} className="rounded-full border border-ink/20 px-4 py-2">{t}</span>
             ))}
-            <span className="rounded-full border border-ink/20 px-4 py-2">MTN MoMo · Airtel Money · Card · Bank</span>
+            <span className="rounded-full border border-ink/20 px-4 py-2">Bank transfer · Visa · MTN MoMo · Airtel Money</span>
             <Link href="/pricing" className="btn-primary ml-auto">
               Full price list <ArrowRight className="h-4 w-4" aria-hidden="true" />
             </Link>

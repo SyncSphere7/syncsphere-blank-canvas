@@ -43,7 +43,7 @@ export function PayForm() {
               onClick={() => setCurrency(c)}
               className={clsx('rounded-lg px-4 py-2 text-sm font-semibold', currency === c ? 'bg-brand text-white' : 'text-ink-soft')}
             >
-              {c === 'UGX' ? 'UGX · Mobile Money or card' : 'USD · Card'}
+              {c === 'UGX' ? 'UGX · Card or Mobile Money' : 'USD · Card'}
             </button>
           ))}
         </div>

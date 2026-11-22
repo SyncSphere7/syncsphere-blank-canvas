@@ -44,7 +44,7 @@ export default function RefundPolicyPage() {
       <p>Domain registration, hosting upgrades, paid plugins, advertising budgets and similar third-party costs are passed on at cost and are generally non-refundable once bought for you, because they follow the provider’s own terms. Any refund a provider gives will be passed on to you.</p>
 
       <h2>8. How refunds are paid</h2>
-      <p>To request a refund, email <a href={`mailto:${site.email}`}>{site.email}</a> with the project name, the milestone and the reason. Approved refunds are paid to the original payment method (Mobile Money, card or bank) within 14 business days of written approval. If that method is no longer available, we will agree an alternative with you in writing.</p>
+      <p>To request a refund, email <a href={`mailto:${site.email}`}>{site.email}</a> with the project name, the milestone and the reason. Approved refunds are paid to the original payment method (bank, card or Mobile Money) within 14 business days of written approval. If that method is no longer available, we will agree an alternative with you in writing.</p>
 
       <h2>9. Disputes</h2>
       <p>Please raise any concern with us first so we can resolve it quickly. This policy is governed by the laws of the State of Montana, United States, as set out in our Terms of Service.</p>

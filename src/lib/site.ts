@@ -7,7 +7,7 @@ export const site = {
   url: 'https://www.syncspherellc.com',
   tagline: 'Websites, apps and AI for Ugandan businesses',
   description:
-    'SyncSphere builds websites, web and mobile apps, and AI chatbots and automation for businesses in Uganda and abroad. Kampala team, US-registered company, pay with Mobile Money or card.',
+    'SyncSphere builds websites, web and mobile apps, and AI chatbots and automation for businesses in Uganda and abroad. Kampala team, US-registered company, pay by bank transfer, Visa card or Mobile Money.',
   phone: '+256 787 308 564',
   phoneHref: 'tel:+256787308564',
   /** Digits only, international format, for wa.me links. */
